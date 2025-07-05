@@ -1,10 +1,10 @@
 name: blackthorn_manor
-description: An interactive document experience simulating classified government files about a mysterious Victorian manor.
+description: Interactive Document Reader for Blackthorn Manor Investigation
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: ">=3.10.0"
+  sdk: '>=2.19.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -13,24 +13,43 @@ dependencies:
   # State Management
   provider: ^6.1.1
   
-  # Data & Storage
+  # Storage
   shared_preferences: ^2.2.2
-  path_provider: ^2.1.1
+  sqflite: ^2.3.0
   
-  # UI & Widgets
-  flutter_widget_from_html: ^0.14.11
-  cached_network_image: ^3.3.0
+  # Networking
+  http: ^1.1.0
+  
+  # JSON Serialization
+  json_serializable: ^6.7.1
+  json_annotation: ^4.8.1
+  
+  # UI Enhancements
+  flutter_animate: ^4.3.0
+  flutter_cube: ^0.1.1
+  particles_flutter: ^0.1.4
+  vibration: ^1.8.4
+  
+  # Charts and Analytics
+  fl_chart: ^0.65.0
   
   # Utilities
-  equatable: ^2.0.5
+  path_provider: ^2.1.1
+  intl: ^0.18.1
   
-  # Icons & Material Design
-  cupertino_icons: ^1.0.6
+  # Icons
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  
+  # Code Generation
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
+  
+  # Linting
+  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
@@ -38,28 +57,16 @@ flutter:
   assets:
     - assets/data/
     - assets/images/
-    - assets/textures/
     - assets/fonts/
-  
+    
   fonts:
-    - family: Courier Prime
+    - family: Crimson
       fonts:
-        - asset: assets/fonts/CourierPrime-Regular.ttf
-        - asset: assets/fonts/CourierPrime-Bold.ttf
+        - asset: assets/fonts/CrimsonPro-Regular.ttf
+        - asset: assets/fonts/CrimsonPro-Bold.ttf
           weight: 700
-    
-    - family: Dancing Script
+    - family: Libre
       fonts:
-        - asset: assets/fonts/DancingScript-Regular.ttf
-        - asset: assets/fonts/DancingScript-Bold.ttf
+        - asset: assets/fonts/LibreBaskerville-Regular.ttf
+        - asset: assets/fonts/LibreBaskerville-Bold.ttf
           weight: 700
-    
-    - family: Kalam
-      fonts:
-        - asset: assets/fonts/Kalam-Regular.ttf
-        - asset: assets/fonts/Kalam-Bold.ttf
-          weight: 700
-    
-    - family: Architects Daughter
-      fonts:
-        - asset: assets/fonts/ArchitectsDaughter-Regular.ttf
