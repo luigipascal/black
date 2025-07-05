@@ -1,0 +1,274 @@
+{
+  "characters": {
+    "MB": {
+      "name": "Margaret Blackthorn",
+      "fullName": "Margaret Blackthorn",
+      "years": "1930-1999",
+      "description": "Last surviving member of the Blackthorn family. Maintained the estate and its dangerous secrets until her death. Her elegant blue script reveals family knowledge passed down through generations.",
+      "role": "Family Guardian",
+      "annotationStyle": {
+        "fontFamily": "Dancing Script",
+        "fontSize": 10,
+        "color": "#2653a3",
+        "fontStyle": "italic",
+        "description": "Elegant blue script with careful, deliberate strokes"
+      },
+      "storyArc": {
+        "character": "MB",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryRole": "Keeper of family secrets and ancient protective rituals"
+    },
+    "JR": {
+      "name": "James Reed",
+      "fullName": "James Reed",
+      "years": "1984-1990",
+      "description": "Independent researcher who investigated the manor's architectural anomalies. His messy black ballpoint notes document his growing unease before his disappearance in 1989.",
+      "role": "Independent Researcher",
+      "annotationStyle": {
+        "fontFamily": "Kalam",
+        "fontSize": 9,
+        "color": "#1a1a1a",
+        "fontStyle": "normal",
+        "description": "Messy black ballpoint, increasingly hurried"
+      },
+      "storyArc": {
+        "character": "JR",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryRole": "Academic investigator who uncovered too much truth"
+    },
+    "EW": {
+      "name": "Eliza Winston",
+      "fullName": "Eliza Winston",
+      "years": "1995-1999",
+      "description": "Structural engineer commissioned to assess the building's safety. Her precise red pen annotations reveal impossible architectural anomalies before her sudden departure.",
+      "role": "Structural Engineer",
+      "annotationStyle": {
+        "fontFamily": "Architects Daughter",
+        "fontSize": 10,
+        "color": "#c41e3a",
+        "fontStyle": "normal",
+        "description": "Precise red pen with engineering accuracy"
+      },
+      "storyArc": {
+        "character": "EW",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryRole": "Technical expert who documented structural impossibilities"
+    },
+    "SW": {
+      "name": "Simon Wells",
+      "fullName": "Simon Wells",
+      "years": "2024+",
+      "description": "Current investigator exploring the manor's mysteries. His hurried pencil notes document his desperate search for his missing sister Claire.",
+      "role": "Current Investigator",
+      "annotationStyle": {
+        "fontFamily": "Kalam",
+        "fontSize": 9,
+        "color": "#2c2c2c",
+        "fontStyle": "normal",
+        "description": "Hurried pencil, emotionally charged"
+      },
+      "storyArc": {
+        "character": "SW",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryRole": "Modern investigator seeking missing sister"
+    },
+    "Detective Sharma": {
+      "name": "Detective Sharma",
+      "fullName": "Detective Moira Sharma",
+      "years": "2024+",
+      "description": "County Police detective investigating multiple disappearances at Blackthorn Manor. Her official green ink documents growing evidence of connected cases.",
+      "role": "Police Investigator",
+      "annotationStyle": {
+        "fontFamily": "Courier Prime",
+        "fontSize": 8,
+        "color": "#006400",
+        "fontStyle": "normal",
+        "description": "Official green ink, professional documentation"
+      },
+      "storyArc": {
+        "character": "Detective Sharma",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryRole": "Law enforcement connecting missing persons cases"
+    },
+    "Dr. Chambers": {
+      "name": "Dr. Chambers",
+      "fullName": "Dr. E. Chambers",
+      "years": "2024+",
+      "description": "Government analyst with Department 8, specializing in anomalous phenomena. Official black ink stamps and classifications indicate high-level interest.",
+      "role": "Government Analyst",
+      "annotationStyle": {
+        "fontFamily": "Courier Prime",
+        "fontSize": 8,
+        "color": "#000000",
+        "fontStyle": "normal",
+        "description": "Official black ink with government classifications"
+      },
+      "storyArc": {
+        "character": "Dr. Chambers",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryRole": "Government oversight of anomalous phenomena"
+    }
+  },
+  "temporalRules": {
+    "pre2000": {
+      "allowedTypes": [
+        "marginalia"
+      ],
+      "allowedZones": [
+        "leftMargin",
+        "rightMargin",
+        "topMargin",
+        "bottomMargin"
+      ],
+      "description": "Pre-2000 annotations are fixed historical documents",
+      "characters": [
+        "MB",
+        "JR",
+        "EW"
+      ]
+    },
+    "post2000": {
+      "allowedTypes": [
+        "postIt",
+        "sticker"
+      ],
+      "allowedZones": [
+        "leftMargin",
+        "rightMargin",
+        "topMargin",
+        "bottomMargin",
+        "content"
+      ],
+      "description": "Post-2000 annotations are interactive and draggable",
+      "characters": [
+        "SW",
+        "Detective Sharma",
+        "Dr. Chambers"
+      ]
+    }
+  },
+  "progressiveRevelation": {
+    "revealLevels": {
+      "1": {
+        "name": "Academic Study",
+        "description": "Original Professor Finch architectural study",
+        "visibleContent": [
+          "academic_text"
+        ],
+        "hiddenContent": [
+          "all_annotations",
+          "redacted_sections"
+        ]
+      },
+      "2": {
+        "name": "Family Secrets",
+        "description": "Margaret Blackthorn's family knowledge revealed",
+        "visibleContent": [
+          "academic_text",
+          "mb_annotations"
+        ],
+        "hiddenContent": [
+          "research_annotations",
+          "modern_annotations",
+          "redacted_sections"
+        ]
+      },
+      "3": {
+        "name": "Research Investigation",
+        "description": "James Reed and Eliza Winston's findings",
+        "visibleContent": [
+          "academic_text",
+          "mb_annotations",
+          "jr_annotations",
+          "ew_annotations"
+        ],
+        "hiddenContent": [
+          "modern_annotations",
+          "partial_redacted_sections"
+        ]
+      },
+      "4": {
+        "name": "Modern Mystery",
+        "description": "Current investigation and disappearances",
+        "visibleContent": [
+          "all_annotations"
+        ],
+        "hiddenContent": [
+          "classified_redactions"
+        ]
+      },
+      "5": {
+        "name": "Complete Truth",
+        "description": "Full supernatural revelation",
+        "visibleContent": [
+          "everything"
+        ],
+        "hiddenContent": []
+      }
+    },
+    "unlockConditions": {
+      "characterDiscovery": {
+        "MB": "Find Margaret's first annotation",
+        "JR": "Discover research notes",
+        "EW": "View engineering analysis",
+        "SW": "Read modern investigation",
+        "Detective Sharma": "Access police files",
+        "Dr. Chambers": "Unlock government documents"
+      },
+      "progressionGates": {
+        "family_secrets": "Interact with 3 Margaret annotations",
+        "research_phase": "Read James Reed's methodology",
+        "modern_mystery": "Discover missing persons connection",
+        "complete_truth": "Unlock all character timelines"
+      }
+    },
+    "characterProgression": {
+      "discoveryOrder": [
+        "MB",
+        "JR",
+        "EW",
+        "SW",
+        "Detective Sharma",
+        "Dr. Chambers"
+      ],
+      "storyMilestones": [
+        "First family annotation",
+        "Research methodology discovered",
+        "Engineering anomalies found",
+        "Modern investigation begins",
+        "Police involvement",
+        "Government classification"
+      ],
+      "unlockRewards": {
+        "character_focus_mode": "View all annotations by specific character",
+        "timeline_view": "See chronological story development",
+        "mystery_tracker": "Track disappearance connections",
+        "complete_revelation": "Full supernatural truth revealed"
+      }
+    }
+  }
+}

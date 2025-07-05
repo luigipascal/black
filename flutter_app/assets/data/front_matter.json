@@ -1,0 +1,339 @@
+{
+  "type": "front_matter",
+  "title": "The Architectural History of Blackthorn Manor",
+  "subtitle": "A Study in Victorian Design",
+  "author": "Professor Harold Finch, PhD",
+  "publisher": "Cambridge University Press",
+  "year": 1967,
+  "content": "# Front Matter\n\nTHE ARCHITECTURAL HISTORY OF\n\nBLACKTHORN MANOR:\n\nA Study in Victorian Design\n\nBy Prof. Harold Finch, PhD\n\nProfessor Emeritus of Architectural History\n\nPublished by Cambridge University Press, 1967\n\nDisclaimer\n\nThe architectural analysis presented in this volume represents my professional assessment based on limited access to Blackthorn Manor during the period 1962-1965. While every effort has been made to ensure factual accuracy regarding structural elements, materials, and historical context, certain areas of the estate—particularly portions of the east wing—remained inaccessible during my research visits.\n\nThe conclusions drawn regarding Sir William Blackthorn's architectural intentions are based on available documentation, family correspondence, and physical examination of accessible areas. Where direct observation was not possible, I have clearly indicated when assessments rely on secondary sources or reasonable academic inference.\n\nArchitectural plans reproduced herein are based on my own measurements and observations, supplemented by partial documentation from the Blackthorn family archives. Discrepancies between these renderings and the actual structure may exist, particularly in areas where access was restricted.\n\nThis work represents an academic architectural study only. It is not intended as a comprehensive structural assessment, and no claims are made regarding the physical condition or safety of Blackthorn Manor. Potential visitors should note that the property remains private and is not open to the public.\n\nProfessor Harold Finch, PhD\n\nDepartment of Architectural History\n\nCambridge University\n\nJanuary 1967\n\nTo Miss Margaret Blackthorn,\n\nI am sincerely grateful for our enlightening discussions concerning your family's architectural heritage. Your insights into the manor's east wing were particularly valuable, despite your reluctance to discuss certain aspects in detail.\n\nThis volume would not have been possible without your cooperation and access to family records. I've honoured our agreement regarding specific omissions, focusing solely on architectural elements of academic interest.\n\nI trust you'll find this published work adheres to the boundaries we established.\n\nYours in scholarly pursuit,\n\nHarold Finch\n\nFebruary 3, 1967\n\nTable of Contents\n\nPREFACE\n\nCHAPTER I: INTRODUCTION AND HISTORICAL CONTEXT\n\n",
+  "sections": [
+    {
+      "type": "disclaimer",
+      "title": "Disclaimer"
+    },
+    {
+      "type": "dedication",
+      "title": "Dedication"
+    },
+    {
+      "type": "toc",
+      "title": "Table of Contents"
+    }
+  ],
+  "wordCount": 322,
+  "annotations": [],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "type": "front_matter",
+      "content": "# Front Matter",
+      "wordCount": 3,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 2,
+      "type": "front_matter",
+      "content": "THE ARCHITECTURAL HISTORY OF",
+      "wordCount": 4,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 3,
+      "type": "front_matter",
+      "content": "BLACKTHORN MANOR:",
+      "wordCount": 2,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 4,
+      "type": "front_matter",
+      "content": "A Study in Victorian Design",
+      "wordCount": 5,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 5,
+      "type": "front_matter",
+      "content": "By Prof. Harold Finch, PhD",
+      "wordCount": 5,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 6,
+      "type": "front_matter",
+      "content": "Professor Emeritus of Architectural History",
+      "wordCount": 5,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 7,
+      "type": "front_matter",
+      "content": "Published by Cambridge University Press, 1967",
+      "wordCount": 6,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 8,
+      "type": "front_matter",
+      "content": "Disclaimer",
+      "wordCount": 1,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 9,
+      "type": "front_matter",
+      "content": "The architectural analysis presented in this volume represents my professional assessment based on limited access to Blackthorn Manor during the period 1962-1965. While every effort has been made to ensure factual accuracy regarding structural elements, materials, and historical context, certain areas of the estate—particularly portions of the east wing—remained inaccessible during my research visits.",
+      "wordCount": 54,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 10,
+      "type": "front_matter",
+      "content": "The conclusions drawn regarding Sir William Blackthorn's architectural intentions are based on available documentation, family correspondence, and physical examination of accessible areas. Where direct observation was not possible, I have clearly indicated when assessments rely on secondary sources or reasonable academic inference.",
+      "wordCount": 42,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 11,
+      "type": "front_matter",
+      "content": "Architectural plans reproduced herein are based on my own measurements and observations, supplemented by partial documentation from the Blackthorn family archives. Discrepancies between these renderings and the actual structure may exist, particularly in areas where access was restricted.",
+      "wordCount": 38,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 12,
+      "type": "front_matter",
+      "content": "This work represents an academic architectural study only. It is not intended as a comprehensive structural assessment, and no claims are made regarding the physical condition or safety of Blackthorn Manor. Potential visitors should note that the property remains private and is not open to the public.",
+      "wordCount": 47,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 13,
+      "type": "front_matter",
+      "content": "Professor Harold Finch, PhD",
+      "wordCount": 4,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 14,
+      "type": "front_matter",
+      "content": "Department of Architectural History",
+      "wordCount": 4,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 15,
+      "type": "front_matter",
+      "content": "Cambridge University",
+      "wordCount": 2,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 16,
+      "type": "front_matter",
+      "content": "January 1967",
+      "wordCount": 2,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 17,
+      "type": "front_matter",
+      "content": "To Miss Margaret Blackthorn,",
+      "wordCount": 4,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 18,
+      "type": "front_matter",
+      "content": "I am sincerely grateful for our enlightening discussions concerning your family's architectural heritage. Your insights into the manor's east wing were particularly valuable, despite your reluctance to discuss certain aspects in detail.",
+      "wordCount": 32,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 19,
+      "type": "front_matter",
+      "content": "This volume would not have been possible without your cooperation and access to family records. I've honoured our agreement regarding specific omissions, focusing solely on architectural elements of academic interest.",
+      "wordCount": 30,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 20,
+      "type": "front_matter",
+      "content": "I trust you'll find this published work adheres to the boundaries we established.",
+      "wordCount": 13,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 21,
+      "type": "front_matter",
+      "content": "Yours in scholarly pursuit,",
+      "wordCount": 4,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 22,
+      "type": "front_matter",
+      "content": "Harold Finch",
+      "wordCount": 2,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 23,
+      "type": "front_matter",
+      "content": "February 3, 1967",
+      "wordCount": 3,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 24,
+      "type": "front_matter",
+      "content": "Table of Contents",
+      "wordCount": 3,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 25,
+      "type": "front_matter",
+      "content": "PREFACE",
+      "wordCount": 1,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    },
+    {
+      "pageNumber": 26,
+      "type": "front_matter",
+      "content": "CHAPTER I: INTRODUCTION AND HISTORICAL CONTEXT",
+      "wordCount": 6,
+      "annotations": [],
+      "annotationCount": 0,
+      "redactedSections": [],
+      "revealLevels": [
+        1
+      ]
+    }
+  ]
+}

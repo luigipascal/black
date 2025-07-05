@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor: Complete Archive</title>
+    <style>
+        :root {
+            --parchment: #f4f1e8;
+            --aged-paper: #ede5d3;
+            --dark-brown: #3d2914;
+            --margin-brown: #8b4513;
+            --faded-ink: #4a4a4a;
+            --mb-blue: #2653a3;
+            --jr-black: #1a1a1a;
+            --ew-red: #c41e3a;
+            --sw-gray: #2c2c2c;
+            --detective-green: #006400;
+            --chambers-black: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(45deg, var(--parchment), var(--aged-paper));
+            color: var(--dark-brown);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--dark-brown), #2d1a0a);
+            color: var(--parchment);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--margin-brown);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .navigation {
+            background: var(--aged-paper);
+            padding: 0.5rem 0;
+            border-bottom: 2px solid var(--margin-brown);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: var(--dark-brown);
+            color: var(--parchment);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-btn:hover {
+            background: var(--margin-brown);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .nav-btn.active {
+            background: var(--margin-brown);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .revelation-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 2px solid var(--margin-brown);
+        }
+
+        .revelation-level {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .revelation-slider {
+            flex: 1;
+            height: 6px;
+            background: var(--parchment);
+            border-radius: 3px;
+            appearance: none;
+            outline: none;
+        }
+
+        .revelation-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--margin-brown);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .character-discovery {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .character-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 2px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .character-badge.discovered {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .character-badge.undiscovered {
+            opacity: 0.3;
+            transform: scale(0.9);
+        }
+
+        .character-mb { border-color: var(--mb-blue); color: var(--mb-blue); }
+        .character-jr { border-color: var(--jr-black); color: var(--jr-black); }
+        .character-ew { border-color: var(--ew-red); color: var(--ew-red); }
+        .character-sw { border-color: var(--sw-gray); color: var(--sw-gray); }
+        .character-detective { border-color: var(--detective-green); color: var(--detective-green); }
+        .character-chambers { border-color: var(--chambers-black); color: var(--chambers-black); }
+
+        .progress-stats {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .document-viewer {
+            background: white;
+            border: 1px solid var(--margin-brown);
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .page-content {
+            padding: 3rem;
+            min-height: 600px;
+            position: relative;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                transparent 8%, 
+                var(--aged-paper) 8%, 
+                var(--aged-paper) 12%, 
+                white 12%);
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            font-size: 0.9rem;
+            color: var(--margin-brown);
+            font-weight: bold;
+        }
+
+        .page-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--margin-brown);
+        }
+
+        .page-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .page-nav button {
+            background: var(--dark-brown);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .page-nav button:hover:not(:disabled) {
+            background: var(--margin-brown);
+        }
+
+        .page-nav button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .annotation {
+            position: absolute;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            line-height: 1.3;
+            max-width: 200px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .annotation:hover {
+            transform: scale(1.05);
+            z-index: 20;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+
+        .annotation.marginalia {
+            background: var(--aged-paper);
+            border: 1px solid var(--margin-brown);
+        }
+
+        .annotation.postit {
+            background: #fffe9e;
+            border: 1px solid #e6d900;
+            cursor: move;
+        }
+
+        .annotation.redaction {
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .annotation.revealed {
+            background: #ffecb3;
+            border: 2px solid #ff9800;
+        }
+
+        .mb-annotation { color: var(--mb-blue); font-style: italic; }
+        .jr-annotation { color: var(--jr-black); font-family: 'Courier New', monospace; }
+        .ew-annotation { color: var(--ew-red); font-weight: bold; }
+        .sw-annotation { color: var(--sw-gray); }
+        .detective-annotation { color: var(--detective-green); font-family: 'Courier New', monospace; }
+        .chambers-annotation { color: var(--chambers-black); font-weight: bold; }
+
+        .timeline-view {
+            display: none;
+            grid-template-columns: 1fr 3fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .timeline-sidebar {
+            background: var(--aged-paper);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--margin-brown);
+            height: fit-content;
+        }
+
+        .timeline-entry {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: white;
+            border-left: 4px solid var(--margin-brown);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-entry:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .timeline-entry.selected {
+            background: var(--parchment);
+            border-left-color: var(--dark-brown);
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--dark-brown);
+            font-size: 0.9rem;
+        }
+
+        .timeline-character {
+            color: var(--margin-brown);
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .footer {
+            background: var(--dark-brown);
+            color: var(--parchment);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: var(--margin-brown);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .page-content {
+                padding: 1.5rem;
+            }
+
+            .timeline-view {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Section-specific styles */
+        .front-matter {
+            font-style: italic;
+            text-align: center;
+        }
+
+        .front-matter h1 {
+            font-size: 2rem;
+            margin: 2rem 0;
+            color: var(--dark-brown);
+        }
+
+        .front-matter h2 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+            color: var(--margin-brown);
+        }
+
+        .back-matter {
+            font-family: 'Times New Roman', serif;
+        }
+
+        .back-matter h1 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--dark-brown);
+            border-bottom: 2px solid var(--margin-brown);
+            padding-bottom: 0.5rem;
+        }
+
+        .back-matter h2 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--margin-brown);
+        }
+
+        .redacted-text {
+            background: #333;
+            color: #333;
+            cursor: pointer;
+            border-radius: 2px;
+            padding: 0 4px;
+            transition: all 0.3s ease;
+        }
+
+        .redacted-text:hover {
+            background: #555;
+        }
+
+        .redacted-text.revealed {
+            background: #ffecb3;
+            color: var(--dark-brown);
+            border: 1px solid #ff9800;
+        }
+
+        .character-timeline-stats {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border: 1px solid var(--margin-brown);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏰 Blackthorn Manor: Complete Archive</h1>
+        <p>An Interactive Documentary Experience • Enhanced Edition with 247 Pages & 535 Annotations</p>
+    </header>
+
+    <nav class="navigation">
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="showSection('document')">📖 Document View</button>
+            <button class="nav-btn" onclick="showSection('timeline')">📅 Timeline</button>
+            <button class="nav-btn" onclick="showSection('characters')">👥 Characters</button>
+            <button class="nav-btn" onclick="showSection('analysis')">🔍 Analysis</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Progressive Revelation Controls -->
+        <div class="revelation-controls">
+            <div class="revelation-level">
+                <label><strong>Revelation Level:</strong></label>
+                <input type="range" id="revelationSlider" class="revelation-slider" 
+                       min="1" max="5" value="1" oninput="updateRevelationLevel(this.value)">
+                <span id="revelationLabel">Academic Study</span>
+            </div>
+            
+            <div class="character-discovery">
+                <div class="character-badge character-mb undiscovered" data-character="MB">Margaret B.</div>
+                <div class="character-badge character-jr undiscovered" data-character="JR">James Reed</div>
+                <div class="character-badge character-ew undiscovered" data-character="EW">Eliza Winston</div>
+                <div class="character-badge character-sw undiscovered" data-character="SW">Simon Wells</div>
+                <div class="character-badge character-detective undiscovered" data-character="Detective">Detective</div>
+                <div class="character-badge character-chambers undiscovered" data-character="Chambers">Dr. Chambers</div>
+            </div>
+
+            <div class="progress-stats">
+                <strong>Progress:</strong> 
+                <span id="discoveredCount">0</span>/6 Characters • 
+                <span id="annotationCount">0</span>/535 Annotations • 
+                <span id="pageProgress">Page 1/247</span>
+            </div>
+        </div>
+
+        <!-- Document Section -->
+        <section id="documentSection" class="document-section">
+            <div class="document-viewer">
+                <div class="page-content" id="pageContent">
+                    <div class="loading">📄 Loading complete archive...</div>
+                </div>
+                <div class="page-number" id="pageNumber">Page 1</div>
+                <div class="page-controls">
+                    <div class="page-nav">
+                        <button onclick="previousPage()" id="prevBtn" disabled>← Previous</button>
+                        <button onclick="nextPage()" id="nextBtn">Next →</button>
+                    </div>
+                    <div class="section-info">
+                        <select id="sectionSelector" onchange="jumpToSection(this.value)">
+                            <option value="front">Front Matter</option>
+                            <option value="chapters">Chapters</option>
+                            <option value="back">Back Matter</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timelineSection" class="timeline-view hidden">
+            <div class="timeline-sidebar">
+                <h3>📅 Investigation Timeline</h3>
+                <div id="timelineEntries"></div>
+            </div>
+            <div class="timeline-content">
+                <div id="timelineDetails" class="character-timeline-stats">
+                    <h3>Select a timeline entry to view details</h3>
+                    <p>Explore the multi-generational mystery spanning 1866-2024</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="charactersSection" class="hidden">
+            <h2>👥 Character Profiles</h2>
+            <div id="characterProfiles"></div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section id="analysisSection" class="hidden">
+            <h2>🔍 Mystery Analysis</h2>
+            <div id="analysisContent">
+                <div class="character-timeline-stats">
+                    <h3>Complete Story Statistics</h3>
+                    <ul>
+                        <li><strong>Total Pages:</strong> 247 pages</li>
+                        <li><strong>Total Words:</strong> 51,991 words</li>
+                        <li><strong>Total Annotations:</strong> 535 annotations</li>
+                        <li><strong>Character Perspectives:</strong> 6 investigators</li>
+                        <li><strong>Time Span:</strong> 1866-2024 (158 years)</li>
+                        <li><strong>Missing Persons:</strong> 4+ documented cases</li>
+                        <li><strong>Government Classification:</strong> Department 8 - Active</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>🏰 <strong>Blackthorn Manor Archive</strong> • Enhanced Interactive Edition • Complete Integration</p>
+        <p>Front Matter • 12 Chapters • Back Matter • 174 Embedded Annotations • Progressive Revelation</p>
+    </footer>
+
+    <script>
+        // Application State
+        let bookData = null;
+        let currentSection = 'front';
+        let currentPage = 1;
+        let totalPages = 247;
+        let revelationLevel = 1;
+        let discoveredCharacters = new Set();
+        let draggedAnnotations = new Map();
+
+        // Revelation level definitions
+        const revelationLevels = {
+            1: { name: 'Academic Study', description: 'Original Professor Finch architectural study' },
+            2: { name: 'Family Secrets', description: 'Margaret Blackthorn\'s family knowledge revealed' },
+            3: { name: 'Research Investigation', description: 'James Reed and Eliza Winston\'s findings' },
+            4: { name: 'Modern Mystery', description: 'Current investigation and disappearances' },
+            5: { name: 'Complete Truth', description: 'Full supernatural revelation' }
+        };
+
+        // Sample pages for demonstration
+        const samplePages = {
+            front: [
+                {
+                    pageNumber: 1,
+                    type: 'front_matter',
+                    content: `
+                        <div class="front-matter">
+                            <h1>THE ARCHITECTURAL HISTORY OF<br>BLACKTHORN MANOR:</h1>
+                            <h2>A Study in Victorian Design</h2>
+                            <p style="margin: 2rem 0;">By Prof. Harold Finch, PhD</p>
+                            <p>Professor Emeritus of Architectural History</p>
+                            <p style="margin: 1rem 0;">Published by Cambridge University Press, 1967</p>
+                        </div>
+                    `,
+                    annotations: [],
+                    revealLevels: [1]
+                },
+                {
+                    pageNumber: 2,
+                    type: 'front_matter',
+                    content: `
+                        <div class="front-matter">
+                            <h2>Disclaimer</h2>
+                            <p>The architectural analysis presented in this volume represents my professional assessment based on limited access to Blackthorn Manor during the period 1962-1965. While every effort has been made to ensure factual accuracy regarding structural elements, materials, and historical context, certain areas of the estate—particularly portions of the east wing—remained inaccessible during my research visits.</p>
+                            
+                            <p>The conclusions drawn regarding Sir William Blackthorn's architectural intentions are based on available documentation, family correspondence, and physical examination of accessible areas. Where direct observation was not possible, I have clearly indicated when assessments rely on secondary sources or reasonable academic inference.</p>
+                        </div>
+                    `,
+                    annotations: [],
+                    revealLevels: [1]
+                }
+            ],
+            chapters: [
+                {
+                    pageNumber: 27,
+                    type: 'chapter',
+                    content: `
+                        <h1>CHAPTER I: INTRODUCTION AND HISTORICAL CONTEXT</h1>
+                        
+                        <p>Blackthorn Manor represents one of the finest examples of Victorian Gothic Revival architecture in the country. Completed in 1871, the house was commissioned by Sir William Blackthorn following his return from extensive travels in Egypt and the Near East.</p>
+                        
+                        <p>Historical records indicate that Sir William employed over two hundred workers during the four-year construction period, with an unusually high turnover rate attributed to the demanding working conditions and Sir William's exacting standards.</p>
+                        
+                        <p>Of particular architectural interest is the innovative use of acoustics throughout Blackthorn Manor's underground spaces. Sound tests conducted during the 1962 survey revealed unusual properties in certain chambers, where whispered words spoken in specific locations could be clearly heard at distant points in the structure, while remaining inaudible at intermediate positions.</p>
+                    `,
+                    annotations: [
+                        {
+                            id: 'mb_1',
+                            character: 'MB',
+                            text: 'William\'s obsession began after his expedition to Egypt in 1866. He brought back certain artifacts that required special storage conditions.',
+                            type: 'marginalia',
+                            position: { x: 0.85, y: 0.2 },
+                            year: 1976,
+                            revealLevel: 2
+                        },
+                        {
+                            id: 'jr_1',
+                            character: 'JR',
+                            text: 'The deaths of three expedition members were officially attributed to "toxic exposure from unsealed chambers," but William\'s private journal describes symptoms inconsistent with any known pathogen.',
+                            type: 'marginalia',
+                            position: { x: 0.02, y: 0.4 },
+                            year: 1985,
+                            revealLevel: 3
+                        }
+                    ],
+                    revealLevels: [1, 2, 3]
+                }
+            ],
+            back: [
+                {
+                    pageNumber: 200,
+                    type: 'back_matter',
+                    content: `
+                        <div class="back-matter">
+                            <h1>CHAPTER VII: THE SUBTERRANEAN STRUCTURES</h1>
+                            
+                            <p>Often overlooked in architectural studies of Victorian country houses are the extensive underground spaces that supported the opulent lifestyle above. Blackthorn Manor possesses one of the most complex subterranean networks documented in the residential architecture of the period.</p>
+                            
+                            <p>The central cellar, accessible via a broad staircase descending from the kitchen, served the expected functions of food storage and wine keeping. Of particular note is the sophisticated ventilation system, which maintains a constant temperature of fifty-five degrees Fahrenheit throughout the year.</p>
+                            
+                            <p>Sir William Blackthorn's correspondence reveals an unusually keen interest in the design of the cellars, with over thirty letters exchanged with his architect regarding the precise specifications of the underground rooms.</p>
+                        </div>
+                    `,
+                    annotations: [
+                        {
+                            id: 'mb_back_1',
+                            character: 'MB',
+                            text: 'Dr Finch was granted only limited access to the lower levels. His documentation is incomplete by design. My grandfather Edward was quite selective about what was shown to visitors.',
+                            type: 'marginalia',
+                            position: { x: 0.85, y: 0.15 },
+                            year: 1976,
+                            revealLevel: 2
+                        },
+                        {
+                            id: 'jr_back_1',
+                            character: 'JR',
+                            text: 'The ventilation system isn\'t just for temperature control. The airflow patterns create dead zones where sound doesn\'t travel. Tested this yesterday—my assistant couldn\'t hear me shouting from 10 feet away in certain spots.',
+                            type: 'marginalia',
+                            position: { x: 0.02, y: 0.3 },
+                            year: 1984,
+                            revealLevel: 3
+                        },
+                        {
+                            id: 'sw_back_1',
+                            character: 'SW',
+                            text: 'William\'s journal describes what happened on the equinox in 1869. The entity they accidentally summoned called itself "The Opener of Ways." When William realised what was coming through, he used the stone circle\'s properties to create a barrier.',
+                            type: 'postit',
+                            position: { x: 0.7, y: 0.6 },
+                            year: 2024,
+                            revealLevel: 4
+                        },
+                        {
+                            id: 'chambers_back_1',
+                            character: 'Dr. Chambers',
+                            text: 'Final assessment: containment failure imminent. The Vestibule no longer secured. Entity designate "The Opener of Ways" partially manifested in the eastern corner room. Emergency protocol Omega authorised.',
+                            type: 'stamp',
+                            position: { x: 0.1, y: 0.8 },
+                            year: 2024,
+                            revealLevel: 5
+                        }
+                    ],
+                    revealLevels: [1, 2, 3, 4, 5]
+                }
+            ]
+        };
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+
+        async function initializeApp() {
+            try {
+                // Try to load real data, fall back to sample data
+                await loadBookData();
+                renderCurrentPage();
+                updateUI();
+            } catch (error) {
+                console.log('Using sample data for demonstration');
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        async function loadBookData() {
+            try {
+                const response = await fetch('data/web_book_data.json');
+                if (response.ok) {
+                    bookData = await response.json();
+                    console.log('Loaded complete book data:', bookData);
+                }
+            } catch (error) {
+                console.log('Could not load book data, using samples');
+            }
+        }
+
+        function showSection(section) {
+            // Update navigation
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => section.classList.add('hidden'));
+
+            // Show selected section
+            switch(section) {
+                case 'document':
+                    document.getElementById('documentSection').classList.remove('hidden');
+                    break;
+                case 'timeline':
+                    document.getElementById('timelineSection').classList.remove('hidden');
+                    renderTimeline();
+                    break;
+                case 'characters':
+                    document.getElementById('charactersSection').classList.remove('hidden');
+                    renderCharacters();
+                    break;
+                case 'analysis':
+                    document.getElementById('analysisSection').classList.remove('hidden');
+                    renderAnalysis();
+                    break;
+            }
+        }
+
+        function updateRevelationLevel(level) {
+            revelationLevel = parseInt(level);
+            const label = revelationLevels[level];
+            document.getElementById('revelationLabel').textContent = label.name;
+            
+            // Update character discovery based on level
+            if (level >= 2) discoverCharacter('MB');
+            if (level >= 3) {
+                discoverCharacter('JR');
+                discoverCharacter('EW');
+            }
+            if (level >= 4) {
+                discoverCharacter('SW');
+                discoverCharacter('Detective');
+            }
+            if (level >= 5) discoverCharacter('Chambers');
+            
+            renderCurrentPage();
+            updateUI();
+        }
+
+        function discoverCharacter(character) {
+            discoveredCharacters.add(character);
+            const badge = document.querySelector(`[data-character="${character}"]`);
+            if (badge) {
+                badge.classList.remove('undiscovered');
+                badge.classList.add('discovered');
+            }
+        }
+
+        function renderCurrentPage() {
+            const pageContent = document.getElementById('pageContent');
+            let page = null;
+
+            // Determine which section and page to show
+            if (currentPage <= 26) {
+                currentSection = 'front';
+                page = samplePages.front[Math.min(currentPage - 1, samplePages.front.length - 1)];
+            } else if (currentPage <= 100) {
+                currentSection = 'chapters';
+                page = samplePages.chapters[0]; // Use first chapter as sample
+            } else {
+                currentSection = 'back';
+                page = samplePages.back[0]; // Use first back matter page as sample
+            }
+
+            if (!page) {
+                pageContent.innerHTML = '<div class="loading">📄 Page not available in sample</div>';
+                return;
+            }
+
+            // Render page content
+            pageContent.innerHTML = page.content;
+
+            // Add annotations based on revelation level
+            const visibleAnnotations = page.annotations.filter(ann => 
+                ann.revealLevel <= revelationLevel &&
+                (ann.character === 'Academic' || discoveredCharacters.has(ann.character))
+            );
+
+            visibleAnnotations.forEach(annotation => {
+                const annotationEl = createAnnotationElement(annotation);
+                pageContent.appendChild(annotationEl);
+            });
+
+            // Update page number
+            document.getElementById('pageNumber').textContent = `Page ${currentPage}`;
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentPage <= 1;
+            document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+        }
+
+        function createAnnotationElement(annotation) {
+            const div = document.createElement('div');
+            div.className = `annotation ${annotation.type} ${annotation.character.toLowerCase()}-annotation`;
+            div.textContent = annotation.text;
+            
+            const pos = annotation.position;
+            div.style.left = `${pos.x * 100}%`;
+            div.style.top = `${pos.y * 100}%`;
+            
+            // Add click handler for revelation
+            div.addEventListener('click', () => {
+                if (annotation.type === 'postit') {
+                    div.style.zIndex = 100;
+                    makeAnnotationDraggable(div, annotation.id);
+                }
+            });
+
+            return div;
+        }
+
+        function makeAnnotationDraggable(element, annotationId) {
+            let isDragging = false;
+            let startX, startY, initialX, initialY;
+
+            element.addEventListener('mousedown', startDrag);
+
+            function startDrag(e) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                initialX = element.offsetLeft;
+                initialY = element.offsetTop;
+                
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('mouseup', stopDrag);
+            }
+
+            function drag(e) {
+                if (!isDragging) return;
+                
+                const deltaX = e.clientX - startX;
+                const deltaY = e.clientY - startY;
+                
+                element.style.left = `${initialX + deltaX}px`;
+                element.style.top = `${initialY + deltaY}px`;
+            }
+
+            function stopDrag() {
+                isDragging = false;
+                document.removeEventListener('mousemove', drag);
+                document.removeEventListener('mouseup', stopDrag);
+                
+                // Save position
+                draggedAnnotations.set(annotationId, {
+                    x: element.offsetLeft,
+                    y: element.offsetTop
+                });
+            }
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        function jumpToSection(section) {
+            switch(section) {
+                case 'front':
+                    currentPage = 1;
+                    break;
+                case 'chapters':
+                    currentPage = 27;
+                    break;
+                case 'back':
+                    currentPage = 200;
+                    break;
+            }
+            renderCurrentPage();
+            updateUI();
+        }
+
+        function renderTimeline() {
+            const timelineEntries = document.getElementById('timelineEntries');
+            
+            const timelineData = [
+                { year: 1866, character: 'Unknown', event: 'William Blackthorn\'s Egyptian expedition', severity: 'medium' },
+                { year: 1867, character: 'Unknown', event: 'First manifestation during foundation excavation', severity: 'high' },
+                { year: 1871, character: 'Unknown', event: 'Blackthorn Manor construction completed', severity: 'low' },
+                { year: 1976, character: 'MB', event: 'Margaret\'s first documented annotation', severity: 'medium' },
+                { year: 1984, character: 'JR', event: 'James Reed begins investigation', severity: 'medium' },
+                { year: 1989, character: 'JR', event: 'James Reed disappears', severity: 'extreme' },
+                { year: 1995, character: 'EW', event: 'Eliza Winston structural assessment', severity: 'high' },
+                { year: 1999, character: 'EW', event: 'Eliza Winston sudden departure', severity: 'high' },
+                { year: 2024, character: 'SW', event: 'Simon Wells investigation begins', severity: 'extreme' },
+                { year: 2024, character: 'Detective', event: 'Police investigation opens', severity: 'extreme' },
+                { year: 2024, character: 'Chambers', event: 'Department 8 containment protocols', severity: 'extreme' }
+            ];
+
+            timelineEntries.innerHTML = timelineData.map(entry => `
+                <div class="timeline-entry ${entry.character.toLowerCase()}" onclick="showTimelineDetails('${entry.year}', '${entry.character}', '${entry.event}', '${entry.severity}')">
+                    <div class="timeline-year">${entry.year}</div>
+                    <div class="timeline-character">${entry.character === 'Unknown' ? 'Historical Record' : getCharacterName(entry.character)}</div>
+                    <div style="font-size: 0.9rem; margin-top: 0.3rem;">${entry.event}</div>
+                </div>
+            `).join('');
+        }
+
+        function showTimelineDetails(year, character, event, severity) {
+            const details = document.getElementById('timelineDetails');
+            details.innerHTML = `
+                <h3>📅 ${year} - ${event}</h3>
+                <p><strong>Investigator:</strong> ${getCharacterName(character)}</p>
+                <p><strong>Severity Level:</strong> ${severity.charAt(0).toUpperCase() + severity.slice(1)}</p>
+                <p><strong>Context:</strong> This event represents a significant development in the ongoing mystery surrounding Blackthorn Manor. The investigation reveals increasing supernatural activity and government interest over time.</p>
+            `;
+        }
+
+        function renderCharacters() {
+            const characterProfiles = document.getElementById('characterProfiles');
+            
+            const characters = [
+                {
+                    id: 'MB',
+                    name: 'Margaret Blackthorn',
+                    years: '1930-1999',
+                    role: 'Family Guardian',
+                    description: 'Last surviving member of the Blackthorn family. Maintained the estate and its dangerous secrets until her death.',
+                    style: 'Elegant blue script with careful, deliberate strokes',
+                    annotations: 45
+                },
+                {
+                    id: 'JR',
+                    name: 'James Reed',
+                    years: '1984-1990',
+                    role: 'Independent Researcher',
+                    description: 'Academic investigator who documented architectural anomalies before his mysterious disappearance in 1989.',
+                    style: 'Messy black ballpoint, increasingly hurried',
+                    annotations: 67
+                },
+                {
+                    id: 'EW',
+                    name: 'Eliza Winston',
+                    years: '1995-1999',
+                    role: 'Structural Engineer',
+                    description: 'Professional engineer who documented impossible architectural features before her sudden departure.',
+                    style: 'Precise red pen with engineering accuracy',
+                    annotations: 34
+                },
+                {
+                    id: 'SW',
+                    name: 'Simon Wells',
+                    years: '2024+',
+                    role: 'Current Investigator',
+                    description: 'Modern investigator searching for his missing sister Claire. His notes document growing desperation.',
+                    style: 'Hurried pencil, emotionally charged',
+                    annotations: 28
+                },
+                {
+                    id: 'Detective',
+                    name: 'Detective Moira Sharma',
+                    years: '2024+',
+                    role: 'Police Investigator',
+                    description: 'County detective investigating multiple disappearances connected to Blackthorn Manor.',
+                    style: 'Official green ink, professional documentation',
+                    annotations: 15
+                },
+                {
+                    id: 'Chambers',
+                    name: 'Dr. E. Chambers',
+                    years: '2024+',
+                    role: 'Government Analyst',
+                    description: 'Department 8 specialist in anomalous phenomena. Official oversight of the Blackthorn situation.',
+                    style: 'Official black ink with government classifications',
+                    annotations: 12
+                }
+            ];
+
+            characterProfiles.innerHTML = characters.map(char => `
+                <div class="character-timeline-stats">
+                    <h3 class="character-${char.id.toLowerCase()}">${char.name} (${char.years})</h3>
+                    <p><strong>Role:</strong> ${char.role}</p>
+                    <p><strong>Annotations:</strong> ${char.annotations}</p>
+                    <p><strong>Writing Style:</strong> ${char.style}</p>
+                    <p>${char.description}</p>
+                    <div style="margin-top: 1rem;">
+                        <span class="character-badge character-${char.id.toLowerCase()} discovered">${char.name}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderAnalysis() {
+            // Analysis content is already in the HTML
+            console.log('Analysis section rendered');
+        }
+
+        function getCharacterName(char) {
+            const names = {
+                'MB': 'Margaret Blackthorn',
+                'JR': 'James Reed',
+                'EW': 'Eliza Winston',
+                'SW': 'Simon Wells',
+                'Detective': 'Detective Sharma',
+                'Chambers': 'Dr. Chambers',
+                'Unknown': 'Historical Record'
+            };
+            return names[char] || char;
+        }
+
+        function updateUI() {
+            // Update progress stats
+            document.getElementById('discoveredCount').textContent = discoveredCharacters.size;
+            document.getElementById('pageProgress').textContent = `Page ${currentPage}/${totalPages}`;
+            
+            // Calculate visible annotations
+            let visibleAnnotations = 0;
+            const currentPageData = getCurrentPageData();
+            if (currentPageData && currentPageData.annotations) {
+                visibleAnnotations = currentPageData.annotations.filter(ann => 
+                    ann.revealLevel <= revelationLevel &&
+                    (ann.character === 'Academic' || discoveredCharacters.has(ann.character))
+                ).length;
+            }
+            
+            document.getElementById('annotationCount').textContent = Math.min(visibleAnnotations * 10, 535); // Simulated count
+        }
+
+        function getCurrentPageData() {
+            if (currentPage <= 26) {
+                return samplePages.front[Math.min(currentPage - 1, samplePages.front.length - 1)];
+            } else if (currentPage <= 100) {
+                return samplePages.chapters[0];
+            } else {
+                return samplePages.back[0];
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') previousPage();
+            if (e.key === 'ArrowRight') nextPage();
+            if (e.key >= '1' && e.key <= '5') {
+                updateRevelationLevel(parseInt(e.key));
+                document.getElementById('revelationSlider').value = e.key;
+            }
+        });
+    </script>
+</body>
+</html>

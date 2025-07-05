@@ -1,0 +1,3502 @@
+{
+  "title": "Blackthorn Manor Archive",
+  "subtitle": "Enhanced Interactive Edition",
+  "author": "Professor Harold Finch",
+  "frontMatter": {
+    "title": "The Architectural History of Blackthorn Manor",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "type": "front_matter",
+        "content": "# Front Matter",
+        "wordCount": 3,
+        "annotations": [],
+        "annotationCount": 0,
+        "redactedSections": [],
+        "revealLevels": [
+          1
+        ]
+      },
+      {
+        "pageNumber": 2,
+        "type": "front_matter",
+        "content": "THE ARCHITECTURAL HISTORY OF",
+        "wordCount": 4,
+        "annotations": [],
+        "annotationCount": 0,
+        "redactedSections": [],
+        "revealLevels": [
+          1
+        ]
+      },
+      {
+        "pageNumber": 3,
+        "type": "front_matter",
+        "content": "BLACKTHORN MANOR:",
+        "wordCount": 2,
+        "annotations": [],
+        "annotationCount": 0,
+        "redactedSections": [],
+        "revealLevels": [
+          1
+        ]
+      }
+    ]
+  },
+  "backMatter": {
+    "title": "Appendices and Historical Documentation",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "type": "back_matter",
+        "content": "# Back Matter",
+        "wordCount": 3,
+        "annotations": [
+          {
+            "id": "emb_23_MB",
+            "character": "MB",
+            "text": "Preservation was not a matter of taste but necessity. William's containment systems were integrated into every aspect of the manor's construction—alterations risked compromising their function. It wasn’t a prison. It was a promise. The agreement bound us, not them. We watched the door—not to keep it closed, but to know when it opened. Each generation of Blackthorns was bound by family oath to maintain the original structure precisely as designed. My grandfather Edward codified these requirements in the family trust in 1912, legally preventing future heirs from making substantial changes.",
+            "year": 1912,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 0,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.6139962624985513,
+              "y": 0.01,
+              "rotation": -0.016722647597293548
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": false,
+            "characterArc": "family_guardian",
+            "relatedAnnotations": []
+          }
+        ],
+        "annotationCount": 1,
+        "redactedSections": [],
+        "revealLevels": [
+          1
+        ],
+        "hasEmbeddedContent": true
+      },
+      {
+        "pageNumber": 2,
+        "type": "back_matter",
+        "content": "APPENDIX A: CHRONOLOGY OF CONSTRUCTION AND MODIFICATIONS",
+        "wordCount": 7,
+        "annotations": [
+          {
+            "id": "emb_33_MB",
+            "character": "MB",
+            "text": "St. Michael's Cathedral was William's attempt to incorporate spiritual protection into the containment network. The site had ancient significance—originally constructed over prehistoric standing stones similar to those at Blackthorn. The bell tower was designed to create specific harmonic frequencies that strengthen dimensional barriers when activated. The crypt contains a sealed chamber housing artifacts from The Vestibule, safely contained within consecrated ground. Weekly bell-ringing patterns established by William continue to this day, though their true purpose remains unknown to church officials.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 0,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.7777212598490371,
+              "rotation": -0.018267521591036208
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_153_SW",
+            "character": "SW",
+            "text": "William created a network of containing structures—seven buildings forming a larger version of the protection geometry in the manor itself. The journal explains each building was positioned to contain a specific aspect of The Opener's influence should it breach The Vestibule. As buildings were modified or destroyed over decades, the containment weakened. Margaret's hidden notes reveal she was working with Department 8 to maintain the remaining structures, but commercial development consistently undermined these efforts.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 1,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.2857516155072857,
+              "rotation": 0.05762066831670845
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          }
+        ],
+        "annotationCount": 2,
+        "redactedSections": [],
+        "revealLevels": [
+          1
+        ],
+        "hasEmbeddedContent": true
+      },
+      {
+        "pageNumber": 3,
+        "type": "back_matter",
+        "content": "APPENDIX B: ARCHITECTURAL INFLUENCES AND COMPARATIVE ANALYSIS",
+        "wordCount": 7,
+        "annotations": [
+          {
+            "id": "emb_3_MB",
+            "character": "MB",
+            "text": "It is not a well, but The Aperture. The symbols are not Egyptian, but much older. They must never be altered or obscured. The monthly offerings must continue to be lowered on the new moon, as our family has done since 1869. I've set aside funds in trust for this purpose after my passing.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 0,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5668011252897218,
+              "y": 0.01,
+              "rotation": 0.013665239313988414
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_17_MB",
+            "character": "MB",
+            "text": "The maze is a decoy—designed to draw The Watchers away from The Vestibule should they ever breach the inner containments. The paths create a one-way journey; entities that enter become trapped in endlessly spiralling corridors that appear linear from within. The central stone acts as a secondary prison, drawing and binding anything that reaches it. I've renewed the binding sigils carved into the stone annually since William's instructions were passed to me.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 1,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.15362520689853093,
+              "y": 0.03,
+              "rotation": -0.045225891901883614
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_42_MB",
+            "character": "MB",
+            "text": "The limited analysis is a protective measure—comprehensive material assessment would reveal anomalous properties inexplicable through conventional science. William sourced materials specifically for their dimensional boundary properties rather than structural or aesthetic qualities. Each material incorporated into the east wing was selected or treated to inhibit, channel, or contain manifestation energy. The construction techniques combined these materials in specific relationships creating integrated containment system where no single element could be removed or altered without compromising the whole. Future researchers with proper understanding will recognise the system's elegant complexity.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 2,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5494495717529222,
+              "y": 0.05,
+              "rotation": 0.04676989566730644
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_59_JR",
+            "character": "JR",
+            "text": "Located grimoire in a false drawer of library desk—handwritten, Latin with sections in unknown script. Astronomy calculations focus on the seven-year cycle when Pleiades alignment is most precise. Next major alignment calculated for spring equinox 2025. Margaret's notes indicate this alignment is when the barrier is weakest yet also when it can be properly reinforced.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 3,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 3,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.2642347832714482,
+              "y": 0.85,
+              "rotation": 0.04646274895408792
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "current",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_102_EW",
+            "character": "EW",
+            "text": "The architectural dissonance is subtle but measurable—angles that appear perpendicular are actually off by 3-5 degrees, creating subconscious unease. More concerning is evidence that these distortions have been changing over time. Measurements taken in 1962 versus my current survey show incremental shifts toward more conventional geometry, as if something is \"correcting\" the disruptions.",
+            "year": 1962,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 4,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.3163965294360229,
+              "rotation": 7.863303513835906e-05
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": false,
+            "characterArc": "structural_analysis",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_118_EW",
+            "character": "EW",
+            "text": "Common architectural elements identified in all seven buildings—specialised acoustic chambers in basement levels, unusual proportions creating subtle perceptual distortion, and identical material compositions in key structural components. Three buildings significantly modified or destroyed during 20th century—each followed by localised reports of unusual phenomena and unexplained disappearances documented in local records.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 5,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.6469014673410959,
+              "rotation": -0.00870113971444804
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_149_SW",
+            "character": "SW",
+            "text": "I've been burning the prepared wood bundles I found in the cellar, labelled by Margaret for specific dates. The journal explains these were harvested from trees growing above The Circle's energy lines, imbued with properties that repel The Watchers when burned. The smoke temporarily pushes them back into the walls, but my supply is running low. The last bundle is marked \"Final Resort—Blackthorn Wood Only.\" I don't know what that means.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 6,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.25976120767447447,
+              "rotation": -0.012425608760055495
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_160_SW",
+            "character": "SW",
+            "text": "Threshold Holdings is a Department 8 shell corporation—they've finally taken direct ownership after decades of indirect influence. William's journal contains correspondence suggesting this was always their ultimate objective, though they waited until legal avenues emerged rather than forcing acquisition. The \"research facility\" proposal creates perfect cover for containment operations, allowing specialised equipment and personnel without public scrutiny. Margaret anticipated this development in her final notes, suggesting Department 8 would eventually recognise the need for direct control as the 2025 alignment approached. The containment system is now under their full authority, though they still don't fully understand its original purpose or complete design.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 7,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.2288413626879905,
+              "y": 0.03,
+              "rotation": 0.05984559875846038
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          }
+        ],
+        "annotationCount": 8,
+        "redactedSections": [],
+        "revealLevels": [
+          1,
+          3,
+          4
+        ],
+        "hasEmbeddedContent": true
+      },
+      {
+        "pageNumber": 4,
+        "type": "back_matter",
+        "content": "APPENDIX C: MATERIAL ANALYSIS AND CONSTRUCTION TECHNIQUES",
+        "wordCount": 7,
+        "annotations": [
+          {
+            "id": "emb_3_MB",
+            "character": "MB",
+            "text": "It is not a well, but The Aperture. The symbols are not Egyptian, but much older. They must never be altered or obscured. The monthly offerings must continue to be lowered on the new moon, as our family has done since 1869. I've set aside funds in trust for this purpose after my passing.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 0,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5668011252897218,
+              "y": 0.01,
+              "rotation": 0.013665239313988414
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_17_MB",
+            "character": "MB",
+            "text": "The maze is a decoy—designed to draw The Watchers away from The Vestibule should they ever breach the inner containments. The paths create a one-way journey; entities that enter become trapped in endlessly spiralling corridors that appear linear from within. The central stone acts as a secondary prison, drawing and binding anything that reaches it. I've renewed the binding sigils carved into the stone annually since William's instructions were passed to me.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 1,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.15362520689853093,
+              "y": 0.03,
+              "rotation": -0.045225891901883614
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_33_MB",
+            "character": "MB",
+            "text": "St. Michael's Cathedral was William's attempt to incorporate spiritual protection into the containment network. The site had ancient significance—originally constructed over prehistoric standing stones similar to those at Blackthorn. The bell tower was designed to create specific harmonic frequencies that strengthen dimensional barriers when activated. The crypt contains a sealed chamber housing artifacts from The Vestibule, safely contained within consecrated ground. Weekly bell-ringing patterns established by William continue to this day, though their true purpose remains unknown to church officials.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 2,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.7777212598490371,
+              "rotation": -0.018267521591036208
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_42_MB",
+            "character": "MB",
+            "text": "The limited analysis is a protective measure—comprehensive material assessment would reveal anomalous properties inexplicable through conventional science. William sourced materials specifically for their dimensional boundary properties rather than structural or aesthetic qualities. Each material incorporated into the east wing was selected or treated to inhibit, channel, or contain manifestation energy. The construction techniques combined these materials in specific relationships creating integrated containment system where no single element could be removed or altered without compromising the whole. Future researchers with proper understanding will recognise the system's elegant complexity.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 3,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5494495717529222,
+              "y": 0.01,
+              "rotation": 0.04676989566730644
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_87_JR",
+            "character": "JR",
+            "text": "Metallurgical analysis reveals manufacturing techniques inconsistent with documented Victorian capabilities—precise lamination of dissimilar metals at microscopic scale without modern equipment. Alloy compositions include theoretical combinations first documented in scientific literature decades after construction. Electrical conductivity tests show unusual properties—different frequencies conducted through specific layers while others simultaneously blocked, creating selective frequency filtration effect. Geometric arrangements within metallic elements follow same mathematical patterns found in architectural proportions.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 4,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.15356296680984355,
+              "rotation": -0.12196493874574162
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_160_SW",
+            "character": "SW",
+            "text": "Threshold Holdings is a Department 8 shell corporation—they've finally taken direct ownership after decades of indirect influence. William's journal contains correspondence suggesting this was always their ultimate objective, though they waited until legal avenues emerged rather than forcing acquisition. The \"research facility\" proposal creates perfect cover for containment operations, allowing specialised equipment and personnel without public scrutiny. Margaret anticipated this development in her final notes, suggesting Department 8 would eventually recognise the need for direct control as the 2025 alignment approached. The containment system is now under their full authority, though they still don't fully understand its original purpose or complete design.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 5,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.2288413626879905,
+              "y": 0.05,
+              "rotation": 0.05984559875846038
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          }
+        ],
+        "annotationCount": 6,
+        "redactedSections": [],
+        "revealLevels": [
+          1,
+          4
+        ],
+        "hasEmbeddedContent": true
+      },
+      {
+        "pageNumber": 5,
+        "type": "back_matter",
+        "content": "APPENDIX D: BLACKTHORN FAMILY CORRESPONDENCE AND DOCUMENTS\n\nBIBLIOGRAPHY\n\nPREFACE\n\nThis volume represents the culmination of seven years' research into one of Britain's most architecturally significant yet least documented Victorian estates. Blackthorn Manor, completed in 1871 under the direction of Sir William Blackthorn, stands as a remarkable example of Gothic Revival architecture infused with elements from diverse global traditions.\n\nWhat follows is not merely architectural documentation, but a record of containment. The east wing was never designed as residential space but as an elaborate mechanism to manage what William encountered in Egypt—an intersection between dimensions that threatened to widen without intervention. The architectural elements I describe herein serve purposes far beyond aesthetics or spatial function; they are components of a sophisticated system designed to control what William termed 'dimensional permeability.\n\nMy examination of the manor's east wing revealed architectural principles that defy conventional physical laws. Doorways that lead to spaces larger than external dimensions would suggest. Acoustic anomalies that cannot be explained through known science. Materials with properties I cannot identify through conventional analysis. I have chosen to present these as architectural curiosities rather than what I have come to suspect they truly represent.\n\nDuring my final visit to the property in 1965, I witnessed phenomena I cannot reconcile with conventional architectural understanding. Sounds emanating from reportedly empty rooms. Shadows moving against light sources. Temperature fluctuations defying thermodynamic principles. These observations have been omitted from my formal analysis at Margaret's insistence, though I remain convinced they relate directly to the manor's unusual design elements.",
+        "wordCount": 253,
+        "annotations": [
+          {
+            "id": "emb_1_MB",
+            "character": "MB",
+            "text": "William's obsession began after his expedition to Egypt in 1866. He brought back certain artifacts that required special storage conditions. The \"architect\" mentioned was actually Professor James Hardwick of the British Museum's occult collection, who advised on the necessary containment measures.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 0,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.3212511654444904,
+              "y": 0.01,
+              "rotation": 0.006594562693820263
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_2_MB",
+            "character": "MB",
+            "text": "The eastern \"dead end\" contains a door visible only under certain conditions. The timing must be precise—within three minutes of 3:33 AM on the equinox—and certain preparations are required. I've maintained the rituals as instructed, though I pray they remain unnecessary.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 1,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.6605715373569809,
+              "rotation": 0.02751465518539982
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_3_MB",
+            "character": "MB",
+            "text": "It is not a well, but The Aperture. The symbols are not Egyptian, but much older. They must never be altered or obscured. The monthly offerings must continue to be lowered on the new moon, as our family has done since 1869. I've set aside funds in trust for this purpose after my passing.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 2,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5668011252897218,
+              "y": 0.05,
+              "rotation": 0.013665239313988414
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_4_MB",
+            "character": "MB",
+            "text": "The Archive stored nothing physical. The slate walls were designed to record impressions from the other side. William discovered that certain materials could retain images and sounds from The Vestibule. My grandfather Edward documented seven distinct entities before declaring the Archive too dangerous to enter in 1899.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 3,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.47813875694022834,
+              "rotation": -0.0091214411128588
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_5_MB",
+            "character": "MB",
+            "text": "The Circle predates the manor by centuries. William built over it deliberately after discovering its properties. The original stone circle was erected in pre-Roman times as a binding site. What it contained broke free in 1866, forcing William to devise new methods of containment using modern materials and ancient knowledge.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 4,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5308392248241846,
+              "y": 0.03,
+              "rotation": -0.04031009586217187
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_6_MB",
+            "character": "MB",
+            "text": "William's correspondence with Thornfield intensified after the 1869 incident. Thornfield provided the design for the copper apparatus in the attic and the mirror arrangement in the eastern corner room. Their letters often employed a substitution cipher when discussing technical details. I've preserved the cipher key in the hidden compartment beneath the library floorboards.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 5,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.1516215679364563,
+              "y": 0.05,
+              "rotation": -0.015877413392575777
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_7_MB",
+            "character": "MB",
+            "text": "The acoustic properties were deliberately engineered to monitor The Watchers. Their whispers can be heard at the listening points William established throughout the house. The servants were instructed to report any sounds emanating from the walls—particularly the names of family members being called. That is how we know when they are growing stronger.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 6,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.47080153922561674,
+              "y": 0.01,
+              "rotation": 0.0139194850357197
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_8_MB",
+            "character": "MB",
+            "text": "Each material was chosen for its specific properties as barriers. Iron repels certain entities, lead blocks their ability to sense living minds, and the metal powders in the mortar (primarily silver, copper, and meteoritic iron) disrupt what William called their \"vibrational signatures.\" The fixtures were anchor points for additional measures during heightened activity.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 7,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.22270185115673002,
+              "y": 0.03,
+              "rotation": 0.039358698205513784
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_9_MB",
+            "character": "MB",
+            "text": "No living creature will willingly remain near The Vestibule. Even insects flee from the presence of The Watchers. The \"local limestone\" was in fact quarried from the ruins of a much older structure found beneath the original stone circle. William discovered that this stone naturally repels the entities but also prevents them from leaving once contained. A perfect prison.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 8,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.22406971485734867,
+              "y": 0.05,
+              "rotation": 0.026288071050005593
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_10_MB",
+            "character": "MB",
+            "text": "The \"observatory\" was never intended for mere stargazing. William designed the mirror system to capture and focus specific celestial energies required for maintaining the seals. The primary alignment occurs during the Pleiades transit on the spring equinox, when all seven mirrors must be precisely adjusted according to the instructions in the family grimoire. I've performed this ritual faithfully for fifty years.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 9,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.6441175995844427,
+              "y": 0.01,
+              "rotation": -0.0007988932240258761
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_11_MB",
+            "character": "MB",
+            "text": "The \"drainage system\" serves to circulate specially treated water around The Circle. William discovered that flowing water charged with certain mineral salts creates a barrier that The Watchers cannot cross. The main reservoir beneath the kitchens must be replenished monthly with the prepared solution—instructions are encoded in the family Bible, Ezekiel chapter 47.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 10,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.4546035710742711,
+              "y": 0.03,
+              "rotation": -0.009016420673898892
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_12_MB",
+            "character": "MB",
+            "text": "The ventilation system was William's most ingenious creation. It does not merely circulate air but creates specific pressure differentials that prevent The Watchers from moving against the airflow. Each vent contains a small iron charm inscribed with binding symbols. The master control in the attic apparatus allows for reversing the flow during containment rituals, forcing entities back toward The Vestibule.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 11,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.19671584216388882,
+              "y": 0.05,
+              "rotation": -0.037825379042817124
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_13_MB",
+            "character": "MB",
+            "text": "William understood that architecture itself could serve as a form of containment. The dimensions, angles, and proportions throughout the manor were precisely calculated to disrupt the thought patterns of The Watchers, making it difficult for them to maintain cohesion in our reality. The human mind perceives these spaces as merely unusual, but to them, it is profoundly disorienting.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 12,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.2861229524493577,
+              "y": 0.01,
+              "rotation": 0.0406709744662192
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_14_MB",
+            "character": "MB",
+            "text": "Middleton was merely the public face of the project. The true designer was Professor Hardwick, the same man who advised on the subterranean structures. The gardens were never intended as mere decoration but as the outermost layer of the containment system. William understood that natural elements could serve as barriers when properly arranged.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 13,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.3829162579034787,
+              "y": 0.03,
+              "rotation": 0.0405362845714186
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_16_MB",
+            "character": "MB",
+            "text": "The stone circle was William's initial discovery—what drew him to purchase this land. His Egyptian expedition had shown him that certain ancient sites serve as natural thin points between worlds. The Circle had been a doorway long before William accidentally opened it wider. The original standing stones contained properties that both attracted and confined entities from beyond. William simply built upon what was already there.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 14,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5421456585032799,
+              "y": 0.05,
+              "rotation": 0.027060227848073506
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_17_MB",
+            "character": "MB",
+            "text": "The maze is a decoy—designed to draw The Watchers away from The Vestibule should they ever breach the inner containments. The paths create a one-way journey; entities that enter become trapped in endlessly spiralling corridors that appear linear from within. The central stone acts as a secondary prison, drawing and binding anything that reaches it. I've renewed the binding sigils carved into the stone annually since William's instructions were passed to me.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 15,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.15362520689853093,
+              "y": 0.01,
+              "rotation": -0.045225891901883614
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_18_MB",
+            "character": "MB",
+            "text": "Each outbuilding serves as an anchor point for the larger protection geometry. The identical architectural elements create resonance with the main containment systems. Every structure contains a sealed chamber accessible only through hidden mechanisms—within each chamber is a vessel holding material from The Vestibule, diluted and bound by William's methods. This distribution was intended to weaken The Opener by dividing its connection points to our reality.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 16,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.6618320667277315,
+              "y": 0.03,
+              "rotation": -0.03056312202936569
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_19_MB",
+            "character": "MB",
+            "text": "The seven springs correspond to the seven Watchers—each water source possesses properties specifically antagonistic to one entity. William discovered this connection accidentally during the initial containment when one entity could not cross a particular stream on the property. Further experimentation revealed the specific relationships between each spring and Watcher. This knowledge was crucial to establishing the hydraulic barriers throughout the estate.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 17,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.44963789869441495,
+              "y": 0.05,
+              "rotation": 0.034262944943835985
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_20_MB",
+            "character": "MB",
+            "text": "Every surface in the manor was treated with protective mixtures. William discovered certain mineral combinations disrupted The Watchers' ability to perceive physical space—essentially rendering walls partially invisible to them, creating a labyrinth they couldn't navigate properly. The mixture had to be renewed every seven years with fresh application. I maintained this schedule until my illness. The last complete treatment was in 1981. Without renewal, the barriers weaken with each passing year.",
+            "year": 1981,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 2,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 18,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.6345660226494215,
+              "rotation": -0.04698113105922297
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": false,
+            "characterArc": "secret_keeper",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_21_MB",
+            "character": "MB",
+            "text": "The doors themselves are barriers—each designed to prevent The Watchers from moving freely through the house. The proportions were calculated to disrupt their perception, while the seven hinges correspond to binding points in their physical manifestation. The wooden inset panels contain material from seven different sacred trees, each antagonistic to one of The Watchers. These elements function as individual locks keyed to specific entities.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 19,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5489468701150582,
+              "y": 0.03,
+              "rotation": 0.03896647993880585
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_22_MB",
+            "character": "MB",
+            "text": "The lighting system was William's most ingenious defence—The Watchers cannot perceive light as we do, instead experiencing it as solid barriers when properly focused. The crystal prisms create invisible walls of refracted light, trapping entities within certain areas when activated. The silver reflectors enhance this effect while the specific placement corresponds to dimensional weak points William identified throughout the house. I've maintained the original fixtures despite modernisation elsewhere.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 20,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5416138028627655,
+              "y": 0.05,
+              "rotation": 0.04153599808821494
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_23_MB",
+            "character": "MB",
+            "text": "Preservation was not a matter of taste but necessity. William's containment systems were integrated into every aspect of the manor's construction—alterations risked compromising their function. It wasn’t a prison. It was a promise. The agreement bound us, not them. We watched the door—not to keep it closed, but to know when it opened. Each generation of Blackthorns was bound by family oath to maintain the original structure precisely as designed. My grandfather Edward codified these requirements in the family trust in 1912, legally preventing future heirs from making substantial changes.",
+            "year": 1912,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 21,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.6139962624985513,
+              "y": 0.01,
+              "rotation": -0.016722647597293548
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": false,
+            "characterArc": "family_guardian",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_24_MB",
+            "character": "MB",
+            "text": "Electricity disrupts the containment fields. William discovered this accidentally when experimenting with early electrical devices—they caused fluctuations in the barriers that allowed The Watchers to move more freely. Edward restricted electrical installation to areas farthest from The Vestibule and added additional copper shielding within permitted areas. Even modern electrical fields interfere with the more sensitive aspects of the system, particularly in the eastern corner room.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 22,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.26446351944732593,
+              "y": 0.03,
+              "rotation": 0.017510703077514164
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_25_MB",
+            "character": "MB",
+            "text": "The original hydraulic system was integral to containment—water flowing through copper pipes charged with precise electrical currents created barriers The Watchers couldn't cross. The retention of original materials was essential to maintaining these properties. Edward added secondary systems that could be activated during incursion events, flooding specific wall cavities with treated water to strengthen failing barriers. I've activated this system only twice during my lifetime.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 23,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.25689931144783407,
+              "y": 0.05,
+              "rotation": -0.008693087552978929
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_26_MB",
+            "character": "MB",
+            "text": "The fireplaces serve a dual purpose—both physical heating and spiritual containment. William discovered that The Watchers are repelled by certain combustion processes, particularly from woods harvested on the property. The chimney system was designed to circulate specific smoke compounds throughout the house's hidden chambers, creating barriers similar to the water system but operating in air rather than liquid medium. Each fireplace must burn specific materials according to the ritual calendar.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 24,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.7231344334313066,
+              "rotation": 0.03443010335727803
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_27_MB",
+            "character": "MB",
+            "text": "The windows are eyes into our world—The Watchers use them to observe and gradually influence physical space from their dimension. William designed the original glass with specific mineral components that distorted their perception, essentially creating a one-way barrier. The Czech glass was the closest modern equivalent I could locate after damage from the storm of 1936. Even so, the replacement panes provide only 70% of the protection of the originals. I reinforced them with additional treatments applied during the dark moon.",
+            "year": 1936,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 25,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.18697721823999944,
+              "y": 0.03,
+              "rotation": -0.00801536824429544
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": false,
+            "characterArc": "family_guardian",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_28_MB",
+            "character": "MB",
+            "text": "The east wing's preservation is not due to construction quality but consequence of containment. The Watchers exist partially outside normal time—their presence slows decay in physical materials as a side effect of their altered temporal perception. This preservation is actually evidence of their growing strength, as they increasingly influence our reality. I've arranged for Department 8 monitoring following my death, though I've withheld certain critical information they believe they need. The time isn't right for final containment.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 26,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.46473242195410425,
+              "rotation": 0.035185482808962804
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_29_MB",
+            "character": "MB",
+            "text": "The east wing plans were deliberately destroyed by William after construction was complete. The true design incorporated elements he didn't want documented—geometries and materials that would raise dangerous questions if discovered by those with knowledge of such matters. The builders themselves worked in shifts and were prevented from seeing the completed structure in its entirety. Several who glimpsed the finished internal arrangement suffered mental breakdowns that William attributed to \"dimensional sickness.\"",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 27,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5067082384745386,
+              "y": 0.01,
+              "rotation": 0.004850954057164014
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_30_MB",
+            "character": "MB",
+            "text": "William never sought recognition for his architectural innovations—quite the opposite. He deliberately obscured his involvement with subsequent projects, operating through proxies and architectural firms who implemented his designs without understanding their true purpose. Each building served as part of the larger containment network, strategically positioned according to ley line intersections and astronomical alignments.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 28,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.37298040527823684,
+              "y": 0.03,
+              "rotation": 0.04786148620829815
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_31_MB",
+            "character": "MB",
+            "text": "William provided specific design requirements to these architects without explaining their purpose, disguising them as aesthetic innovations. The recurring seven-point geometry creates resonance with the original containment system, establishing a network of connected sites that collectively strengthen the barriers between dimensions. Each building positioned according to precise calculations forming a protective grid across Britain, with Blackthorn Manor as the central node.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 29,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.7471703572937928,
+              "y": 0.05,
+              "rotation": -0.015573133396424924
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_32_MB",
+            "character": "MB",
+            "text": "The Royal Institute wing was William's attempt to establish scientific understanding of The Watchers and their realm. While publicly presented as a conventional research facility, its true purpose was to study dimensional boundaries under controlled conditions. The architectural anomalies create a miniature version of The Vestibule—a space where careful experimentation could be conducted without risk of full breach. Several significant scientific \"discoveries\" of the late Victorian era originated from research conducted there by those unaware of what they were actually studying.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 30,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.360183161660372,
+              "rotation": 0.0454058988818645
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_33_MB",
+            "character": "MB",
+            "text": "St. Michael's Cathedral was William's attempt to incorporate spiritual protection into the containment network. The site had ancient significance—originally constructed over prehistoric standing stones similar to those at Blackthorn. The bell tower was designed to create specific harmonic frequencies that strengthen dimensional barriers when activated. The crypt contains a sealed chamber housing artifacts from The Vestibule, safely contained within consecrated ground. Weekly bell-ringing patterns established by William continue to this day, though their true purpose remains unknown to church officials.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 31,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.7777212598490371,
+              "rotation": -0.018267521591036208
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_34_MB",
+            "character": "MB",
+            "text": "The Sanatorium was never intended as a medical facility but as containment site for humans affected by contact with The Watchers. William discovered that prolonged exposure to The Vestibule caused individuals to develop dimensional sensitivity—essentially becoming conduits between worlds. These unfortunate souls required specialised containment to prevent them from being used as doorways themselves. The patients were primarily workers from the east wing construction and their affected family members, housed there for their protection and the safety of others.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 32,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.4500785418731159,
+              "y": 0.05,
+              "rotation": -0.0322139459150458
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_35_MB",
+            "character": "MB",
+            "text": "Doyle was one of the few outsiders William trusted with partial knowledge of The Watchers. His interest in spiritualism provided convenient cover for more substantive research into dimensional boundaries. William provided specific architectural guidelines for Doyle's residence, creating a small-scale observation post where Doyle could safely document The Watchers' influence without risk of direct manifestation. Many of Doyle's \"fictional\" concepts originated from these observations, disguised as imagination rather than documented encounters.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 33,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.2805683281510898,
+              "y": 0.01,
+              "rotation": -0.03738395882412478
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_36_MB",
+            "character": "MB",
+            "text": "The Cornwall Observatory was William's final project—designed specifically to track celestial alignments affecting The Vestibule. He discovered that certain astronomical configurations weakened or strengthened the dimensional barriers predictably. The observatory allowed precise calculation of these patterns, creating an early warning system for potential breaches. The trust was established to ensure maintenance regardless of Blackthorn family circumstances, with specific instructions for astronomical observations to be recorded and delivered to family representatives on particular dates. I've received these reports throughout my lifetime, using them to prepare for periods of increased vulnerability.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 34,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.25686737696300427,
+              "y": 0.03,
+              "rotation": 0.009759218947198979
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_38_MB",
+            "character": "MB",
+            "text": "Each modification responded to containment failures as The Watchers tested the barriers. The 1877 acoustic treatments followed discovery that certain sound frequencies disrupted their ability to materialise. Copper infrastructure was added when William discovered electrical currents could temporarily repel manifesting entities. The 1887 \"fire\" was actually spontaneous combustion during partial breach, requiring complete reconstruction of the eastern corner room with enhanced barriers. Foundation reinforcement became necessary as The Watchers began attempting to emerge from beneath rather than within the structure. Each adaptation represented William's evolving understanding of dimensional mechanics.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 35,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.3084634205513283,
+              "y": 0.05,
+              "rotation": -0.04177034029296628
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_39_MB",
+            "character": "MB",
+            "text": "The architectural synthesis was functional rather than aesthetic—William incorporated elements from traditions worldwide that addressed dimensional boundaries. Gothic proportions naturally disrupt certain manifestation patterns through their mathematical properties. Egyptian elements reference preservation techniques for containing non-physical entities. Eastern features incorporate protective geometries from traditions with an ancient understanding of interdimensional contact. The design appears eclectic to conventional architectural analysis but actually represents sophisticated interdimensional engineering drawing from humanity's collective experience with boundary phenomena across cultures.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 36,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.2195510947901333,
+              "y": 0.01,
+              "rotation": -0.04587219375449201
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_40_MB",
+            "character": "MB",
+            "text": "The Egyptian elements directly reference the protective architecture William studied during his expedition. The hieroglyphics are not decorative but functional—specific symbols from temples dedicated to boundary protection between life and afterlife, repurposed for interdimensional containment. The pyramidal geometry in the eastern corner room creates energy focusing effect, channelling manifestation attempts to controlled central point rather than allowing dispersed emergence throughout the structure. Each Egyptian-inspired element incorporated specific protective functions documented in ancient texts William acquired during his expedition.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 37,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.41260266451555294,
+              "rotation": -0.03245091919230118
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_41_MB",
+            "character": "MB",
+            "text": "The Eastern elements represent William's later research into dimensional management techniques from non-Western traditions. He discovered geometric patterns in Islamic architecture specifically designed to confuse djinn—entities similar to The Watchers in certain respects. Hindu mandalas provided templates for energy containment through specific mathematical relationships. East Asia patterns incorporated traditional protective symbols from Taoist dimensional understanding. Together, these created multilayered defence using knowledge from cultures worldwide with experience managing non-physical entities. The astronomical alignments activate different protective aspects according to dimensional thinning cycles throughout the year.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 38,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.5227493431012016,
+              "rotation": 0.023469489465086243
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_42_MB",
+            "character": "MB",
+            "text": "The limited analysis is a protective measure—comprehensive material assessment would reveal anomalous properties inexplicable through conventional science. William sourced materials specifically for their dimensional boundary properties rather than structural or aesthetic qualities. Each material incorporated into the east wing was selected or treated to inhibit, channel, or contain manifestation energy. The construction techniques combined these materials in specific relationships creating integrated containment system where no single element could be removed or altered without compromising the whole. Future researchers with proper understanding will recognise the system's elegant complexity.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 39,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.5494495717529222,
+              "y": 0.01,
+              "rotation": 0.04676989566730644
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_43_MB",
+            "character": "MB",
+            "text": "The metallurgical components were perhaps William's most innovative containment elements—he discovered certain metal combinations created natural resistance to dimensional transit. Each alloy responded to different aspects of manifestation energy, essentially creating frequency-specific barriers that collectively prevented full spectrum emergence. The seven-layer hinges are actually sophisticated dimensional locks, each layer corresponding to specific aspects of The Watchers' composition. Door hinges received particular attention because William discovered thresholds naturally facilitate dimensional transition—doors and windows being literal as well as metaphorical boundary points requiring strongest protection.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 40,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.5114685189842402,
+              "rotation": 0.02629348775064784
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_44_MB",
+            "character": "MB",
+            "text": "The wooden elements utilise natural organic resistance to certain aspects of manifestation. William discovered living materials retain dimensional boundary properties even after harvesting—trees naturally resist interdimensional transit as evolutionary defence against entities like The Watchers. The seven woods correspond to traditional protective species from worldwide cultures—rowan, ash, oak, elder, hawthorn, yew, and lignum vitae—each with specific resonate properties affecting different aspects of manifestation. The mineral solutions enhanced these natural properties, essentially creating bioactive barrier materials functioning at the cellular level.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 41,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.445807102571384,
+              "y": 0.05,
+              "rotation": -0.014976732041758
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_45_MB",
+            "character": "MB",
+            "text": "The glass elements were critical sensory barriers—William discovered The Watchers perceive our reality primarily through wavelengths slightly outside normal human visual spectrum. The specialised glass composition selectively filters these frequencies, essentially creating one-way observation barriers allowing humans to see out while preventing Watchers from seeing in. The prismatic effects in the eastern corner room create active disruption patterns, generating shifting visual interference that prevents sustained observation from outside. These elements were among the most difficult to maintain over time, as modern replacement materials lack the specialised optical properties of the originals.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 42,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.42996014133775107,
+              "y": 0.01,
+              "rotation": 0.016649257125856604
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_46_MB",
+            "character": "MB",
+            "text": "The \"limited access\" is deliberate protection—William's complete correspondence would reveal the true nature of the containment system to those with sufficient background to understand the implications. What has been made publicly available was carefully selected to support the conventional narrative of eccentric but unremarkable Victorian architectural patronage. The complete archives contain detailed dimensional mechanics, manifestation countermeasures, and communications with entities from beyond established reality. These remain secured against unauthorised access through measures extending beyond mere physical protection.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 43,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.7377901096879217,
+              "y": 0.03,
+              "rotation": 0.030550566505242835
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_47_MB",
+            "character": "MB",
+            "text": "This references William's discovery of dimensionally active materials—stone fragments from Egyptian temple site where similar manifestation occurred centuries earlier. The \"remarkable results\" were early containment successes as he learned to manipulate dimensional boundaries through specific geometric arrangements. His hesitation to provide details in writing reflected the growing awareness that knowledge itself could facilitate manifestation—The Watchers could perceive our reality through human consciousness focused on their existence. Hardwick later disappeared during the site visit to Blackthorn Manor, apparently affected by direct contact with early manifestation. His research notes were deliberately destroyed by William after the incident.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-mb elegant-blue-script",
+            "pageNumber": 44,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.2986589029299044,
+              "y": 0.05,
+              "rotation": -0.021398382767150184
+            },
+            "style": "character-mb elegant-blue-script",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_49_JR",
+            "character": "JR",
+            "text": "The ventilation system isn't just for temperature control. The airflow patterns create dead zones where sound doesn't travel. Tested this yesterday—my assistant couldn't hear me shouting from 10 feet away in certain spots. Deliberate acoustic manipulation?",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 45,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.2353115707826211,
+              "y": 0.85,
+              "rotation": 0.014440049866984689
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_51_JR",
+            "character": "JR",
+            "text": "Spent three nights at the eastern dead end. Nothing visible, but at 3:30 AM the temperature drops dramatically and there's a distinct smell like ozone and rotting flowers. Sound recording captured what might be whispers in an unknown language.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 46,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.11512036438376794,
+              "rotation": 0.0419557913367411
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_52_JR",
+            "character": "JR",
+            "text": "Trust dissolved after Margaret's death. No record of what \"offerings\" entailed. Lowered camera into shaft—symbols appear to shift positions between photographs taken minutes apart. Camera malfunctioned at bottom, recovered with lens melted. University refuses further funding for my research.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 47,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.47040035826119275,
+              "y": 0.89,
+              "rotation": -0.08557905327899147
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_53_JR",
+            "character": "JR",
+            "text": "Spent night in Archive with recording equipment. Tapes contain hours of static with occasional sounds like distant conversation and what might be chanting. Developed film left in room overnight—photos show nothing but contain strange light leaks and what appear to be handprints on unexposed negatives.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 48,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.7262761002205332,
+              "rotation": -0.012851623585587335
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_58_JR",
+            "character": "JR",
+            "text": "Limestone samples contain unusual fossils—unlike any documented species. British Museum experts puzzled by spiral patterns and what appear to be hieroglyphs occurring naturally in the rock. Carbon dating indicates the stone is significantly older than the surrounding geological formations. What was the \"older structure\" Margaret mentioned?",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 49,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.38485118620664716,
+              "y": 0.87,
+              "rotation": -0.12097981520251272
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_59_JR",
+            "character": "JR",
+            "text": "Located grimoire in a false drawer of library desk—handwritten, Latin with sections in unknown script. Astronomy calculations focus on the seven-year cycle when Pleiades alignment is most precise. Next major alignment calculated for spring equinox 2025. Margaret's notes indicate this alignment is when the barrier is weakest yet also when it can be properly reinforced.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 3,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 50,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.2642347832714482,
+              "y": 0.89,
+              "rotation": 0.04646274895408792
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "current",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_62_JR",
+            "character": "JR",
+            "text": "Room dimensions throughout eastern wing follow mathematical progression based on prime numbers and golden ratio. Layout creates subtle perceptual distortions—tested with volunteers who reported disorientation and \"feeling watched\" in certain intersections of corridors. These effects strengthen near The Circle and eastern wall.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 51,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.401473978867528,
+              "y": 0.85,
+              "rotation": -0.12377127088791053
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_63_JR",
+            "character": "JR",
+            "text": "The ha-ha isn't just a boundary marker—soil samples from the ditch contain high concentrations of iron filings, silver dust, and salt. These materials match traditional protection elements found in folklore worldwide. Ground-penetrating radar shows something buried at regular intervals around the perimeter—metallic objects approximately 2 feet long, positioned exactly 33 feet apart.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 52,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.1285512147134301,
+              "rotation": 0.010213972029976537
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_65_JR",
+            "character": "JR",
+            "text": "Archaeological reports mention unusual properties in the stone material—not native to region and containing crystalline structures that respond to lunar cycles by subtle fluorescence. Local folklore records multiple disappearances around the circle dating back centuries. Parish records from 1600s mention \"unholy lights\" and \"thin voices calling from the stones\" before William's time.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 53,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.6181759205676322,
+              "y": 0.89,
+              "rotation": -0.07898843696627923
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_66_JR",
+            "character": "JR",
+            "text": "Maze pattern matches no known historical labyrinth design—mathematical analysis shows paths create impossible geometries when mapped in three dimensions. Central stone contains microscopic engravings in an unknown script, similar to markings in the eastern corner room. Local legend claims anyone remaining in a maze after sunset becomes \"temporally displaced\"—numerous disappearances recorded in parish registers.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 54,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.4323611478847752,
+              "y": 0.85,
+              "rotation": -0.13416586098731223
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_68_JR",
+            "character": "JR",
+            "text": "Chemical analysis shows water from each spring contains unique mineral profiles with no geological explanation for their differences. Local folklore attributes healing properties to certain springs and ill fortune to others. Historical records indicate specific rituals were performed at each wellhead on different calendar dates. Hydraulic system designed to prevent mixing until water reaches specific junction points in east wing.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 55,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.2138119755697962,
+              "rotation": 0.011333349762894684
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_69_JR",
+            "character": "JR",
+            "text": "Paint samples from east wing show seven distinct layers, each containing different mineral compositions. Bottom layer (original) includes compounds not identified by standard analysis—similar to material found in meteorites. Later layers show decreasing concentrations of these compounds. Current surface contains minimal protective elements. Significant deterioration observed in areas with water damage and renovation.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 56,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.6628664355286332,
+              "rotation": -0.06674772321682378
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_71_JR",
+            "character": "JR",
+            "text": "Crystal prisms show unusual properties—structural analysis indicates internal faceting unlike standard manufacturing techniques of period. Light passing through creates spectral patterns not consistent with normal refraction. Several prisms contain what appear to be deliberate inclusions—microscopic symbols etched internally. Silver reflectors positioned according to complex mathematical formula related to golden ratio and prime number sequence.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 57,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.4127793728876451,
+              "y": 0.85,
+              "rotation": -0.08135259024942348
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_74_JR",
+            "character": "JR",
+            "text": "Fireplace design unique to Blackthorn Manor—hidden chambers within chimney structures contain specialised filtering systems composed of iron, silver mesh, and crystalline deposits. Maintenance records detail specific burning schedules requiring different woods throughout the year following astronomical calendar. Residue analysis from chimney deposits shows unusual chemical compounds not consistent with normal wood combustion.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 58,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.6912603709129742,
+              "rotation": 0.023782795345029806
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_75_JR",
+            "character": "JR",
+            "text": "Glass sample analysis shows unusual composition—contains rare earth elements including lanthanum and cerium not typical of period manufacturing. Spectral analysis reveals glass filters specific light frequencies in near-ultraviolet range. Historical weather records confirm severe storm damage in 1936 concentrated almost exclusively on east wing windows—meteorological pattern highly localised and unexplained.",
+            "year": 1936,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 59,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.5175467908210002,
+              "rotation": 0.14399454550489935
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": false,
+            "characterArc": "initial_research",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_76_JR",
+            "character": "JR",
+            "text": "Department 8 referenced in Margaret's personal correspondence—appears to be a government organisation with knowledge of Blackthorn situation. Multiple surveillance reports in county records detail unexplained phenomena at property following abandonment. Local authorities regularly redirected from investigations by officials with unusual clearance levels. Property shows evidence of regular monitoring despite official \"abandonment\"—maintenance performed on specific elements of containment system only.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 60,
+            "position": {
+              "zone": "bottomMargin",
+              "x": 0.6009966525977357,
+              "y": 0.85,
+              "rotation": 0.08628063539095293
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_78_JR",
+            "character": "JR",
+            "text": "Architectural archives show unusual correspondence between Blackthorn and major Victorian architects—detailed specifications for non-visible structural elements and material compositions with no aesthetic function. Seven buildings identified with nearly identical internal geometries despite different external appearances. Each completed within seven years after Blackthorn Manor, forming perfect heptagram pattern when plotted on the map of Britain.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 61,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.4243492776769574,
+              "rotation": -0.11228840702952067
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_82_JR",
+            "character": "JR",
+            "text": "Doyle's personal journals contain numerous references to \"visitors perceived at thresholds\" and \"entities visible only in peripheral vision\" observed in specially designed rooms of his residence. Architectural plans show rooms with identical proportions to Blackthorn east wing chambers, positioned according to same mathematical relationships. Library contains first editions of Doyle's works with marginal notes connecting fictional concepts to observed phenomena in specific rooms.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 62,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.5178710985951925,
+              "rotation": 0.08817131898704442
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_83_JR",
+            "character": "JR",
+            "text": "Observatory trust documents contain unusual provisions—building must remain unoccupied except during specific astronomical alignments when designated observer conducts predetermined measurements. Data collected sent to unnamed recipients according to strict protocol established in 1890. Equipment includes standard astronomical instruments but also specialised devices measuring \"etheric densities\" and \"dimensional permeability\" according to maintenance records. Primary focus appears to be Pleiades constellation and its alignments with specific terrestrial coordinates.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 63,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.3790701678288856,
+              "rotation": -0.12387490659481315
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_86_JR",
+            "character": "JR",
+            "text": "Geological analysis of east wing stone samples shows impossible characteristics—crystalline formations requiring pressure conditions found only at depths of 30+ kilometres, not achievable through any known Victorian industrial process. Trace element composition includes iridium concentrations consistent with meteoric material alongside organic compounds preserved within mineral matrix. Isotope dating produces contradictory results—some layers indicating recent formation while others testing beyond equipment calibration range (100,000+ years). No known natural formation process explains combined characteristics.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-jr messy-black-ballpoint",
+            "pageNumber": 64,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.6173680201899513,
+              "rotation": -0.027097424815533372
+            },
+            "style": "character-jr messy-black-ballpoint",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_90_EW",
+            "character": "EW",
+            "text": "The \"ventilation system\" includes shafts that don't connect to the outside at all. Some appear to channel air from the eastern corner room down to the lowest level. The design suggests airflow was intended to move in both directions at different times. Not standard engineering for any period I'm familiar with.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 65,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.1628053517862778,
+              "rotation": -0.011514232408759999
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_93_EW",
+            "character": "EW",
+            "text": "The slate walls have unusual properties—they're slightly radioactive and contain microscopic crystalline structures not typical of ordinary slate. When viewed under ultraviolet light, portions of the walls reveal patterns similar to neural networks. Construction crews refuse to enter this room, claiming headaches and \"bad feelings.\"",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 66,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.17214051245270956,
+              "rotation": 0.01096885483153609
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_94_EW",
+            "character": "EW",
+            "text": "During foundation assessment, we discovered the circular structure is composed of a material not readily identifiable—similar to concrete but with unusual elasticity and resistance to ground-penetrating radar. My samples were confiscated by men claiming to represent the Historical Preservation Society, though I can find no record of their department. Renovation plans for the east wing have been indefinitely suspended by anonymous donors to the preservation fund.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 67,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.19131937586593714,
+              "rotation": -0.0019910726303912114
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_95_EW",
+            "character": "EW",
+            "text": "Found what must be parts of Thornfield's design hidden within the walls—copper wiring runs through the entire east wing in patterns that make no sense for electrical or plumbing purposes. The wiring converges at seven points forming a geometric pattern that precisely mirrors the Pleiades star cluster. Cannot determine function, but clearly intentional.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 68,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.24155134254943542,
+              "rotation": -0.004655765516602087
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_96_EW",
+            "character": "EW",
+            "text": "The acoustic design creates a network throughout the house—sound from one area can be channelled to specific rooms through hidden ducts in the walls. Most concerning is that the system works both ways. During testing, I clearly heard a child's voice say \"Eliza\" when I was alone in the lower cellar. Strongly considering terminating my contract with the historical society.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 69,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.15784792223358352,
+              "rotation": -0.002324614819817779
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_97_EW",
+            "character": "EW",
+            "text": "The iron fixtures are connected beneath the plaster by copper wiring. They appear to be part of a circuit that runs throughout the building, converging in the eastern corner room. When measured with an electromagnetic field detector, they pulse at regular intervals—approximately once every 33 minutes. The pulses have been growing stronger since renovation began.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 70,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.5246553312351085,
+              "rotation": 0.003483390234968957
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_98_EW",
+            "character": "EW",
+            "text": "The absence of biological activity extends beyond normal explanation. Brought in environmental specialists who discovered the air contains trace amounts of an unidentified compound that appears to inhibit microorganism growth. More concerning—the compound's concentration has been decreasing steadily since we began work, suggesting some active process is failing.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 71,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.5557955731112785,
+              "rotation": 0.0013858212270677732
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_99_EW",
+            "character": "EW",
+            "text": "The mirror system defies conventional engineering. Each shaft changes angle slightly throughout the year without any mechanical components. Materials testing shows an unusual crystalline structure in the mirror glass—not manufactured using any known Victorian techniques. When aligned during equinox, the focused light creates spectral patterns matching no known optical phenomenon.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 72,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.6957202185908865,
+              "rotation": 0.010276138410720503
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_100_EW",
+            "character": "EW",
+            "text": "The drainage system is masterfully engineered—water flow maintains constant pressure regardless of volume, suggesting a self-regulating mechanism. However, minerals in the water have calcified many channels. Flow around circular structure reduced approximately 60% since original design. Evidence suggests regular maintenance ceased in late 1980s. System near complete failure.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 73,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.465068444961354,
+              "rotation": -0.005748340512419587
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_101_EW",
+            "character": "EW",
+            "text": "Ventilation system contains mechanism in an attic that appears to function as a switch, reversing airflow throughout the house when activated. System hasn't been engaged for decades—components seized with corrosion. Evidence of recent movement in dust patterns around eastern vents suggests air currents changing direction without mechanical activation. Physical impossibility under normal conditions.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 74,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.316001653285562,
+              "rotation": 0.007106589196287101
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_102_EW",
+            "character": "EW",
+            "text": "The architectural dissonance is subtle but measurable—angles that appear perpendicular are actually off by 3-5 degrees, creating subconscious unease. More concerning is evidence that these distortions have been changing over time. Measurements taken in 1962 versus my current survey show incremental shifts toward more conventional geometry, as if something is \"correcting\" the disruptions.",
+            "year": 1962,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 75,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.3163965294360229,
+              "rotation": 7.863303513835906e-05
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": false,
+            "characterArc": "structural_analysis",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_103_EW",
+            "character": "EW",
+            "text": "Engineering assessment confirms the ha-ha is mathematically perfect—deviation less than 1cm around the entire circumference. Construction would have required precision instruments not commonly available in the 1860s. The ditch depth varies according to astronomical calculations related to shadow length on specific dates. Current erosion threatens the integrity of whatever system this represents.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 76,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.44859090866105744,
+              "rotation": 0.007606399737684066
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_104_EW",
+            "character": "EW",
+            "text": "Garden restoration revealed irrigation system far more sophisticated than typical Victorian design—ceramic pipes channel water from seven springs on property to specific plants in precise amounts. Water samples contain unusual mineral content, distinct for each garden section. Many original plants have died and been replaced with ornamental varieties by previous caretakers, disrupting whatever patterns they were meant to form.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 77,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.24344234293717334,
+              "rotation": -0.018652574433397514
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_106_EW",
+            "character": "EW",
+            "text": "Surveying the maze revealed optical illusion effect—paths appear straight when walked but aerial mapping shows continuous curves. Central stone exhibits unusual electromagnetic properties—compass needles rotate continuously in its presence. Restored carving on the stone base appears to be a star map of unfamiliar celestial configuration. Yew trees show accelerated growth patterns unlike normal specimens—some reaching 300 years' typical development in 150 years.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 78,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.7293835358544692,
+              "rotation": -0.009706293414992392
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_107_EW",
+            "character": "EW",
+            "text": "Structural assessment revealed all outbuildings contain identical anomalies—load-bearing calculations inconsistent with apparent weight distribution, suggesting hidden elements within walls. Each building contains precisely oriented skylight or window that, when mapped collectively, creates alignment system focusing on a central manor. Evidence of recent access to hidden chambers in three buildings—dust patterns indicate multiple visits within the past year.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 79,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.7844651934067353,
+              "rotation": 0.01851028096191488
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_108_EW",
+            "character": "EW",
+            "text": "Wellhead structures contain receptacles for unknown substances to be added to water flow. Copper piping system more complex than previously documented—includes switching mechanisms to redirect flow on demand. Three springs showing declining output over the past decade—two now completely dry. Remaining springs, exhibiting unusual properties, show water seemingly flowing upward against gravity for a moment when sampled during specific lunar phases.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 80,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.28600015586890504,
+              "rotation": -0.01287303139526514
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_110_EW",
+            "character": "EW",
+            "text": "Door design creates unusual acoustic properties—sound doesn't travel naturally through doorways even when open. Engineering analysis shows doorframes subtly distort surrounding space, creating slight compression effect when passing through. All doors in east wing now exhibit structural strain—wood splitting around panels and hinges working loose. Damage appears recent and progressive, with no obvious physical cause.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 81,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.10809652890577169,
+              "rotation": 0.012779414718544092
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_111_EW",
+            "character": "EW",
+            "text": "Electrical conversion of lighting system compromised original design functionality. Remaining gas fixtures in east wing exhibit unexplained phenomena—operating without fuel source during specific astronomical alignments. Spectral analysis of light produced by these fixtures shows unusual wavelength patterns outside normal visible spectrum. Crystal prisms deteriorating in eastern sections—internal fractures developing without external damage.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 82,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.29325521638195695,
+              "rotation": 0.01281634413303075
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_114_EW",
+            "character": "EW",
+            "text": "Chimney system contains unexpected architectural elements—secondary channels divert smoke to wall cavities throughout east wing before external ventilation. Intricate damper system allows for redirection controlled from central mechanism in master bedroom. Many fireplaces show recent usage despite property being officially unoccupied—ash contains distinctive blue-grey residue unlike standard wood combustion. Significant deterioration in masonry allowing smoke leakage into unintended areas.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 83,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.18118373726278567,
+              "rotation": 0.015547956885261827
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_115_EW",
+            "character": "EW",
+            "text": "Window glass throughout east wing exhibiting strange properties—internal stress patterns developing without external pressure, creating subtle distortions visible only at certain angles. Several panes contain what appear to be images formed within the glass itself—faces and figures that shift position when not directly observed. Renovation plan includes complete replacement, but three separate glass installers have refused to continue work after beginning removal process.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 84,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.4505678972904963,
+              "rotation": 0.006352624631478371
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_118_EW",
+            "character": "EW",
+            "text": "Common architectural elements identified in all seven buildings—specialised acoustic chambers in basement levels, unusual proportions creating subtle perceptual distortion, and identical material compositions in key structural components. Three buildings significantly modified or destroyed during 20th century—each followed by localised reports of unusual phenomena and unexplained disappearances documented in local records.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 85,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.6469014673410959,
+              "rotation": -0.00870113971444804
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_128_EW",
+            "character": "EW",
+            "text": "Material assessment reveals stone with unique properties—subtle electromagnetic field detectable with sensitive equipment, temperature consistently 0.2°C below ambient regardless of external conditions, and microscopic surface structures that appear to shift configuration between observations. Load-bearing tests indicate tensile strength exceeding normal stone by approximately 300%, despite identical appearance to conventional limestone. During renovation assessment, the most unusual property observed was the stone's apparent active resistance to cutting tools, a resistance not attributable to normal material hardness.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 86,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.49954692889576024,
+              "rotation": 0.01644754184161364
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_130_EW",
+            "character": "EW",
+            "text": "Trust documents located in county archives contain unusual provisions maintaining legal force despite multiple challenges over generations. Language creates perpetual maintenance obligations binding on all future owners through complex legal mechanism effectively preventing east wing modification regardless of property transfer or ownership structure. Financial provisions established dedicated funding source for specific maintenance activities on a seven-year cycle, administered through separate trust with autonomous authority transcending normal property rights. Legal assessment describes structure as \"extraordinarily sophisticated for period,\" effectively creating an autonomous legal entity focused solely on east wing preservation independent of human oversight.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-ew precise-red-pen",
+            "pageNumber": 87,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.39803579192451877,
+              "rotation": 0.004103272897131735
+            },
+            "style": "character-ew precise-red-pen",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_131_SW",
+            "character": "SW",
+            "text": "Found reference to Hardwick's unpublished final manuscript in William's journal. William burned it after the \"incident\" but implemented all the professor's designs for the cellars. The journal mentions \"reversing the flow\" to \"seal rather than summon.\" What were they trying to contain?",
+            "year": 2024,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 88,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.87,
+              "y": 0.2094143923828895,
+              "rotation": -0.07703529107493375
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_132_SW",
+            "character": "SW",
+            "text": "William's final journal entry describes what happened on the equinox in 1869. The entity they accidentally summoned called itself \"The Opener of Ways.\" It promised knowledge in exchange for allowing \"visitors\" through The Vestibule. When William realised what was coming through, he used the stone circle's properties to create a barrier, but couldn't completely close the door. The Watchers were trapped in between. [Hurried pencil, continued] April 10, 2024. I've found James Reed's notebook hidden in the Archive. He didn't leave—there's a detailed entry dated March 22, 1989. He describes finding \"impossible footprints\" in the dust of the eastern corridor and \"movement in the walls.\" His final words: \"Something is following me through the house. It doesn't walk but glides. I'm hiding in the Archive, but the slate is turning black where the shadows touch it. They know I'm here.\" [Hurried pencil, different handwriting] April 15, 2024. This is Claire Wells. My brother Simon stopped answering his phone two weeks ago. I found this book on the floor of that horrible eastern room. If anyone finds this—Simon isn't the only one missing. I've found evidence of at least three others: Margaret Blackthorn, James Reed, and someone named Eliza Winston. The police don't believe me. There's scratching on the walls. Something knows I'm here. I'm leaving now and taking this book as evidence. Don't come looking for — [New handwriting, green ink, neat but shaky]",
+            "year": 2024,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 89,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.89,
+              "y": 0.2426684899863959,
+              "rotation": 0.0023207737894091612
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_133_SW",
+            "character": "SW",
+            "text": "William's journal explains everything—the entire house is a machine designed to keep The Vestibule sealed. The metals, the acoustics, the astronomical alignments—all working together to contain what lies beyond. But the mechanism requires maintenance and the rituals Margaret performed. The lock is failing. I can hear them moving freely now, no longer confined to the walls. They've taken physical form.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 90,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.11076957852842617,
+              "rotation": -0.008426907353801555
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_134_SW",
+            "character": "SW",
+            "text": "William's final entries describe the nature of The Opener of Ways—it cannot fully enter our world without assistance from this side. The Watchers were its advance scouts, trapped when William sealed The Vestibule. They've been working to weaken the barriers for over a century. Margaret was the last who knew how to strengthen the seals. Without the rituals, they've grown strong enough to physically manifest. I've tried to replicate the containment ceremony from William's notes, but I think it's too late.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 91,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.6248452044985053,
+              "rotation": -0.015117441642453294
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_135_SW",
+            "character": "SW",
+            "text": "William's journal explains the mirror system draws power from the Pleiades to reinforce the barrier. The seven stars correspond to the seven Watchers—each mirror binds one entity when properly aligned. Margaret's death left the ritual incomplete for decades. I've attempted to calculate the positions but I'm missing critical information. The alignment is tomorrow night—our last chance before the full convergence in 2025.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 92,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.20018511659975402,
+              "y": 0.05,
+              "rotation": -0.032694543401103185
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_136_SW",
+            "character": "SW",
+            "text": "The water barrier is almost completely gone. I've tried to restore the flow using William's formula from the Bible reference, but the channels are too degraded. The Watchers can now move freely throughout the lower levels. I've barricaded myself in the library. I can hear them searching room by room. They know I've read William's journal and understand what's happening. They won't let me complete the ritual tomorrow.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 93,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.6100034915702482,
+              "rotation": -0.06607318705708307
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_138_SW",
+            "character": "SW",
+            "text": "William's journal explains the ha-ha is actually a \"containment circle\"—the buried objects are iron rods engraved with binding symbols, creating a barrier The Watchers cannot cross while in physical form. The circle must remain unbroken. I tried to reach it yesterday but they're between me and the grounds now. They know what I'm trying to do.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 94,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.45489249876316307,
+              "rotation": -0.05578837715052712
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_139_SW",
+            "character": "SW",
+            "text": "The plants were more than symbolic—William discovered certain botanicals growing on the property contained compounds toxic to The Watchers. The gardens were a living chemical barrier. The journal describes how the irrigation system infused the plants with water from springs that flowed near The Circle, enhancing their protective properties. Nearly all the original species are gone now, replaced with decorative varieties. Another defence lost.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 95,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.4467542167715429,
+              "rotation": -0.08407136998106153
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_140_SW",
+            "character": "SW",
+            "text": "William never created The Vestibule—it was always there, beneath the circle. He merely found a way to close a door that had been opening and closing for millennia partially. The journal details how the original inhabitants of this land would conduct sacrifices to keep the door shut. When Christian settlers arrived and stopped the rituals, the door began to open again. What William encountered in 1866 was just the first entity to slip through in centuries.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 96,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.18941783936212034,
+              "rotation": 0.06902607757998674
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_141_SW",
+            "character": "SW",
+            "text": "The maze is our last hope. William's journal explains it was designed as a trap, but it works both ways—the central stone can imprison The Watchers but also contains a mechanism to collapse The Vestibule permanently. The stone and The Circle are connected through the tunnel network. A specific ritual performed at the centre during the correct alignment can seal the doorway, but requires blood from a Blackthorn descendant. I don't know if I qualify, but I have to try.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 97,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.34358321327856456,
+              "rotation": 0.09537622668088383
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_142_SW",
+            "character": "SW",
+            "text": "The outbuildings form a secondary containment system—if The Watchers breach the manor, the heptagon creates a larger boundary they theoretically cannot cross. William's journal indicates the hidden chambers contain fragments of The Watchers themselves, captured during the initial binding. Like voodoo dolls, they create a sympathetic connection that can be used to control the entities. But someone has been tampering with the vessels—several are empty now.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 98,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.5934236550766675,
+              "rotation": 0.001109967668762507
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_143_SW",
+            "character": "SW",
+            "text": "The springs are failing because The Watchers are consuming them—absorbing the very elements designed to contain them. William's journal warns this would happen if the renewal rituals ceased. Without Margaret's maintenance, they've been growing stronger by eliminating their weaknesses. The last functioning spring feeds the maze—that's why I need to reach the central stone. It's the final barrier still intact.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 99,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.37038979598235855,
+              "rotation": 0.010181013511038436
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_144_SW",
+            "character": "SW",
+            "text": "William's journal contains exact formulations for the protective paints—the meteoritic material was key, containing elements not found on Earth that repel entities from the Watchers' dimension. Without it, the barriers are useless. I found Margaret's stored supplies in the cellar and have been applying it to my bedroom walls, which has kept them out temporarily. Not enough remains for the entire house. They're scratching at the door now.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 100,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.7160147967249471,
+              "rotation": 0.07113067445067686
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_145_SW",
+            "character": "SW",
+            "text": "The doors were William's first line of defence within the house—The Watchers initially couldn't pass through them without human assistance. The journal explains they've been learning to manipulate physical objects over decades, gradually overcoming the barriers. The wooden panels are failing because the entities have adapted to their specific properties. The scratches are their attempts to remove the panels entirely. Most doors in the east wing no longer function as barriers.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 101,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.44327898136243793,
+              "rotation": -0.028857290412836134
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_146_SW",
+            "character": "SW",
+            "text": "The journal explains that light itself is a weapon against The Watchers, but only specific frequencies created by gas flames through the crystal prisms. Electrical lighting lacks the necessary properties. William designed the system to create a network of barriers that would activate automatically during incursions. Most crystals are damaged now, and the entities have learned to avoid the few functioning ones. I've barricaded myself in the observatory where several original fixtures remain operational.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 102,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.16720451371710726,
+              "rotation": 0.09414797409427828
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_147_SW",
+            "character": "SW",
+            "text": "William's journal explains that electromagnetic fields disrupt the vibrational frequencies that bind The Watchers. The copper shielding was designed to contain electrical influences, but modern technology produces much stronger fields than William anticipated. Each new electrical device installed weakened the barriers further. They've learned to manipulate electricity now—I've watched lights flicker in patterns as they communicate with each other through the wiring. They're using our own systems against us.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 103,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.20187201193076026,
+              "rotation": -0.06385138980296384
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_148_SW",
+            "character": "SW",
+            "text": "I found the control panel and activated the emergency flooding system yesterday when The Watchers nearly broke through my barricade. The journal explains the water creates a temporary barrier that causes them pain when they contact it. It bought me a few hours, but the pressure is already failing. The reservoir is nearly empty now, and they're gathering outside the library again. I can see their shadows under the door—more solid than before.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 104,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.5029622752209958,
+              "rotation": -0.02951612534741306
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_149_SW",
+            "character": "SW",
+            "text": "I've been burning the prepared wood bundles I found in the cellar, labelled by Margaret for specific dates. The journal explains these were harvested from trees growing above The Circle's energy lines, imbued with properties that repel The Watchers when burned. The smoke temporarily pushes them back into the walls, but my supply is running low. The last bundle is marked \"Final Resort—Blackthorn Wood Only.\" I don't know what that means.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 105,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.25976120767447447,
+              "rotation": -0.012425608760055495
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_150_SW",
+            "character": "SW",
+            "text": "The windows are failing—I can see them pressing against the glass from the outside now. Not reflections, but actual forms becoming visible in the material itself. William's journal warns this is the final stage before physical manifestation—they imprint on the glass before pushing through into our reality. I've covered the windows with the protective paint, but it's drying too slowly to be effective. They know I can see them now. They're smiling.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 106,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.7580365677561822,
+              "rotation": -0.0022945593598903413
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_151_SW",
+            "character": "SW",
+            "text": "Margaret knew more than she wrote in these margins. William's journal mentions Department 8's first involvement in 1892 after a failed containment breach that killed three Blackthorn relatives. They've been studying the situation for generations but fundamentally misunderstand what they're dealing with. The Watchers aren't the threat—they're refugees from what lies beyond The Vestibule. I've found Margaret's hidden notes explaining why she prevented Department 8 from implementing their \"final solution\"—The Opener wants them to destroy this site. It needs the doorway removed to create a new one it can control.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 107,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.20597149228529343,
+              "rotation": -0.08560936318415469
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_152_SW",
+            "character": "SW",
+            "text": "The east wing isn't fully in our reality—William designed it to exist partially in The Watchers' dimension, creating a space where both worlds overlap. The journal explains this was intended to trap them in a familiar environment they couldn't easily leave. Over decades, they've been modifying this shared space, gradually pulling it further into their reality. The impossible measurements and strange perceptions are symptoms of being in two dimensions simultaneously. Department 8 doesn't understand that destroying the east wing won't eliminate The Watchers—it will free them completely from their partial containment.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 108,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.14514137352922815,
+              "rotation": -0.0022306041354182293
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_153_SW",
+            "character": "SW",
+            "text": "William created a network of containing structures—seven buildings forming a larger version of the protection geometry in the manor itself. The journal explains each building was positioned to contain a specific aspect of The Opener's influence should it breach The Vestibule. As buildings were modified or destroyed over decades, the containment weakened. Margaret's hidden notes reveal she was working with Department 8 to maintain the remaining structures, but commercial development consistently undermined these efforts.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 109,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.2857516155072857,
+              "rotation": 0.05762066831670845
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_154_SW",
+            "character": "SW",
+            "text": "The Royal Institute wing was William's greatest mistake—he believed he could safely study The Watchers in a controlled environment, not understanding they were already influencing his perceptions. The journal details how researchers unwittingly established new connections to The Opener while believing they were making scientific breakthroughs. The \"accident\" in 1887 was actually a deliberate containment action after partial manifestation. Department 8 originated from surviving research team members who understood what they'd encountered.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 110,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.6771288407498938,
+              "rotation": -0.03730282009735822
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_155_SW",
+            "character": "SW",
+            "text": "The cathedral bells create sound barriers The Watchers cannot cross when rung in correct sequence. The journal explains William provided church officials with a bell-ringing pattern disguised as traditional changes, ensuring weekly reinforcement of protective harmonics. The sealed crypt contains one of The Watchers captured in physical form during 1877 manifestation—William discovered they could be bound to physical objects under specific consecration rituals. Department 8 remains unaware of the entity's presence, or that weekly bell-ringing maintains its containment.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 111,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.4041942137315714,
+              "rotation": -0.05990481430391399
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_156_SW",
+            "character": "SW",
+            "text": "The Sanatorium patients weren't just construction workers but people William was experimenting on—attempting to create human interfaces with The Watchers' dimension. The journal details how he discovered certain bloodlines showed greater sensitivity to dimensional boundaries. His research identified genetic markers that allowed some humans to perceive The Watchers naturally. The \"treatments\" were attempts to enhance and control these abilities. The 1923 incident was a mass possession event when The Watchers briefly gained control of all patients simultaneously. This led to Department 8's direct involvement and the formal establishment of the Blackthorn protocols.",
+            "year": 1923,
+            "chapter": "back_matter",
+            "type": "marginalia",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 112,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.6012537991648358,
+              "rotation": -0.049343661957592905
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": false,
+            "characterArc": "early",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_158_SW",
+            "character": "SW",
+            "text": "The observatory monitors the approaching alignment William predicted—a 157-year cycle when the Pleiades aligns with seven terrestrial points simultaneously, creating a period of maximum dimensional thinning. The journal calculates next critical alignment in spring 2025, when The Opener will have greatest potential to fully manifest. Margaret's hidden notes reveal she was preparing for this alignment throughout her lifetime, knowing containment would likely fail in preceding years. The observatory trust is actually controlled by Department 8 now, though they don't fully understand the data they're collecting.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 113,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.559438951273355,
+              "rotation": 0.027624087376912604
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_159_SW",
+            "character": "SW",
+            "text": "The Watchers have been protecting their containment system—manipulating physical reality to prevent interference as they've grown stronger. William's journal describes similar phenomena during original construction, requiring continuous workforce replacement as sensitivity developed among exposed workers. The \"atmospheric historical ruin\" concept would have actually benefited the containment system, creating a legitimate reason for east wing preservation without exposing true purpose. The developers abandoned this approach after experiencing direct manifestation phenomena during preliminary tours—visitors reported seeing figures in supposedly empty rooms.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 114,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.21308567864832756,
+              "rotation": 0.08143248601827624
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_160_SW",
+            "character": "SW",
+            "text": "Threshold Holdings is a Department 8 shell corporation—they've finally taken direct ownership after decades of indirect influence. William's journal contains correspondence suggesting this was always their ultimate objective, though they waited until legal avenues emerged rather than forcing acquisition. The \"research facility\" proposal creates perfect cover for containment operations, allowing specialised equipment and personnel without public scrutiny. Margaret anticipated this development in her final notes, suggesting Department 8 would eventually recognise the need for direct control as the 2025 alignment approached. The containment system is now under their full authority, though they still don't fully understand its original purpose or complete design.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 115,
+            "position": {
+              "zone": "topMargin",
+              "x": 0.2288413626879905,
+              "y": 0.03,
+              "rotation": 0.05984559875846038
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_161_SW",
+            "character": "SW",
+            "text": "The excavation discovered what William found in 1866—the original containment chamber constructed by prehistoric cultures aware of dimensional boundaries. The journal describes how he incorporated these discoveries into his own containment system, building upon ancient knowledge while applying Victorian scientific understanding. The astronomical markings track the same alignment pattern William calculated, showing ancient awareness of the 157-year cycle when boundaries thin. Department 8 supervised the excavation but removed certain artifacts before academic documentation, hiding evidence that would reveal the site's true significance. The \"artifacts of unknown origin\" were actual fragments from The Watchers' dimension, left behind during previous manifestations.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 116,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.17865317243594675,
+              "rotation": 0.0819009528897536
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_162_SW",
+            "character": "SW",
+            "text": "The contradiction is intentional—Department 8 maintains the appearance of abandonment while actively operating containment systems within. The journal's final notes predicted this outcome, suggesting the most effective long-term protection would come from \"purposeful neglect\"—a property appearing abandoned while actually under intensive management. The recent east wing maintenance corresponds with Margaret's schedule for critical system renewal, following lunar cycles and astronomical alignments she documented decades ago. William's original containment design is now fully operational for the first time since his death, combining ancient methods with modern understanding developed through Department 8 research. The approaching alignment in 2025 represents both maximum danger and opportunity—the moment when The Vestibule can be either permanently sealed or irrevocably opened.",
+            "year": 2025,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 4,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 117,
+            "position": {
+              "zone": "rightMargin",
+              "x": 0.85,
+              "y": 0.6975998946426848,
+              "rotation": 0.037138622909786506
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "sister_investigation",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_164_SW",
+            "character": "SW",
+            "text": "The modifications tracked The Watchers' evolutionary adaptation to containment—as they learned to bypass each barrier, William developed countermeasures through trial and error. The journal details how each manifestation revealed new aspects of their abilities, requiring containment system to evolve. Most significant was the 1887 incident when William discovered The Watchers could affect physical matter through dimensional overlap, causing spontaneous combustion of organic materials in the eastern corner room. This led to his understanding that The Vestibule wasn't merely a doorway but an active interface between realities.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 118,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.3767474098667414,
+              "rotation": 0.08526548947772408
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_166_SW",
+            "character": "SW",
+            "text": "The Egyptian elements were William's first effective containment tools—derived from his discovery that ancient Egyptian priests had encountered similar entities and developed architectural countermeasures. The journal details his translation of obscure temple texts describing boundaries between life and death as dimensional thresholds that could be managed through specific geometric arrangements. The pyramidal space creates what William called \"dimensional focusing point\" where manifestation energy could be collected and redirected back through The Vestibule, essentially creating feedback loop preventing complete emergence.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 119,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.6559511513197153,
+              "rotation": -0.00581549176311176
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_167_SW",
+            "character": "SW",
+            "text": "The screens are two-dimensional representations of higher-dimensional mathematics—William discovered these patterns could disrupt The Watchers' ability to process three-dimensional space when transitioning between dimensions. The journal explains how each cultural tradition developed a partial understanding of interdimensional mechanics through encounters with similar entities, creating protective geometric systems through intuitive trial and error over centuries. William's innovation was combining these systems into a unified theoretical framework, essentially creating mathematical barrier language The Watchers couldn't easily translate into physical manifestation.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 120,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.3126293285781821,
+              "rotation": 0.08903030499815812
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_168_SW",
+            "character": "SW",
+            "text": "The east wing stone came from beneath the prehistoric circle—William discovered deposits with naturally occurring dimensional boundary properties. The journal describes material existing simultaneously in multiple realities, creating natural resistance to entities attempting cross-dimensional transit. The unusual properties result from millennia of exposure to boundary conditions where our reality intersects with The Watchers' dimension. The organic compounds preserved in the matrix are actually remnants of earlier manifestation attempts, essentially fossils of interdimensional contact dating back thousands of years. Department 8 has samples but fundamentally misunderstands their significance—testing them as unusual geological specimens rather than dimensional interface material.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 121,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.3068933744027401,
+              "rotation": 0.05118331896033887
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_169_SW",
+            "character": "SW",
+            "text": "The metal components form electromagnetic barrier network throughout structure—William discovered The Watchers are sensitive to specific electromagnetic frequencies that disrupt their ability to maintain physical form. The journal details experiments determining exact alloy compositions that generated these frequencies naturally through interaction with Earth's magnetic field. The seven-layer construction mimics dimensional structure William perceived during containment breach, creating physical counterpart to The Watchers' own composition that establishes resonant barrier they cannot easily penetrate. Department 8 partially replicated these alloys but never fully understood the mathematical relationships governing their arrangement throughout the structure.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 122,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.5846270312955777,
+              "rotation": -0.014308189314661823
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_170_SW",
+            "character": "SW",
+            "text": "The wood elements represent William's integration of folklore into functional containment system—he discovered traditional protective species actually possess measurable effects against interdimensional entities. The journal documents experiments showing how The Watchers could not maintain physical form when in contact with certain woods, particularly those associated with protection in European folklore. The mineral treatments enhanced these natural properties while ensuring longevity beyond normal wood degradation. The door panels create composite barriers specifically tuned to each Watcher's unique vibrational signature, essentially creating individualised containment elements for each entity.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 123,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.01,
+              "y": 0.21610519357321611,
+              "rotation": 0.06459164836063214
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_172_SW",
+            "character": "SW",
+            "text": "The specifications were dimensional containment mathematics—William developed a system of proportions specifically designed to disrupt manifestation through geometric interference patterns. The journal explains how conventional architectural training actually interfered with implementation, as professionally trained architects insisted on \"correcting\" critical dimensional relationships they perceived as errors rather than intentional features. Both architects experienced early stages of Watcher contact through exposure to the design mathematics alone—the plans themselves functioned as minor connection points between dimensions. William eventually supervised construction personally because he alone understood the critical importance of exact mathematical relationships in creating effective containment geometry.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 124,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.03,
+              "y": 0.1278352964885811,
+              "rotation": 0.09904856165543943
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          },
+          {
+            "id": "emb_173_SW",
+            "character": "SW",
+            "text": "This references the first major manifestation incident—William conducted ritual during spring equinox alignment that temporarily opened direct connection to The Watchers' dimension. The \"unfortunate outcomes\" were deaths of three workers present during ritual, who experienced cellular dissolution when manifestation energy reached a critical threshold. The journal details how this incident revealed fundamental flaws in William's understanding of dimensional mechanics, leading to the complete redesign of containment system. The imported materials included meteoritic iron with natural dimensional boundary properties and specialised crystalline structures that could maintain stability during manifestation events.",
+            "year": null,
+            "chapter": "back_matter",
+            "type": "postIt",
+            "isEmbedded": true,
+            "revealLevel": 1,
+            "characterStyle": "character-sw hurried-pencil",
+            "pageNumber": 125,
+            "position": {
+              "zone": "leftMargin",
+              "x": 0.05,
+              "y": 0.35225880750361405,
+              "rotation": 0.01159017350561728
+            },
+            "style": "character-sw hurried-pencil",
+            "isDraggable": true,
+            "characterArc": "unknown",
+            "relatedAnnotations": []
+          }
+        ],
+        "annotationCount": 126,
+        "redactedSections": [],
+        "revealLevels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "hasEmbeddedContent": true
+      }
+    ],
+    "totalAnnotations": 174
+  },
+  "chapters": [
+    {
+      "name": "CHAPTER_I_INTRODUCTION_AND_HISTORICAL_CONTEXT",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "content": "The Blackthorn family's connection to the land predates recorded history. Archaeological evidence suggests ritual activity at the site for at least six millennia, centred around what locals once called the Whispering Stones. The stone circle William incorporated into his estate grounds shows evidence of continuous use since approximately 4000 BCE, with artifacts discovered during William's initial excavations suggesting its purpose remained remarkably consistent throughout millennia of human activity.\n\nBlackthorn Manor represents one of the finest examples of Victorian Gothic Revival architecture in the country. Completed in 1871, the house was commissioned by Sir William Blackthorn following his return from extensive travels in Egypt and the Near East.\n\nLocal folklore documented by parish records describes the Blackthorn property as 'thin ground' where 'visitors from elsewhere' would occasionally appear. These accounts date back to the earliest settlement records, with consistent descriptions of phenomena despite changing religious and cultural contexts over centuries.\n\nWilliam Blackthorn's Egyptian expedition of 1866 was privately funded after the British Museum rejected his proposed exploration of chambers beneath the Temple of Hathor that had been sealed and marked with unusual warnings. Local authorities initially denied access, citing ancient prohibitions specifically forbidding disturbance during certain astronomical alignments.\n\nHistorical records indicate that Sir William employed over two hundred workers during the four-year construction period, with an unusually high turnover rate attributed to the demanding working conditions and Sir William’s exacting standards.",
+          "annotations": [],
+          "revealLevels": []
+        },
+        {
+          "pageNumber": 2,
+          "content": "The deaths of three expedition members were officially attributed to 'toxic exposure from unsealed chambers,' but William's private journal describes symptoms inconsistent with any known pathogen or toxin. His notes detail 'partial dissolution of physical form' and 'cognitive fragmentation' following direct contact with what he described as 'atmosphere with presence and purpose.\n\nWilliam's removal of specific artifacts from the Egyptian site violated explicit warnings from local religious authorities. His journals record their prophetic warning that 'what has long been separated will recognise the pathway you create' and 'the threshold, once established, cannot be easily unmade.' He dismissed these as superstition until experiencing the first manifestation at Blackthorn property during foundation excavation.\n\nThe stone circle on the Blackthorn property contains astronomical alignments identical to those found at the Egyptian site. William recognised this immediately upon returning to England, purchasing the property within a week of his inspection, despite its remote location and dilapidated condition. Construction began less than a month later, with the east wing designed according to measurements and proportions copied directly from the Egyptian chamber.\n\nWilliam's initial excavation of the stone circle uncovered artifacts of unknown origin and composition. Materials analysis conducted by colleagues at Cambridge revealed properties inconsistent with any known mineral formations. Most disturbing were crystalline structures that appeared to modify their molecular arrangement when not directly observed. William incorporated these materials into the east wing's foundation, believing they possessed natural containment properties.",
+          "annotations": [],
+          "revealLevels": []
+        },
+        {
+          "pageNumber": 3,
+          "content": "The first documented manifestation occurred during foundation excavation in early 1867, when workers uncovered a previously undetected chamber beneath the stone circle. Three labourers disappeared after entering the chamber, with the remaining workers reporting 'shapes that moved within shadows' and 'voices speaking unintelligible words' emanating from the excavation. William himself witnessed a 'partial materialisation of non-human form' before implementing emergency containment measures derived from Egyptian texts acquired during his expedition.\n\nWilliam's architectural plans were intentionally deceptive, showing conventional residential designs while implementing specialised containment features disguised as decorative elements. The true plans, preserved in the family archives but never publicly documented, reveal an integrated system for managing dimensional permeability through precise geometric relationships, specialised materials, and astronomical alignments.\n\nThe unusually high worker turnover resulted from exposure effects William documented as 'dimensional sickness'—symptoms included persistent nightmares, perception of shadows moving independently, auditory hallucinations, and in severe cases, disappearances during shift changes. William instituted a strict rotation system to limit exposure, with no worker permitted in the east wing for more than four consecutive days.\n\nConstruction of the east wing proceeded in carefully timed phases corresponding to lunar and stellar cycles. William's journals document increased manifestation activity during specific astronomical alignments, requiring specialised containment measures implemented only during these vulnerable periods. The final phase of construction in 1871 coincided with a complete alignment of the Pleiades constellation with the stone circle—the same alignment projected to recur in 2025.",
+          "annotations": [],
+          "revealLevels": []
+        }
+      ]
+    },
+    {
+      "name": "CHAPTER_II_ARCHITECTURAL_OVERVIEW",
+      "pages": [
+        {
+          "pageNumber": 4,
+          "content": "William's architectural plans incorporate mathematical concepts that anticipate quantum theory by decades. The proportional relationships between rooms in the east wing create what modern physics would term 'probability interference patterns'—spaces where reality itself becomes less rigidly defined. The relationship between physical dimensions disrupts normal spatial perception in ways subtle enough that most visitors experience only mild discomfort rather than recognising the fundamental wrongness of the space.\n\nThe cruciform layout isn't merely aesthetic but functional—creating intersection points where dimensional energies can be channelled and controlled. The central block serves as a neutral buffer zone between the fully conventional west wing and the deliberately destabilised east wing. William discovered that dimensional boundaries require gradual transition rather than abrupt changes, implementing a subtle gradient of increasing dimensional permeability moving from west to east.\n\nThe true purpose of the east wing was never residential accommodation but controlled contact with entities William termed 'The Watchers'—beings that existed partially n our dimension and partially beyond conventional reality. The 'guest rooms' were designed for specialised containment of different aspects of these entities, with each space calibrated to specific dimensional frequencies William documented during manifestation events.\n\nThe proportions throughout the east wing follow mathematical patterns derived from William's Egyptian discoveries—ratios that create natural resistance to complete manifestation while allowing limited interaction. These proportions would later be independently discovered in quantum physics as wave function relationships governing probability distributions, though William implemented them through intuitive understanding rather than formal theory.",
+          "annotations": [],
+          "revealLevels": []
+        },
+        {
+          "pageNumber": 5,
+          "content": "When viewed from above, Blackthorn Manor presents a roughly cruciform layout, with the central block containing the main entrance, great hall, and primary social spaces. The west wing houses the family’s private quarters, while the east wing, the most architecturally distinctive portion, contains what were ostensibly guest accommodations and entertainment spaces.\n\nThe 'harmonious dissonance' Barrett identified represents William's deliberate implementation of dimensional interference patterns. These proportional relationships create perceptual discomfort because human consciousness naturally resists awareness of spatial arrangements that violate conventional three-dimensional reality. The discomfort serves as a natural warning system against prolonged exposure to spaces where dimensional boundaries thin.\n\nOf particular note is Sir William’s attention to proportional relationships throughout the structure. Detailed analysis reveals the consistent use of the golden ratio in room dimensions, with subtle variations in the east wing creating what architectural historian James Barrett has termed “harmonious dissonance”—proportions that appear correct at first glance but create subtle perceptual discomfort upon prolonged exposure.\n\nWilliam discovered that certain geometric arrangements naturally repel interdimensional entities while others attract them. The east wing incorporates both—attractive geometries in controlled chambers surrounded by repellent geometries in transition spaces. This arrangement allows for managed contact while preventing uncontrolled manifestation throughout the structure.",
+          "annotations": [],
+          "revealLevels": []
+        },
+        {
+          "pageNumber": 6,
+          "content": "The most sophisticated aspect of William's design is the integration of temporal factors—architectural elements that activate only during specific astronomical alignments. Shadows cast by external features create temporary geometric patterns on interior surfaces during these alignments, completing containment configurations only when dimensional boundaries are naturally thin. This dynamic architecture responds to celestial movements without requiring mechanical adjustment.\n\nStructural elements visible to conventional architectural analysis represent only the permanently manifested components of William's design. His complete plans, partially preserved in family archives, indicate additional architectural elements that materialise only under specific conditions. These 'conditional architectures' exist in potential rather than continuous physical form, manifesting when dimensional permeability increases during astronomical alignments.",
+          "annotations": [],
+          "revealLevels": []
+        }
+      ]
+    }
+  ],
+  "characters": {
+    "MB": {
+      "character": "MB",
+      "fullName": "Margaret Blackthorn",
+      "role": "Family Guardian",
+      "timeline": [],
+      "storyArc": {
+        "character": "MB",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryInvolvement": {
+        "involvementLevel": "low",
+        "disappearanceRisk": false,
+        "knowledgeLevel": "low",
+        "lastActivity": 1967
+      },
+      "disappearanceClues": []
+    },
+    "JR": {
+      "character": "JR",
+      "fullName": "James Reed",
+      "role": "Independent Researcher",
+      "timeline": [],
+      "storyArc": {
+        "character": "JR",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryInvolvement": {
+        "involvementLevel": "low",
+        "disappearanceRisk": false,
+        "knowledgeLevel": "low",
+        "lastActivity": 1967
+      },
+      "disappearanceClues": []
+    },
+    "EW": {
+      "character": "EW",
+      "fullName": "Eliza Winston",
+      "role": "Structural Engineer",
+      "timeline": [],
+      "storyArc": {
+        "character": "EW",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryInvolvement": {
+        "involvementLevel": "low",
+        "disappearanceRisk": false,
+        "knowledgeLevel": "low",
+        "lastActivity": 1967
+      },
+      "disappearanceClues": []
+    },
+    "SW": {
+      "character": "SW",
+      "fullName": "Simon Wells",
+      "role": "Current Investigator",
+      "timeline": [],
+      "storyArc": {
+        "character": "SW",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryInvolvement": {
+        "involvementLevel": "low",
+        "disappearanceRisk": false,
+        "knowledgeLevel": "low",
+        "lastActivity": 1967
+      },
+      "disappearanceClues": []
+    },
+    "Detective Sharma": {
+      "character": "Detective Sharma",
+      "fullName": "Detective Moira Sharma",
+      "role": "Police Investigator",
+      "timeline": [],
+      "storyArc": {
+        "character": "Detective Sharma",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryInvolvement": {
+        "involvementLevel": "low",
+        "disappearanceRisk": false,
+        "knowledgeLevel": "low",
+        "lastActivity": 1967
+      },
+      "disappearanceClues": []
+    },
+    "Dr. Chambers": {
+      "character": "Dr. Chambers",
+      "fullName": "Dr. E. Chambers",
+      "role": "Government Analyst",
+      "timeline": [],
+      "storyArc": {
+        "character": "Dr. Chambers",
+        "totalAnnotations": 0,
+        "timeSpan": "Unknown",
+        "keyThemes": [],
+        "mysterySeverity": "low"
+      },
+      "mysteryInvolvement": {
+        "involvementLevel": "low",
+        "disappearanceRisk": false,
+        "knowledgeLevel": "low",
+        "lastActivity": 1967
+      },
+      "disappearanceClues": []
+    }
+  },
+  "revealLevels": {
+    "1": {
+      "name": "Academic Study",
+      "description": "Original Professor Finch architectural study",
+      "visibleContent": [
+        "academic_text"
+      ],
+      "hiddenContent": [
+        "all_annotations",
+        "redacted_sections"
+      ]
+    },
+    "2": {
+      "name": "Family Secrets",
+      "description": "Margaret Blackthorn's family knowledge revealed",
+      "visibleContent": [
+        "academic_text",
+        "mb_annotations"
+      ],
+      "hiddenContent": [
+        "research_annotations",
+        "modern_annotations",
+        "redacted_sections"
+      ]
+    },
+    "3": {
+      "name": "Research Investigation",
+      "description": "James Reed and Eliza Winston's findings",
+      "visibleContent": [
+        "academic_text",
+        "mb_annotations",
+        "jr_annotations",
+        "ew_annotations"
+      ],
+      "hiddenContent": [
+        "modern_annotations",
+        "partial_redacted_sections"
+      ]
+    },
+    "4": {
+      "name": "Modern Mystery",
+      "description": "Current investigation and disappearances",
+      "visibleContent": [
+        "all_annotations"
+      ],
+      "hiddenContent": [
+        "classified_redactions"
+      ]
+    },
+    "5": {
+      "name": "Complete Truth",
+      "description": "Full supernatural revelation",
+      "visibleContent": [
+        "everything"
+      ],
+      "hiddenContent": []
+    }
+  }
+}
