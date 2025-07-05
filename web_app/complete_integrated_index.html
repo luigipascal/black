@@ -1,4 +1,4 @@
-THIS SHOULD BE A LINTER ERROR<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -701,11 +701,18 @@ THIS SHOULD BE A LINTER ERROR<!DOCTYPE html>
         async function initializeApp() {
             try {
                 // Try to load real data, fall back to sample data
-                await loadBookData();
+                const dataLoaded = await loadBookData();
+                
+                if (dataLoaded) {
+                    console.log('Successfully loaded complete book data');
+                } else {
+                    console.log('Using sample data for demonstration');
+                }
+                
                 renderCurrentPage();
                 updateUI();
             } catch (error) {
-                console.log('Using sample data for demonstration');
+                console.log('Error during initialization:', error);
                 renderCurrentPage();
                 updateUI();
             }
