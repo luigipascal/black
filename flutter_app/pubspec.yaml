@@ -1,0 +1,68 @@
+name: blackthorn_manor
+description: An interactive document experience simulating classified government files about a mysterious Victorian manor.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # Data & Storage
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.1
+  
+  # UI & Widgets
+  flutter_widget_from_html: ^0.14.11
+  cached_network_image: ^3.3.0
+  
+  # Utilities
+  json_annotation: ^4.8.1
+  equatable: ^2.0.5
+  
+  # Icons & Material Design
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/data/
+    - assets/images/
+    - assets/textures/
+    - assets/fonts/
+  
+  fonts:
+    - family: Courier Prime
+      fonts:
+        - asset: assets/fonts/CourierPrime-Regular.ttf
+        - asset: assets/fonts/CourierPrime-Bold.ttf
+          weight: 700
+    
+    - family: Dancing Script
+      fonts:
+        - asset: assets/fonts/DancingScript-Regular.ttf
+        - asset: assets/fonts/DancingScript-Bold.ttf
+          weight: 700
+    
+    - family: Kalam
+      fonts:
+        - asset: assets/fonts/Kalam-Regular.ttf
+        - asset: assets/fonts/Kalam-Bold.ttf
+          weight: 700
+    
+    - family: Architects Daughter
+      fonts:
+        - asset: assets/fonts/ArchitectsDaughter-Regular.ttf
