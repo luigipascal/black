@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor: Interactive Experience</title>
+    <style>
+        :root {
+            --parchment: #f4f1e8;
+            --aged-paper: #ede5d3;
+            --dark-brown: #3d2914;
+            --margin-brown: #8b4513;
+            --faded-ink: #4a4a4a;
+            --mb-blue: #2653a3;
+            --jr-black: #1a1a1a;
+            --ew-red: #c41e3a;
+            --sw-gray: #2c2c2c;
+            --detective-green: #006400;
+            --chambers-black: #000000;
+        }
+
+        /* Import character-specific fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(45deg, var(--parchment), var(--aged-paper));
+            color: var(--dark-brown);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--dark-brown), #2d1a0a);
+            color: var(--parchment);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--margin-brown);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .revelation-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 2px solid var(--margin-brown);
+        }
+
+        .revelation-level {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .revelation-slider {
+            flex: 1;
+            height: 6px;
+            background: var(--parchment);
+            border-radius: 3px;
+            appearance: none;
+            outline: none;
+        }
+
+        .revelation-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--margin-brown);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .discovery-panel {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .discovery-stats {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .discovered-characters {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .character-hint {
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid var(--margin-brown);
+            background: var(--parchment);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .character-hint.discovered {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        .document-viewer {
+            background: white;
+            border: 1px solid var(--margin-brown);
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .page-content {
+            padding: 3rem;
+            min-height: 600px;
+            position: relative;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                transparent 8%, 
+                var(--aged-paper) 8%, 
+                var(--aged-paper) 12%, 
+                white 12%);
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            font-size: 0.9rem;
+            color: var(--margin-brown);
+            font-weight: bold;
+        }
+
+        .page-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--margin-brown);
+        }
+
+        .page-nav {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .page-nav button {
+            background: var(--dark-brown);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .page-nav button:hover:not(:disabled) {
+            background: var(--margin-brown);
+        }
+
+        .page-nav button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .page-jump {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-jump input {
+            width: 60px;
+            padding: 0.5rem;
+            border: 1px solid var(--margin-brown);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .page-jump button {
+            background: var(--margin-brown);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Character-specific annotation styles with proper fonts */
+        .annotation {
+            position: absolute;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            max-width: 280px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            user-select: none;
+        }
+
+        .annotation:hover {
+            transform: scale(1.05);
+            z-index: 20;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+
+        .annotation.marginalia {
+            background: var(--aged-paper);
+            border: 1px solid var(--margin-brown);
+        }
+
+        .annotation.postIt {
+            background: #fffe9e;
+            border: 1px solid #e6d900;
+            cursor: move;
+        }
+
+        .annotation.dragging {
+            opacity: 0.8;
+            transform: scale(1.1);
+            z-index: 100;
+        }
+
+        /* Character-specific fonts and styles */
+        .character-mb, .elegant-blue-script {
+            color: var(--mb-blue);
+            font-family: 'Dancing Script', cursive;
+            font-weight: 600;
+            font-style: italic;
+            text-shadow: 0 1px 2px rgba(38, 83, 163, 0.2);
+        }
+
+        .character-jr, .messy-black-ballpoint {
+            color: var(--jr-black);
+            font-family: 'Courier Prime', monospace;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transform: rotate(-0.5deg);
+        }
+
+        .character-ew, .precise-red-pen {
+            color: var(--ew-red);
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .character-sw, .hurried-pencil {
+            color: var(--sw-gray);
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            transform: rotate(0.8deg);
+        }
+
+        .character-detective {
+            color: var(--detective-green);
+            font-family: 'Courier Prime', monospace;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .character-chambers {
+            color: var(--chambers-black);
+            font-family: 'Times New Roman', serif;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .unknown-character {
+            color: #666;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .debug-info {
+            background: rgba(0,0,0,0.1);
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: var(--margin-brown);
+        }
+
+        .error {
+            background: #ffe6e6;
+            border: 1px solid #ff6b6b;
+            padding: 1rem;
+            border-radius: 4px;
+            color: #d63031;
+            margin: 1rem 0;
+        }
+
+        /* Content styling - no section distinctions */
+        .page-content h1 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--dark-brown);
+            border-bottom: 2px solid var(--margin-brown);
+            padding-bottom: 0.5rem;
+        }
+
+        .page-content h2 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--margin-brown);
+        }
+
+        .page-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--parchment);
+            border-radius: 3px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--margin-brown), #a0622d);
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .redacted-text {
+            background: #333;
+            color: #333;
+            cursor: pointer;
+            border-radius: 2px;
+            padding: 0 4px;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .redacted-text:hover {
+            background: #555;
+        }
+
+        .redacted-text.revealed {
+            background: #ffecb3;
+            color: var(--dark-brown);
+            border: 1px solid #ff9800;
+            animation: revealFlash 0.5s ease;
+        }
+
+        @keyframes revealFlash {
+            0% { background: #ff9800; }
+            100% { background: #ffecb3; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .page-content {
+                padding: 1.5rem;
+            }
+
+            .annotation {
+                max-width: 200px;
+                font-size: 0.75rem;
+            }
+
+            .page-nav {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏰 Blackthorn Manor</h1>
+        <p>An Interactive Documentary Experience</p>
+    </header>
+
+    <main class="container">
+        <!-- Progressive Revelation Controls -->
+        <div class="revelation-controls">
+            <div class="revelation-level">
+                <label><strong>Investigation Depth:</strong></label>
+                <input type="range" id="revelationSlider" class="revelation-slider" 
+                       min="1" max="5" value="1" oninput="updateRevelationLevel(this.value)">
+                <span id="revelationLabel">Academic Study</span>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            
+            <div class="discovery-panel">
+                <div class="discovery-stats">
+                    📖 Page <span id="pageProgress">1/247</span> • 
+                    🔍 <span id="annotationCount">0</span> annotations discovered • 
+                    👤 <span id="characterCount">0</span>/6 identities revealed
+                </div>
+                <div class="discovered-characters" id="discoveredCharacters">
+                    <!-- Character hints will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Section -->
+        <div class="document-viewer">
+            <div class="page-content" id="pageContent">
+                <div class="loading">📄 Loading Blackthorn Manor...</div>
+            </div>
+            <div class="page-number" id="pageNumber">Page 1</div>
+            <div class="page-controls">
+                <div class="page-nav">
+                    <button onclick="previousPage()" id="prevBtn" disabled>← Previous</button>
+                    <button onclick="nextPage()" id="nextBtn">Next →</button>
+                </div>
+                <div class="page-jump">
+                    <span>Jump to page:</span>
+                    <input type="number" id="jumpInput" min="1" max="247" placeholder="1">
+                    <button onclick="jumpToPage()">Go</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="debug-info" id="debugInfo">
+            Status: Initializing...
+        </div>
+    </main>
+
+    <script>
+        // Global variables
+        let bookData = null;
+        let currentPage = 1;
+        let totalPages = 247;
+        let revelationLevel = 1;
+        let discoveredCharacters = new Set();
+        let allPages = [];
+        let characterClues = new Map();
+        let annotationCount = 0;
+
+        const revelationLevels = {
+            1: { name: 'Academic Study', description: 'Original architectural analysis' },
+            2: { name: 'Family Secrets', description: 'Hidden family knowledge' },
+            3: { name: 'Research Findings', description: 'Investigative discoveries' },
+            4: { name: 'Modern Mystery', description: 'Current investigations' },
+            5: { name: 'Complete Truth', description: 'All secrets revealed' }
+        };
+
+        // Character discovery system
+        const characterData = {
+            'MB': { 
+                name: 'Unknown Family Member', 
+                fullName: 'Margaret Blackthorn',
+                clues: ['family knowledge', 'elegant handwriting', 'blue ink', 'personal memories'],
+                style: 'elegant-blue-script'
+            },
+            'JR': { 
+                name: 'Unknown Researcher', 
+                fullName: 'James Reed',
+                clues: ['messy notes', 'investigation dates', 'missing person', 'ballpoint pen'],
+                style: 'messy-black-ballpoint'
+            },
+            'EW': { 
+                name: 'Unknown Engineer', 
+                fullName: 'Eliza Winston',
+                clues: ['technical analysis', 'precise measurements', 'red pen', 'structural concerns'],
+                style: 'precise-red-pen'
+            },
+            'SW': { 
+                name: 'Unknown Modern Investigator', 
+                fullName: 'Simon Wells',
+                clues: ['recent dates', 'personal urgency', 'pencil notes', 'sister search'],
+                style: 'hurried-pencil'
+            },
+            'Detective': { 
+                name: 'Unknown Official', 
+                fullName: 'Detective Moira Sharma',
+                clues: ['police investigation', 'official reports', 'green ink', 'case files'],
+                style: 'official-green'
+            },
+            'Chambers': { 
+                name: 'Unknown Authority', 
+                fullName: 'Dr. E. Chambers',
+                clues: ['government classification', 'official stamps', 'black ink', 'authority'],
+                style: 'official-black'
+            }
+        };
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+
+        async function initializeApp() {
+            updateDebugInfo('Loading complete archive...');
+            
+            try {
+                const dataLoaded = await loadBookData();
+                
+                if (dataLoaded) {
+                    updateDebugInfo(`Successfully loaded ${totalPages} pages`);
+                    initializeCharacterHints();
+                    renderCurrentPage();
+                    updateUI();
+                } else {
+                    updateDebugInfo('Failed to load data - check console');
+                }
+                
+            } catch (error) {
+                updateDebugInfo('Error: ' + error.message);
+                console.error('Initialization error:', error);
+            }
+        }
+
+        async function loadBookData() {
+            try {
+                const response = await fetch('data/web_book_data.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const loadedData = await response.json();
+                console.log('Raw data structure:', Object.keys(loadedData));
+                
+                // Process the loaded data into a flat array - NO SECTIONS
+                allPages = [];
+                let pageNumber = 1;
+                
+                // Add ALL pages in order - front matter, chapters, back matter
+                // But treat them all as just "pages"
+                if (loadedData.frontMatter && loadedData.frontMatter.pages) {
+                    loadedData.frontMatter.pages.forEach(page => {
+                        allPages.push({
+                            ...page,
+                            actualPageNumber: pageNumber++
+                        });
+                    });
+                }
+                
+                if (loadedData.chapters && Array.isArray(loadedData.chapters)) {
+                    loadedData.chapters.forEach(chapter => {
+                        if (chapter.pages && Array.isArray(chapter.pages)) {
+                            chapter.pages.forEach(page => {
+                                allPages.push({
+                                    ...page,
+                                    actualPageNumber: pageNumber++,
+                                    chapterName: chapter.name
+                                });
+                            });
+                        }
+                    });
+                }
+                
+                if (loadedData.backMatter && loadedData.backMatter.pages) {
+                    loadedData.backMatter.pages.forEach(page => {
+                        allPages.push({
+                            ...page,
+                            actualPageNumber: pageNumber++
+                        });
+                    });
+                }
+                
+                totalPages = allPages.length;
+                bookData = loadedData;
+                
+                console.log(`Processed ${totalPages} pages sequentially`);
+                
+                return true;
+                
+            } catch (error) {
+                console.error('Error loading book data:', error);
+                return false;
+            }
+        }
+
+        function initializeCharacterHints() {
+            const container = document.getElementById('discoveredCharacters');
+            Object.keys(characterData).forEach(charCode => {
+                const char = characterData[charCode];
+                const hint = document.createElement('div');
+                hint.className = 'character-hint';
+                hint.textContent = char.name;
+                hint.id = `hint-${charCode}`;
+                container.appendChild(hint);
+            });
+        }
+
+        function renderCurrentPage() {
+            const pageContent = document.getElementById('pageContent');
+            
+            if (!allPages || allPages.length === 0) {
+                pageContent.innerHTML = '<div class="error">No data available. Check network connection.</div>';
+                return;
+            }
+            
+            const pageIndex = currentPage - 1;
+            if (pageIndex < 0 || pageIndex >= allPages.length) {
+                pageContent.innerHTML = '<div class="error">Page not found</div>';
+                return;
+            }
+            
+            const page = allPages[pageIndex];
+            
+            // Render page content
+            let content = page.content || '';
+            
+            // Convert markdown-style content to HTML
+            content = content.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+            content = content.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+            content = content.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+            content = content.replace(/\n\n/g, '</p><p>');
+            content = content.replace(/\n/g, '<br>');
+            
+            // Wrap in paragraphs if needed
+            if (!content.includes('<p>') && !content.includes('<h1>')) {
+                content = '<p>' + content + '</p>';
+            }
+            
+            // Process redacted content
+            content = processRedactedContent(content);
+            
+            pageContent.innerHTML = content;
+            
+            // Add annotations
+            renderAnnotations(page);
+            
+            // Update page number
+            document.getElementById('pageNumber').textContent = `Page ${currentPage}`;
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentPage <= 1;
+            document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+            
+            // Update jump input max
+            document.getElementById('jumpInput').max = totalPages;
+        }
+
+        function processRedactedContent(content) {
+            // Look for redacted patterns and make them interactive
+            const redactedPatterns = [
+                /████+/g,
+                /\[REDACTED\]/g,
+                /\[CLASSIFIED\]/g
+            ];
+            
+            redactedPatterns.forEach(pattern => {
+                content = content.replace(pattern, (match) => {
+                    return `<span class="redacted-text" onclick="revealRedacted(this)">${match}</span>`;
+                });
+            });
+            
+            return content;
+        }
+
+        function revealRedacted(element) {
+            if (revelationLevel >= 5) {
+                element.classList.add('revealed');
+                element.textContent = '[CLASSIFIED INFORMATION REVEALED]';
+            } else {
+                element.style.background = '#ff4444';
+                setTimeout(() => {
+                    element.style.background = '#333';
+                }, 200);
+            }
+        }
+
+        function renderAnnotations(page) {
+            const pageContent = document.getElementById('pageContent');
+            const annotations = page.annotations || [];
+            
+            let visibleCount = 0;
+            
+            annotations.forEach(annotation => {
+                const charCode = annotation.character || 'Unknown';
+                const withinLevel = annotation.revealLevel <= revelationLevel;
+                
+                if (withinLevel) {
+                    const annotationEl = createAnnotationElement(annotation);
+                    pageContent.appendChild(annotationEl);
+                    visibleCount++;
+                    
+                    // Add character clues
+                    addCharacterClue(charCode, annotation.text);
+                }
+            });
+            
+            annotationCount = visibleCount;
+        }
+
+        function createAnnotationElement(annotation) {
+            const div = document.createElement('div');
+            const charCode = annotation.character || 'Unknown';
+            const isDiscovered = discoveredCharacters.has(charCode);
+            
+            // Determine character display name
+            const displayName = isDiscovered ? 
+                characterData[charCode]?.fullName || charCode :
+                characterData[charCode]?.name || 'Unknown Annotator';
+            
+            // Set basic properties
+            const characterClass = isDiscovered ? 
+                `character-${charCode.toLowerCase()} ${annotation.characterStyle || ''}` :
+                'unknown-character';
+                
+            div.className = `annotation ${annotation.type || 'marginalia'} ${characterClass}`;
+            div.textContent = annotation.text;
+            div.title = `${displayName} ${annotation.year ? `(${annotation.year})` : ''}`;
+            
+            // Position the annotation
+            const position = annotation.position || { x: 0.85, y: 0.2 };
+            div.style.left = `${position.x * 100}%`;
+            div.style.top = `${position.y * 100}%`;
+            
+            // Add rotation if specified
+            if (position.rotation) {
+                div.style.transform = `rotate(${position.rotation}rad)`;
+            }
+            
+            // Add click handler
+            div.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handleAnnotationClick(annotation, div);
+            });
+            
+            // Make draggable if it's a post-it
+            if (annotation.type === 'postIt' || annotation.isDraggable) {
+                makeAnnotationDraggable(div, annotation.id);
+            }
+            
+            return div;
+        }
+
+        function handleAnnotationClick(annotation, element) {
+            const charCode = annotation.character;
+            
+            // Try to discover character
+            attemptCharacterDiscovery(charCode, annotation.text);
+            
+            // Highlight annotation
+            element.style.boxShadow = '0 0 15px rgba(255, 215, 0, 0.8)';
+            setTimeout(() => {
+                element.style.boxShadow = '';
+            }, 1000);
+            
+            updateUI();
+        }
+
+        function addCharacterClue(charCode, text) {
+            if (!characterClues.has(charCode)) {
+                characterClues.set(charCode, new Set());
+            }
+            
+            const clues = characterClues.get(charCode);
+            const charData = characterData[charCode];
+            
+            if (charData) {
+                // Check for character-specific clues in the text
+                charData.clues.forEach(clue => {
+                    if (text.toLowerCase().includes(clue.toLowerCase())) {
+                        clues.add(clue);
+                    }
+                });
+            }
+            
+            // Add generic clues based on content
+            if (text.includes('I ') || text.includes('my ')) clues.add('personal');
+            if (text.includes('measure') || text.includes('angle')) clues.add('technical');
+            if (text.includes('family') || text.includes('grandfather')) clues.add('family');
+            if (text.includes('recent') || text.includes('2024')) clues.add('modern');
+        }
+
+        function attemptCharacterDiscovery(charCode, text) {
+            if (discoveredCharacters.has(charCode)) return;
+            
+            const clues = characterClues.get(charCode) || new Set();
+            const requiredClues = Math.max(2, Math.floor(characterData[charCode]?.clues.length / 2));
+            
+            // Discovery conditions
+            const hasEnoughClues = clues.size >= requiredClues;
+            const hasNameMention = text.includes(characterData[charCode]?.fullName?.split(' ')[0] || '');
+            const hasStrongIndicator = text.includes('signed') || text.includes('initials') || text.includes('name');
+            
+            if (hasEnoughClues || hasNameMention || hasStrongIndicator) {
+                discoverCharacter(charCode);
+            }
+        }
+
+        function discoverCharacter(charCode) {
+            if (discoveredCharacters.has(charCode)) return;
+            
+            discoveredCharacters.add(charCode);
+            
+            // Update character hint
+            const hint = document.getElementById(`hint-${charCode}`);
+            if (hint) {
+                hint.textContent = characterData[charCode]?.fullName || charCode;
+                hint.classList.add('discovered');
+                hint.style.border = `2px solid var(--${charCode.toLowerCase()}-color, #333)`;
+            }
+            
+            // Re-render current page to show proper character styling
+            renderCurrentPage();
+            
+            updateDebugInfo(`Character discovered: ${characterData[charCode]?.fullName || charCode}`);
+        }
+
+        function makeAnnotationDraggable(element, annotationId) {
+            let isDragging = false;
+            let startX, startY, initialX, initialY;
+
+            element.addEventListener('mousedown', startDrag);
+            element.addEventListener('touchstart', startDrag);
+
+            function startDrag(e) {
+                isDragging = true;
+                element.classList.add('dragging');
+                
+                const touch = e.touches ? e.touches[0] : e;
+                startX = touch.clientX;
+                startY = touch.clientY;
+                initialX = element.offsetLeft;
+                initialY = element.offsetTop;
+                
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('touchmove', drag);
+                document.addEventListener('mouseup', stopDrag);
+                document.addEventListener('touchend', stopDrag);
+                
+                e.preventDefault();
+            }
+
+            function drag(e) {
+                if (!isDragging) return;
+                
+                const touch = e.touches ? e.touches[0] : e;
+                const deltaX = touch.clientX - startX;
+                const deltaY = touch.clientY - startY;
+                
+                element.style.left = `${initialX + deltaX}px`;
+                element.style.top = `${initialY + deltaY}px`;
+                
+                e.preventDefault();
+            }
+
+            function stopDrag() {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                element.classList.remove('dragging');
+                
+                document.removeEventListener('mousemove', drag);
+                document.removeEventListener('touchmove', drag);
+                document.removeEventListener('mouseup', stopDrag);
+                document.removeEventListener('touchend', stopDrag);
+            }
+        }
+
+        function updateRevelationLevel(level) {
+            revelationLevel = parseInt(level);
+            const levelInfo = revelationLevels[level];
+            document.getElementById('revelationLabel').textContent = levelInfo.name;
+            
+            renderCurrentPage();
+            updateUI();
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        function jumpToPage() {
+            const input = document.getElementById('jumpInput');
+            const pageNum = parseInt(input.value);
+            
+            if (pageNum >= 1 && pageNum <= totalPages) {
+                currentPage = pageNum;
+                renderCurrentPage();
+                updateUI();
+                input.value = '';
+            }
+        }
+
+        function updateUI() {
+            document.getElementById('pageProgress').textContent = `${currentPage}/${totalPages}`;
+            document.getElementById('annotationCount').textContent = annotationCount;
+            document.getElementById('characterCount').textContent = discoveredCharacters.size;
+            
+            // Update progress bar
+            const progressPercent = (currentPage / totalPages) * 100;
+            document.getElementById('progressFill').style.width = `${progressPercent}%`;
+        }
+
+        function updateDebugInfo(message) {
+            const debugInfo = document.getElementById('debugInfo');
+            debugInfo.textContent = 'Status: ' + message;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') previousPage();
+            if (e.key === 'ArrowRight') nextPage();
+            if (e.key >= '1' && e.key <= '5') {
+                updateRevelationLevel(parseInt(e.key));
+                document.getElementById('revelationSlider').value = e.key;
+            }
+        });
+
+        // Enter key for page jump
+        document.getElementById('jumpInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                jumpToPage();
+            }
+        });
+    </script>
+</body>
+</html>
