@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor Archive - Advanced UI Edition</title>
+    <style>
+        :root {
+            --paper-color: #f4f1e8;
+            --paper-dark: #e8e1d3;
+            --text-color: #2c2c2c;
+            --candlelight: #ff8c42;
+            --supernatural-glow: #9d4edd;
+            --shadow-deep: rgba(0,0,0,0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: radial-gradient(circle at 50% 50%, #1a1a1a, #000);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        /* Dark Mode with Candlelight */
+        body.dark-mode {
+            background: radial-gradient(circle at 30% 20%, #2d1810, #0d0d0d);
+        }
+
+        .candlelight-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                transparent 0%,
+                transparent 10%,
+                rgba(0,0,0,0.3) 30%,
+                rgba(0,0,0,0.8) 70%
+            );
+            pointer-events: none;
+            z-index: 1;
+            transition: background 0.1s ease;
+        }
+
+        /* Particle System */
+        .particle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--supernatural-glow);
+            border-radius: 50%;
+            opacity: 0;
+            animation: float-particle 8s infinite linear;
+        }
+
+        .spirit-particle {
+            background: rgba(157, 78, 221, 0.6);
+            width: 3px;
+            height: 3px;
+            box-shadow: 0 0 10px var(--supernatural-glow);
+            animation: spirit-dance 12s infinite ease-in-out;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes spirit-dance {
+            0%, 100% {
+                transform: translateX(0) translateY(0) scale(1);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translateX(20px) translateY(-10px) scale(1.2);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateX(-15px) translateY(-20px) scale(0.8);
+                opacity: 0.6;
+            }
+            75% {
+                transform: translateX(25px) translateY(-5px) scale(1.1);
+                opacity: 0.9;
+            }
+        }
+
+        /* 3D Book Container */
+        .book-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            margin: 50px auto;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .book-page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--paper-color) 0%, var(--paper-dark) 100%);
+            border-radius: 8px;
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.3),
+                inset 0 0 50px rgba(139,69,19,0.1);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transform-origin: left center;
+            transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .book-page.turning {
+            transform: rotateY(-180deg);
+        }
+
+        .book-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(139,69,19,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139,69,19,0.1) 0%, transparent 50%);
+            border-radius: 8px;
+        }
+
+        /* Enhanced Header */
+        .app-header {
+            background: linear-gradient(45deg, #1a1a1a, #2d1810);
+            color: white;
+            padding: 1rem;
+            box-shadow: 
+                0 4px 20px rgba(0,0,0,0.5),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .app-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px var(--candlelight);
+            animation: title-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes title-glow {
+            from { text-shadow: 0 0 10px var(--candlelight); }
+            to { text-shadow: 0 0 20px var(--candlelight), 0 0 30px rgba(255,140,66,0.5); }
+        }
+
+        .controls {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+            box-shadow: 0 5px 15px rgba(255,140,66,0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Floating Annotations */
+        .annotation {
+            position: absolute;
+            font-size: 0.8rem;
+            max-width: 200px;
+            cursor: pointer;
+            z-index: 15;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform-style: preserve-3d;
+        }
+
+        .annotation.floating {
+            animation: float-gentle 6s ease-in-out infinite;
+        }
+
+        .annotation.character-mb {
+            color: #2653a3;
+            font-family: cursive;
+            font-style: italic;
+            text-shadow: 0 0 8px rgba(38, 83, 163, 0.6);
+        }
+
+        .annotation.character-jr {
+            color: #1a1a1a;
+            font-family: 'Courier New', monospace;
+            background: rgba(255,255,255,0.9);
+            padding: 0.3rem;
+            border-radius: 4px;
+        }
+
+        .annotation.character-sw {
+            background: #fff68f;
+            padding: 0.5rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transform: rotate(2deg);
+        }
+
+        .annotation:hover {
+            transform: scale(1.1) translateZ(20px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            z-index: 20;
+        }
+
+        @keyframes float-gentle {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-8px) rotate(1deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(0deg);
+            }
+            75% {
+                transform: translateY(-8px) rotate(-1deg);
+            }
+        }
+
+        /* Supernatural Effects */
+        .supernatural-active {
+            animation: supernatural-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes supernatural-pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(157, 78, 221, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(157, 78, 221, 0.8), 0 0 60px rgba(157, 78, 221, 0.4);
+            }
+        }
+
+        /* Redacted Content */
+        .redacted {
+            background: linear-gradient(45deg, #2c2c2c, #1a1a1a);
+            color: transparent;
+            padding: 0 4px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.6s ease;
+            border-radius: 2px;
+        }
+
+        .redacted::before {
+            content: '████████';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c2c2c;
+            transition: all 0.6s ease;
+        }
+
+        .redacted:hover {
+            box-shadow: 0 0 15px rgba(255,0,0,0.5);
+            transform: scale(1.02);
+        }
+
+        .redacted.revealed {
+            background: linear-gradient(45deg, #ffeb3b, #ffc107);
+            color: var(--text-color);
+            animation: reveal-flash 1.5s ease;
+        }
+
+        .redacted.revealed::before {
+            opacity: 0;
+        }
+
+        @keyframes reveal-flash {
+            0% { 
+                background: #2c2c2c;
+                transform: scale(1);
+            }
+            25% { 
+                background: #ff6b6b;
+                transform: scale(1.05);
+            }
+            50% { 
+                background: #ffeb3b;
+                transform: scale(1.1);
+            }
+            100% { 
+                background: #ffeb3b;
+                transform: scale(1);
+            }
+        }
+
+        /* Page Content */
+        .page-content {
+            padding: 2rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: justify;
+            position: relative;
+            z-index: 5;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Dark Mode Toggle */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: linear-gradient(45deg, #ff8c42, #ff6b42);
+            border: none;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(255,140,66,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .mode-toggle:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 6px 20px rgba(255,140,66,0.6);
+        }
+
+        /* Navigation */
+        .navigation {
+            background: linear-gradient(45deg, #1a1a1a, #2d1810);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav-btn {
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(45deg, var(--candlelight), #ff6b42);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,140,66,0.4);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .book-container {
+                width: 95vw;
+                height: 70vh;
+                margin: 20px auto;
+            }
+            
+            .page-content {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .annotation {
+                font-size: 0.7rem;
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Candlelight Effect -->
+    <div class="candlelight-overlay"></div>
+
+    <!-- Particle System -->
+    <div class="particle-container" id="particles"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button class="mode-toggle" onclick="toggleDarkMode()">🕯️</button>
+
+    <!-- Header -->
+    <div class="app-header">
+        <div class="app-title">🏰 Blackthorn Manor Archive - Advanced UI</div>
+        <div class="controls">
+            <button class="btn" onclick="toggleParticles()">✨ Supernatural</button>
+            <button class="btn" onclick="showCharacterGuide()">👥 Characters</button>
+            <button class="btn" onclick="showTimeline()">⏰ Timeline</button>
+            <button class="btn" onclick="toggle3DMode()">📖 3D Mode</button>
+        </div>
+    </div>
+
+    <!-- Main Book -->
+    <div class="book-container" id="book">
+        <div class="book-page" id="current-page">
+            <div class="page-content">
+                <h2 style="margin-bottom: 1rem; border-bottom: 2px solid rgba(0,0,0,0.2); padding-bottom: 0.5rem;">
+                    Chapter I: Introduction and Historical Context
+                </h2>
+                
+                <p>The Blackthorn family's connection to the land predates recorded history. Archaeological evidence suggests ritual activity at the site for at least six millennia, centred around what locals once called the Whispering Stones.</p>
+
+                <p>Blackthorn Manor represents one of the finest examples of Victorian Gothic Revival architecture in the country. Completed in 1871, the house was commissioned by Sir William Blackthorn following his return from extensive travels in Egypt and the Near East.</p>
+
+                <p>Local folklore documented by parish records describes the Blackthorn property as 'thin ground' where <span class="redacted" data-reveal="visitors from other dimensions" onclick="revealSecret(this)">████████</span> would occasionally appear. These accounts date back to the earliest settlement records.</p>
+
+                <p>William Blackthorn's Egyptian expedition of 1866 was privately funded after the British Museum rejected his proposed exploration of chambers beneath the Temple of Hathor that had been sealed and marked with <span class="redacted" data-reveal="warnings about dimensional barriers" onclick="revealSecret(this)">unusual warnings</span>.</p>
+
+                <p>The deaths of three expedition members were officially attributed to 'toxic exposure,' but William's private journal describes symptoms inconsistent with any known pathogen: <span class="redacted" data-reveal="partial dissolution of physical form and cognitive fragmentation following contact with otherworldly atmosphere" onclick="revealSecret(this)">████████</span>.</p>
+            </div>
+
+            <!-- Floating Annotations -->
+            <div class="annotation floating character-mb" style="top: 20%; right: 5%;" onclick="showAnnotation('mb1')">
+                "The symbols weren't unknown to us. We just couldn't speak of them openly." - MB, 1987
+            </div>
+
+            <div class="annotation floating character-jr" style="top: 60%; left: 3%;" onclick="showAnnotation('jr1')">
+                The expedition deaths weren't from toxic exposure. William's journal describes something that defies explanation. - JR, 1988
+            </div>
+
+            <div class="annotation floating character-sw" style="bottom: 20%; right: 10%;" onclick="showAnnotation('sw1')">
+                Note: Claire was investigating these same symbols before she disappeared. - SW, 2024
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <div>
+            <button class="nav-btn" onclick="previousPage()">← Previous</button>
+            <span style="margin: 0 2rem;">Page 1 of 99</span>
+            <button class="nav-btn" onclick="nextPage()">Next →</button>
+        </div>
+        <div>
+            <span>🔓 Level 1: Academic Study</span>
+        </div>
+    </div>
+
+    <script>
+        let darkMode = false;
+        let particlesEnabled = true;
+        let is3DMode = true;
+        let supernaturalLevel = 0;
+
+        // Initialize
+        window.onload = function() {
+            createParticles();
+            setupCandlelight();
+            enableFloatingAnimations();
+        };
+
+        // Dark Mode
+        function toggleDarkMode() {
+            darkMode = !darkMode;
+            document.body.classList.toggle('dark-mode', darkMode);
+            document.querySelector('.mode-toggle').textContent = darkMode ? '☀️' : '🕯️';
+            
+            if (darkMode) {
+                createSpiritParticles();
+            }
+        }
+
+        // Particle System
+        function createParticles() {
+            const container = document.getElementById('particles');
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 8 + 's';
+                    particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                    container.appendChild(particle);
+                }, i * 100);
+            }
+        }
+
+        function createSpiritParticles() {
+            const container = document.getElementById('particles');
+            
+            for (let i = 0; i < 20; i++) {
+                const spirit = document.createElement('div');
+                spirit.className = 'particle spirit-particle';
+                spirit.style.left = Math.random() * 100 + '%';
+                spirit.style.top = Math.random() * 100 + '%';
+                spirit.style.animationDelay = Math.random() * 12 + 's';
+                container.appendChild(spirit);
+            }
+        }
+
+        function toggleParticles() {
+            particlesEnabled = !particlesEnabled;
+            const container = document.getElementById('particles');
+            container.style.display = particlesEnabled ? 'block' : 'none';
+            
+            if (particlesEnabled) {
+                supernaturalLevel++;
+                document.querySelector('.book-page').classList.add('supernatural-active');
+                createSpiritParticles();
+            } else {
+                document.querySelector('.book-page').classList.remove('supernatural-active');
+            }
+        }
+
+        // Candlelight Effect
+        function setupCandlelight() {
+            document.addEventListener('mousemove', function(e) {
+                const overlay = document.querySelector('.candlelight-overlay');
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+                overlay.style.setProperty('--mouse-x', x + '%');
+                overlay.style.setProperty('--mouse-y', y + '%');
+            });
+        }
+
+        // 3D Page Turning
+        function toggle3DMode() {
+            is3DMode = !is3DMode;
+            const book = document.getElementById('book');
+            
+            if (is3DMode) {
+                book.style.transform = 'rotateX(5deg) rotateY(-5deg)';
+            } else {
+                book.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            }
+        }
+
+        function nextPage() {
+            const page = document.querySelector('.book-page');
+            page.classList.add('turning');
+            
+            setTimeout(() => {
+                // Load new content here
+                page.classList.remove('turning');
+            }, 1200);
+        }
+
+        function previousPage() {
+            const page = document.querySelector('.book-page');
+            page.style.transform = 'rotateY(180deg)';
+            
+            setTimeout(() => {
+                page.style.transform = 'rotateY(0deg)';
+            }, 1200);
+        }
+
+        // Floating Animations
+        function enableFloatingAnimations() {
+            const annotations = document.querySelectorAll('.annotation');
+            annotations.forEach((annotation, index) => {
+                annotation.style.animationDelay = (index * 0.5) + 's';
+                
+                annotation.addEventListener('mouseenter', function() {
+                    this.style.animation = 'none';
+                    this.style.transform = 'scale(1.15) translateZ(30px)';
+                });
+                
+                annotation.addEventListener('mouseleave', function() {
+                    this.style.animation = 'float-gentle 6s ease-in-out infinite';
+                    this.style.transform = 'scale(1) translateZ(0px)';
+                });
+            });
+        }
+
+        // Redaction Reveals
+        function revealSecret(element) {
+            const revealText = element.dataset.reveal;
+            element.textContent = revealText;
+            element.classList.add('revealed');
+            
+            // Supernatural effect
+            document.querySelector('.book-page').classList.add('supernatural-active');
+            createSpiritParticles();
+            
+            // Notification
+            showNotification('🔓 Classified information revealed!');
+        }
+
+        function showAnnotation(id) {
+            showNotification('📝 Character annotation discovered!');
+            
+            // Add supernatural glow
+            event.target.style.textShadow = '0 0 15px var(--supernatural-glow)';
+            setTimeout(() => {
+                event.target.style.textShadow = '';
+            }, 2000);
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 80px;
+                background: linear-gradient(45deg, var(--supernatural-glow), #ff6b42);
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 25px;
+                z-index: 1001;
+                box-shadow: 0 5px 20px rgba(157, 78, 221, 0.4);
+                animation: slideIn 0.5s ease, fadeOut 0.5s ease 2.5s forwards;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        function showCharacterGuide() {
+            showNotification('👥 Character guide coming soon!');
+        }
+
+        function showTimeline() {
+            showNotification('⏰ Timeline view coming soon!');
+        }
+
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
