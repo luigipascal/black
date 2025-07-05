@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor Archive - Enhanced Edition</title>
+    <style>
+        :root {
+            --paper-color: #f4f1e8;
+            --paper-dark: #e8e1d3;
+            --text-color: #2c2c2c;
+            --margin-blue: #2653a3;
+            --margin-black: #1a1a1a;
+            --margin-red: #c41e3a;
+            --book-spine: #8b4513;
+            --book-cover: #654321;
+            --post-it-yellow: #fff68f;
+            --post-it-white: #f8f8f8;
+            --redacted-bg: #2c2c2c;
+            --reveal-highlight: #ffeb3b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--book-cover);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-header {
+            background: var(--book-spine);
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .app-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .controls {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .btn.active {
+            background: var(--reveal-highlight);
+            color: var(--text-color);
+        }
+
+        .revelation-level {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            min-height: 0;
+        }
+
+        .document-container {
+            background: var(--paper-color);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 900px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .document-page {
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--paper-color) 0%, var(--paper-dark) 100%);
+        }
+
+        .document-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(139,69,19,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139,69,19,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .chapter-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .page-content {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            text-align: justify;
+            position: relative;
+            height: calc(100% - 3rem);
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        .annotation {
+            position: absolute;
+            font-size: 0.7rem;
+            max-width: 180px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .annotation.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .annotation:hover {
+            transform: scale(1.05);
+            z-index: 20;
+        }
+
+        .annotation.marginalia {
+            background: none;
+            transform: rotate(-2deg);
+        }
+
+        .annotation.marginalia.visible {
+            transform: rotate(-2deg) scale(1);
+        }
+
+        .annotation.post-it {
+            background: var(--post-it-yellow);
+            padding: 0.4rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transform: rotate(1deg);
+        }
+
+        .annotation.post-it.visible {
+            transform: rotate(1deg) scale(1);
+        }
+
+        .annotation.character-mb {
+            color: var(--margin-blue);
+            font-family: cursive;
+            font-style: italic;
+        }
+
+        .annotation.character-jr {
+            color: var(--margin-black);
+            font-family: 'Courier New', monospace;
+        }
+
+        .annotation.character-ew {
+            color: var(--margin-red);
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        .annotation.character-sw {
+            color: #654321;
+            font-family: 'Courier New', monospace;
+        }
+
+        .annotation.character-detective {
+            color: #006400;
+            font-family: 'Courier New', monospace;
+            font-size: 0.6rem;
+        }
+
+        .annotation.character-chambers {
+            color: #000000;
+            font-family: 'Courier New', monospace;
+            font-size: 0.6rem;
+            font-weight: bold;
+        }
+
+        .redacted {
+            background: var(--redacted-bg);
+            color: var(--redacted-bg);
+            padding: 0 4px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .redacted:hover {
+            background: rgba(44, 44, 44, 0.7);
+        }
+
+        .redacted.revealed {
+            background: var(--reveal-highlight);
+            color: var(--text-color);
+            animation: reveal-flash 1s ease;
+        }
+
+        @keyframes reveal-flash {
+            0% { background: var(--redacted-bg); }
+            50% { background: var(--reveal-highlight); }
+            100% { background: transparent; }
+        }
+
+        .navigation {
+            background: var(--book-spine);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .page-info {
+            font-size: 0.9rem;
+        }
+
+        .progress-info {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+
+        .character-timeline {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 3px solid #ddd;
+        }
+
+        .timeline-entry {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--book-spine);
+        }
+
+        .revelation-progress {
+            background: linear-gradient(to right, #4caf50, #8bc34a, #cddc39, #ffeb3b, #ff9800);
+            height: 6px;
+            border-radius: 3px;
+            margin: 0.5rem 0;
+        }
+
+        .progress-fill {
+            background: var(--book-spine);
+            height: 100%;
+            border-radius: 3px;
+            transition: width 1s ease;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 0.5rem;
+            }
+            
+            .document-page {
+                padding: 1rem;
+            }
+            
+            .annotation {
+                max-width: 120px;
+                font-size: 0.6rem;
+            }
+
+            .controls {
+                gap: 0.25rem;
+            }
+
+            .btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-header">
+        <div class="app-title">📖 Blackthorn Manor Archive - Enhanced Edition</div>
+        <div class="controls">
+            <div class="revelation-level" id="revelation-level">Level 1: Academic Study</div>
+            <button class="btn" onclick="toggleReadingMode()">📱 Single Page</button>
+            <button class="btn" onclick="showCharacterGuide()">👥 Characters</button>
+            <button class="btn" onclick="showTimeline()">⏰ Timeline</button>
+            <button class="btn" onclick="showRevealMenu()">🔓 Revelation</button>
+            <button class="btn" onclick="showMenu()">⋮</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="document-container">
+            <div class="document-page">
+                <div class="loading" id="loading">
+                    🏰 Loading classified documents...<br>
+                    <small>Initializing progressive revelation system...</small>
+                </div>
+                <div id="page-content" style="display: none;">
+                    <div class="chapter-title" id="chapter-title"></div>
+                    <div class="page-content" id="main-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="nav-controls">
+            <button class="nav-btn" id="prev-btn" onclick="previousPage()">← Previous</button>
+            <div class="page-info" id="page-info">Page 1 of 99</div>
+            <button class="nav-btn" id="next-btn" onclick="nextPage()">Next →</button>
+        </div>
+        <div class="progress-info">
+            <div>Discovery Progress: <span id="discovery-progress">0%</span></div>
+            <div class="revelation-progress">
+                <div class="progress-fill" id="progress-fill" style="width: 20%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Modals -->
+    <div id="annotation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-character"></h2>
+            <p id="modal-year"></p>
+            <p id="modal-text"></p>
+            <div id="modal-character-info" class="character-info"></div>
+            <div id="modal-reveal-info"></div>
+        </div>
+    </div>
+
+    <div id="character-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCharacterModal()">&times;</span>
+            <h2>Character Guide</h2>
+            <div id="character-list"></div>
+        </div>
+    </div>
+
+    <div id="timeline-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTimelineModal()">&times;</span>
+            <h2>Investigation Timeline</h2>
+            <div id="timeline-content"></div>
+        </div>
+    </div>
+
+    <div id="revelation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRevelationModal()">&times;</span>
+            <h2>Progressive Revelation Control</h2>
+            <div id="revelation-controls"></div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced App State
+        let currentPage = 0;
+        let totalPages = 99;
+        let revelationLevel = 1;
+        let discoveredCharacters = new Set();
+        let unlockedAnnotations = new Set();
+        let readingMode = 'single';
+        let draggedAnnotation = null;
+
+        // Enhanced book data with progressive revelation
+        const enhancedPages = [
+            {
+                pageNumber: 1,
+                chapterName: "CHAPTER_I_INTRODUCTION_AND_HISTORICAL_CONTEXT",
+                content: `# Chapter I: Introduction and Historical Context
+
+                The Blackthorn family's connection to the land predates recorded history. Archaeological evidence suggests ritual activity at the site for at least six millennia, centred around what locals once called the Whispering Stones. The stone circle William incorporated into his estate grounds shows evidence of continuous use since approximately 4000 BCE.
+
+                Blackthorn Manor represents one of the finest examples of Victorian Gothic Revival architecture in the country. Completed in 1871, the house was commissioned by Sir William Blackthorn following his return from extensive travels in Egypt and the Near East.
+
+                Local folklore documented by parish records describes the Blackthorn property as 'thin ground' where <span class="redacted" data-reveal="visitors from other dimensions">████████</span> would occasionally appear. These accounts date back to the earliest settlement records.
+
+                William Blackthorn's Egyptian expedition of 1866 was privately funded after the British Museum rejected his proposed exploration of chambers beneath the Temple of Hathor that had been sealed and marked with <span class="redacted" data-reveal="warnings about dimensional barriers">unusual warnings</span>.
+
+                The deaths of three expedition members were officially attributed to 'toxic exposure,' but William's private journal describes symptoms inconsistent with any known pathogen: <span class="redacted" data-reveal="partial dissolution of physical form and cognitive fragmentation following contact with otherworldly atmosphere">████████</span>.`,
+                annotations: [
+                    {
+                        id: "ann1",
+                        character: "MB",
+                        text: "The symbols weren't unknown to us. We just couldn't speak of them openly.",
+                        type: "marginalia",
+                        year: 1987,
+                        revealLevel: 2,
+                        position: { x: 0.85, y: 0.3 }
+                    },
+                    {
+                        id: "ann2", 
+                        character: "SW",
+                        text: "Note: Claire was investigating these same symbols before she disappeared.",
+                        type: "post-it",
+                        year: 2024,
+                        revealLevel: 4,
+                        position: { x: 0.05, y: 0.6 }
+                    },
+                    {
+                        id: "ann3",
+                        character: "JR",
+                        text: "The expedition deaths weren't from toxic exposure. William's journal describes something that defies explanation.",
+                        type: "marginalia",
+                        year: 1988,
+                        revealLevel: 3,
+                        position: { x: 0.02, y: 0.8 }
+                    }
+                ]
+            },
+            {
+                pageNumber: 2,
+                chapterName: "CHAPTER_I_INTRODUCTION_AND_HISTORICAL_CONTEXT",
+                content: `The architectural style of Blackthorn Manor defies easy categorization. While primarily Gothic Revival, the building incorporates elements that seem to predate this movement by centuries. The stonework displays mastery of techniques that were supposedly lost during the medieval period.
+
+                Of particular note are the manor's numerous doorways - a total of 47 have been documented, though architectural plans suggest there should be only 31. These additional entrances appear to have been added during construction, not as later modifications. More puzzling still, several of these doors <span class="redacted" data-reveal="open onto walls or lead to rooms that exist in parallel dimensions">████████</span>.
+
+                The building's most controversial feature is the so-called "Observation Tower" - a circular structure that rises 60 feet above the main building. No contemporary records explain its purpose, and its interior contains only a single, windowless chamber designed for <span class="redacted" data-reveal="monitoring dimensional fluctuations and entity manifestations">unknown observations</span>.
+
+                Local folklore has long associated the manor with supernatural occurrences, though these tales were dismissed by academic researchers until the 1980s, when a series of unexplained events began to be documented by credible witnesses.
+
+                The manor's most disturbing feature, hidden from public view, is the eastern wing's <span class="redacted" data-reveal="primary manifestation chamber where dimensional barriers are naturally thinnest">special room</span> where William conducted his most dangerous experiments.`,
+                annotations: [
+                    {
+                        id: "ann4",
+                        character: "JR",
+                        text: "The door count keeps changing. I've counted 47, then 49, then back to 47. Something's not right.",
+                        type: "marginalia",
+                        year: 1989,
+                        revealLevel: 3,
+                        position: { x: 0.02, y: 0.2 }
+                    },
+                    {
+                        id: "ann5",
+                        character: "EW",
+                        text: "Structural analysis shows these 'extra' doors are load-bearing. Removing them would cause collapse.",
+                        type: "marginalia",
+                        year: 1998,
+                        revealLevel: 3,
+                        position: { x: 0.9, y: 0.4 }
+                    },
+                    {
+                        id: "ann6",
+                        character: "Detective Sharma",
+                        text: "Missing persons reports correlate with visits to the eastern wing. Investigating connection.",
+                        type: "post-it",
+                        year: 2024,
+                        revealLevel: 4,
+                        position: { x: 0.7, y: 0.7 }
+                    },
+                    {
+                        id: "ann7",
+                        character: "Dr. Chambers",
+                        text: "CLASSIFIED: Dimensional instability detected. Department 8 monitoring required.",
+                        type: "post-it",
+                        year: 2024,
+                        revealLevel: 5,
+                        position: { x: 0.1, y: 0.9 }
+                    }
+                ]
+            },
+            {
+                pageNumber: 3,
+                chapterName: "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
+                content: `The most enigmatic feature of Blackthorn Manor lies beneath the foundation - a network of chambers that extend far beyond typical Victorian cellars. The central cellar serves expected functions, but beyond it lies something far more sinister.
+
+                The eastern corridor terminates in what appears to be a dead end, though <span class="redacted" data-reveal="dimensional gateway William termed 'The Vestibule'">architectural plans suggest additional rooms</span> beyond this point. The wall appears solid under normal perception but becomes permeable during specific astronomical alignments.
+
+                The most curious feature is undoubtedly the well room, housing what appears to be a conventional water well. However, county records indicate no natural water source exists at this location. The shaft descends sixty feet to <span class="redacted" data-reveal="a dimensional weak point where limited interaction can occur without risking full manifestation">a chamber with unknown purpose</span>.
+
+                Adjacent to the well room is "The Archive," measuring fifteen feet square with walls lined with slate. Unlike traditional archives, this room contained no furniture, but the slate walls were designed to <span class="redacted" data-reveal="record and preserve manifestations too unstable for direct observation">serve a specific recording function</span>.
+
+                The lowest level contains a circular structure, approximately forty feet in diameter, positioned directly beneath the east wing. This structure predates the manor by millennia and creates <span class="redacted" data-reveal="a perfect resonance point between dimensions, naturally amplifying manifestation attempts">unknown architectural anomalies</span>.`,
+                annotations: [
+                    {
+                        id: "ann8",
+                        character: "MB",
+                        text: "The eastern 'dead end' contains a door visible only under certain conditions. The timing must be precise—within three minutes of 3:33 AM on the equinox.",
+                        type: "marginalia",
+                        year: 1977,
+                        revealLevel: 2,
+                        position: { x: 0.02, y: 0.25 }
+                    },
+                    {
+                        id: "ann9",
+                        character: "JR",
+                        text: "Spent three nights at the eastern dead end. At 3:30 AM the temperature drops dramatically and there's a distinct smell like ozone and rotting flowers.",
+                        type: "marginalia",
+                        year: 1985,
+                        revealLevel: 3,
+                        position: { x: 0.85, y: 0.35 }
+                    },
+                    {
+                        id: "ann10",
+                        character: "EW",
+                        text: "Ground-penetrating radar confirms a large chamber beyond the eastern wall. No detected entrance. Wall composition contains minerals not local to this region.",
+                        type: "marginalia",
+                        year: 1996,
+                        revealLevel: 3,
+                        position: { x: 0.9, y: 0.6 }
+                    },
+                    {
+                        id: "ann11",
+                        character: "SW",
+                        text: "William's journal describes the hidden chamber as 'The Vestibule.' Not a room but a threshold to somewhere else. He wrote about 'visitors' who first appeared as shadows on the walls.",
+                        type: "post-it",
+                        year: 2024,
+                        revealLevel: 4,
+                        position: { x: 0.05, y: 0.75 }
+                    },
+                    {
+                        id: "ann12",
+                        character: "Detective Sharma",
+                        text: "Audio equipment captured several distinct voices despite house being empty. Voices repeat four names: 'Margaret,' 'James,' 'Eliza,' and 'Simon.'",
+                        type: "post-it",
+                        year: 2024,
+                        revealLevel: 4,
+                        position: { x: 0.7, y: 0.1 }
+                    }
+                ]
+            }
+        ];
+
+        const characters = {
+            "MB": {
+                name: "Margaret Blackthorn",
+                years: "1930-1999",
+                role: "Family Guardian",
+                description: "Last surviving member of the Blackthorn family. Her elegant blue script reveals family secrets passed down through generations. Maintained dangerous protective rituals until her death.",
+                style: "character-mb",
+                mysteryRole: "Keeper of family secrets and ancient protective rituals",
+                revealLevel: 2,
+                disappearanceDate: "1999 (natural death)",
+                keyThemes: ["family secrets", "protective rituals", "dimensional containment"]
+            },
+            "JR": {
+                name: "James Reed", 
+                years: "1984-1990",
+                role: "Independent Researcher",
+                description: "Independent researcher whose messy black ballpoint notes document his growing unease before his mysterious disappearance in 1989.",
+                style: "character-jr",
+                mysteryRole: "Academic investigator who uncovered too much truth",
+                revealLevel: 3,
+                disappearanceDate: "March 1989",
+                keyThemes: ["architectural anomalies", "research methodology", "growing danger"]
+            },
+            "EW": {
+                name: "Eliza Winston",
+                years: "1995-1999", 
+                role: "Structural Engineer",
+                description: "Structural engineer whose precise red pen annotations revealed impossible architectural anomalies before her sudden departure from the project.",
+                style: "character-ew",
+                mysteryRole: "Technical expert who documented structural impossibilities",
+                revealLevel: 3,
+                disappearanceDate: "1999 (project abandonment)",
+                keyThemes: ["structural analysis", "engineering impossibilities", "safety concerns"]
+            },
+            "SW": {
+                name: "Simon Wells",
+                years: "2024+",
+                role: "Current Investigator", 
+                description: "Current investigator whose hurried pencil notes document his desperate search for his missing sister Claire and the truth about the manor.",
+                style: "character-sw",
+                mysteryRole: "Modern investigator seeking missing sister",
+                revealLevel: 4,
+                disappearanceDate: "Active investigation",
+                keyThemes: ["sister's disappearance", "modern investigation", "connecting timelines"]
+            },
+            "Detective Sharma": {
+                name: "Detective Moira Sharma",
+                years: "2024+",
+                role: "Police Investigator",
+                description: "County Police detective whose official green ink documents growing evidence of connected missing persons cases at Blackthorn Manor.",
+                style: "character-detective",
+                mysteryRole: "Law enforcement connecting missing persons cases",
+                revealLevel: 4,
+                disappearanceDate: "Active investigation",
+                keyThemes: ["missing persons", "police investigation", "pattern recognition"]
+            },
+            "Dr. Chambers": {
+                name: "Dr. E. Chambers",
+                years: "2024+",
+                role: "Government Analyst",
+                description: "Government analyst with Department 8, specializing in anomalous phenomena. Official black ink classifications indicate high-level interest.",
+                style: "character-chambers",
+                mysteryRole: "Government oversight of anomalous phenomena",
+                revealLevel: 5,
+                disappearanceDate: "Classified status",
+                keyThemes: ["government classification", "anomalous phenomena", "dimensional monitoring"]
+            }
+        };
+
+        const revelationLevels = {
+            1: {
+                name: "Academic Study",
+                description: "Original Professor Finch architectural study",
+                characters: [],
+                unlockCondition: "Start reading"
+            },
+            2: {
+                name: "Family Secrets",
+                description: "Margaret Blackthorn's family knowledge revealed",
+                characters: ["MB"],
+                unlockCondition: "Discover 3 Margaret annotations"
+            },
+            3: {
+                name: "Research Investigation", 
+                description: "James Reed and Eliza Winston's findings",
+                characters: ["MB", "JR", "EW"],
+                unlockCondition: "Find research methodology"
+            },
+            4: {
+                name: "Modern Mystery",
+                description: "Current investigation and disappearances",
+                characters: ["MB", "JR", "EW", "SW", "Detective Sharma"],
+                unlockCondition: "Connect missing persons cases"
+            },
+            5: {
+                name: "Complete Truth",
+                description: "Full supernatural revelation",
+                characters: ["MB", "JR", "EW", "SW", "Detective Sharma", "Dr. Chambers"],
+                unlockCondition: "Government classification accessed"
+            }
+        };
+
+        // Initialize the enhanced app
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('page-content').style.display = 'block';
+                loadPage(currentPage);
+                updateRevelationLevel();
+            }, 2000);
+        };
+
+        function loadPage(pageIndex) {
+            const page = enhancedPages[pageIndex];
+            if (!page) return;
+
+            // Clear existing annotations
+            document.querySelectorAll('.annotation').forEach(el => el.remove());
+
+            // Set content
+            document.getElementById('chapter-title').textContent = formatChapterName(page.chapterName);
+            document.getElementById('main-text').innerHTML = formatContent(page.content);
+
+            // Add annotations based on revelation level
+            page.annotations.forEach(annotation => {
+                if (annotation.revealLevel <= revelationLevel) {
+                    createAnnotation(annotation);
+                }
+            });
+
+            // Update navigation
+            updateNavigation();
+            updateProgress();
+        }
+
+        function formatChapterName(chapterName) {
+            return chapterName.replace(/_/g, ' ').replace(/CHAPTER (\w+)/, 'Chapter $1:');
+        }
+
+        function formatContent(content) {
+            return content.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+        }
+
+        function createAnnotation(annotation) {
+            const annotationEl = document.createElement('div');
+            annotationEl.className = `annotation ${annotation.type} ${characters[annotation.character]?.style || ''}`;
+            annotationEl.style.left = `${annotation.position.x * 100}%`;
+            annotationEl.style.top = `${annotation.position.y * 100}%`;
+            annotationEl.textContent = annotation.text;
+            
+            annotationEl.onclick = () => {
+                showAnnotationDetail(annotation);
+                discoverCharacter(annotation.character);
+                unlockAnnotation(annotation.id);
+            };
+            
+            if (annotation.type === 'post-it') {
+                annotationEl.draggable = true;
+                annotationEl.ondragstart = (e) => {
+                    draggedAnnotation = annotation;
+                };
+            }
+
+            document.querySelector('.document-page').appendChild(annotationEl);
+            
+            // Animate appearance
+            setTimeout(() => {
+                annotationEl.classList.add('visible');
+            }, Math.random() * 1000);
+        }
+
+        function discoverCharacter(characterCode) {
+            if (!discoveredCharacters.has(characterCode)) {
+                discoveredCharacters.add(characterCode);
+                const character = characters[characterCode];
+                if (character) {
+                    showNotification(`📝 Character Discovered: ${character.name}!`);
+                    checkRevelationProgress();
+                }
+            }
+        }
+
+        function unlockAnnotation(annotationId) {
+            if (!unlockedAnnotations.has(annotationId)) {
+                unlockedAnnotations.add(annotationId);
+                updateProgress();
+            }
+        }
+
+        function checkRevelationProgress() {
+            // Check if we can advance revelation level
+            if (revelationLevel === 1 && discoveredCharacters.has('MB')) {
+                advanceRevelationLevel(2);
+            } else if (revelationLevel === 2 && discoveredCharacters.has('JR')) {
+                advanceRevelationLevel(3);
+            } else if (revelationLevel === 3 && discoveredCharacters.has('SW')) {
+                advanceRevelationLevel(4);
+            } else if (revelationLevel === 4 && discoveredCharacters.has('Dr. Chambers')) {
+                advanceRevelationLevel(5);
+            }
+        }
+
+        function advanceRevelationLevel(newLevel) {
+            if (newLevel > revelationLevel) {
+                revelationLevel = newLevel;
+                updateRevelationLevel();
+                showNotification(`🔓 Revelation Level ${newLevel} Unlocked: ${revelationLevels[newLevel].name}!`);
+                
+                // Reload current page to show new annotations
+                setTimeout(() => {
+                    loadPage(currentPage);
+                }, 1000);
+            }
+        }
+
+        function updateRevelationLevel() {
+            const levelInfo = revelationLevels[revelationLevel];
+            document.getElementById('revelation-level').textContent = 
+                `Level ${revelationLevel}: ${levelInfo.name}`;
+        }
+
+        function updateProgress() {
+            const totalAnnotations = enhancedPages.reduce((sum, page) => sum + page.annotations.length, 0);
+            const discoveredCount = unlockedAnnotations.size;
+            const percentage = Math.round((discoveredCount / totalAnnotations) * 100);
+            
+            document.getElementById('discovery-progress').textContent = `${percentage}%`;
+            document.getElementById('progress-fill').style.width = `${percentage}%`;
+        }
+
+        function showNotification(message) {
+            // Create temporary notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--reveal-highlight);
+                color: var(--text-color);
+                padding: 1rem;
+                border-radius: 8px;
+                z-index: 1001;
+                animation: slideIn 0.5s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Enhanced annotation detail function
+        function showAnnotationDetail(annotation) {
+            const character = characters[annotation.character];
+            document.getElementById('modal-character').textContent = character?.name || annotation.character;
+            document.getElementById('modal-year').textContent = annotation.year ? `Year: ${annotation.year}` : '';
+            document.getElementById('modal-text').textContent = annotation.text;
+            
+            if (character) {
+                document.getElementById('modal-character-info').innerHTML = `
+                    <strong>Role:</strong> ${character.role}<br>
+                    <strong>Years:</strong> ${character.years}<br>
+                    <strong>Mystery Role:</strong> ${character.mysteryRole}<br>
+                    <strong>Description:</strong> ${character.description}
+                `;
+            }
+
+            document.getElementById('modal-reveal-info').innerHTML = `
+                <hr style="margin: 1rem 0;">
+                <strong>Revelation Level:</strong> ${annotation.revealLevel}/5<br>
+                <strong>Required Level:</strong> ${revelationLevels[annotation.revealLevel].name}<br>
+                <small style="opacity: 0.7;">This annotation becomes visible at revelation level ${annotation.revealLevel}</small>
+            `;
+            
+            document.getElementById('annotation-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('annotation-modal').style.display = 'none';
+        }
+
+        function showCharacterGuide() {
+            const characterList = document.getElementById('character-list');
+            characterList.innerHTML = '';
+            
+            Object.entries(characters).forEach(([code, character]) => {
+                const isDiscovered = discoveredCharacters.has(code);
+                const canSee = character.revealLevel <= revelationLevel;
+                
+                if (canSee || isDiscovered) {
+                    const div = document.createElement('div');
+                    div.className = 'character-timeline';
+                    div.innerHTML = `
+                        <h3>${character.name} (${code}) ${isDiscovered ? '✅' : '🔒'}</h3>
+                        <p><strong>${character.role}</strong> • ${character.years}</p>
+                        <p><strong>Mystery Role:</strong> ${character.mysteryRole}</p>
+                        <p>${character.description}</p>
+                        <p><strong>Key Themes:</strong> ${character.keyThemes.join(', ')}</p>
+                        <p><strong>Status:</strong> ${character.disappearanceDate}</p>
+                        <hr style="margin: 1rem 0;">
+                    `;
+                    characterList.appendChild(div);
+                }
+            });
+            
+            document.getElementById('character-modal').style.display = 'block';
+        }
+
+        function closeCharacterModal() {
+            document.getElementById('character-modal').style.display = 'none';
+        }
+
+        function showTimeline() {
+            const timelineContent = document.getElementById('timeline-content');
+            timelineContent.innerHTML = `
+                <div class="character-timeline">
+                    <h3>🏰 The Blackthorn Manor Mystery Timeline</h3>
+                    
+                    <div class="timeline-entry">
+                        <div class="timeline-year">1866-1871</div>
+                        <p><strong>William Blackthorn's Egyptian Expedition & Manor Construction</strong></p>
+                        <p>Sir William discovers dangerous artifacts and builds Blackthorn Manor with specialized containment features.</p>
+                    </div>
+                    
+                    <div class="timeline-entry">
+                        <div class="timeline-year">1930-1999</div>
+                        <p><strong>Margaret Blackthorn Era</strong></p>
+                        <p>Last family member maintains protective rituals and family secrets. Her blue script annotations reveal generational knowledge.</p>
+                    </div>
+                    
+                    <div class="timeline-entry">
+                        <div class="timeline-year">1984-1990</div>
+                        <p><strong>James Reed Investigation</strong></p>
+                        <p>Independent researcher documents architectural anomalies. Disappears in March 1989 after finding "something impossible."</p>
+                    </div>
+                    
+                    <div class="timeline-entry">
+                        <div class="timeline-year">1995-1999</div>
+                        <p><strong>Eliza Winston Structural Analysis</strong></p>
+                        <p>Engineer discovers load-bearing "impossible" doors and unexplained materials. Project terminated for "safety concerns."</p>
+                    </div>
+                    
+                    <div class="timeline-entry">
+                        <div class="timeline-year">2024</div>
+                        <p><strong>Wells Family Investigation</strong></p>
+                        <p>Simon Wells searches for missing sister Claire. Police investigation reveals pattern of disappearances.</p>
+                    </div>
+                    
+                    <div class="timeline-entry">
+                        <div class="timeline-year">2024 (Current)</div>
+                        <p><strong>Government Classification</strong></p>
+                        <p>Department 8 monitors dimensional instability. Dr. Chambers' black ink classifications indicate highest security levels.</p>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('timeline-modal').style.display = 'block';
+        }
+
+        function closeTimelineModal() {
+            document.getElementById('timeline-modal').style.display = 'none';
+        }
+
+        function showRevealMenu() {
+            const controls = document.getElementById('revelation-controls');
+            controls.innerHTML = `
+                <p>Control your revelation level to see different layers of the mystery:</p>
+                <div style="margin: 1rem 0;">
+                    ${Object.entries(revelationLevels).map(([level, info]) => `
+                        <button class="btn ${level <= revelationLevel ? 'active' : ''}" 
+                                onclick="setRevelationLevel(${level})"
+                                ${level > revelationLevel ? 'disabled' : ''}>
+                            Level ${level}: ${info.name}
+                        </button>
+                    `).join('')}
+                </div>
+                <p><strong>Current Level:</strong> ${revelationLevel}/5 - ${revelationLevels[revelationLevel].description}</p>
+                <p><strong>Progress:</strong> ${discoveredCharacters.size}/6 characters discovered</p>
+                <p><strong>Next Unlock:</strong> ${revelationLevel < 5 ? revelationLevels[revelationLevel + 1].unlockCondition : 'All content unlocked!'}</p>
+            `;
+            
+            document.getElementById('revelation-modal').style.display = 'block';
+        }
+
+        function setRevelationLevel(level) {
+            if (level <= revelationLevel) {
+                const oldLevel = revelationLevel;
+                revelationLevel = parseInt(level);
+                updateRevelationLevel();
+                loadPage(currentPage);
+                
+                if (level < oldLevel) {
+                    showNotification(`📖 Viewing Level ${level}: ${revelationLevels[level].name}`);
+                }
+            }
+        }
+
+        function closeRevelationModal() {
+            document.getElementById('revelation-modal').style.display = 'none';
+        }
+
+        // Enhanced redaction reveal
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('redacted') && revelationLevel >= 5) {
+                const revealText = e.target.dataset.reveal;
+                if (revealText) {
+                    e.target.textContent = revealText;
+                    e.target.classList.add('revealed');
+                    showNotification('🔓 Classified information revealed!');
+                }
+            }
+        });
+
+        function previousPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                loadPage(currentPage);
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < enhancedPages.length - 1) {
+                currentPage++;
+                loadPage(currentPage);
+            }
+        }
+
+        function updateNavigation() {
+            document.getElementById('prev-btn').disabled = currentPage === 0;
+            document.getElementById('next-btn').disabled = currentPage === enhancedPages.length - 1;
+            document.getElementById('page-info').textContent = `Page ${currentPage + 1} of ${enhancedPages.length}`;
+        }
+
+        function toggleReadingMode() {
+            readingMode = readingMode === 'single' ? 'spread' : 'single';
+            document.querySelector('.controls .btn').textContent = 
+                readingMode === 'single' ? '📱 Single Page' : '📖 Book Spread';
+        }
+
+        function showMenu() {
+            alert(`📋 Enhanced Blackthorn Manor Features
+
+🔓 Progressive Revelation System:
+• Discover characters to unlock their annotations
+• Each level reveals deeper supernatural truth
+• 5 revelation levels from Academic to Complete Truth
+
+📝 Interactive Elements:
+• Tap annotations to learn about characters
+• Drag yellow post-it notes to move them
+• Click redacted text (Level 5) to reveal secrets
+• Character guide shows discovery progress
+
+👥 Character Discovery:
+• Margaret Blackthorn: Family secrets
+• James Reed: Research investigation (disappeared)
+• Eliza Winston: Engineering analysis
+• Simon Wells: Current investigation
+• Detective Sharma: Police files
+• Dr. Chambers: Government classification
+
+🎭 Welcome to the complete Blackthorn Manor mystery!`);
+        }
+
+        // Add CSS for slideIn animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
