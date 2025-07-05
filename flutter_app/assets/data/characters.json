@@ -1,0 +1,116 @@
+{
+  "characters": {
+    "MB": {
+      "name": "Margaret Blackthorn",
+      "fullName": "Margaret Blackthorn",
+      "years": "1930-1999",
+      "description": "Last surviving member of the Blackthorn family. Maintained the estate and its secrets until her death.",
+      "role": "Family Guardian",
+      "annotationStyle": {
+        "fontFamily": "Dancing Script",
+        "fontSize": 10,
+        "color": "#2653a3",
+        "fontStyle": "italic",
+        "description": "Elegant blue script"
+      }
+    },
+    "JR": {
+      "name": "James Reed",
+      "fullName": "James Reed",
+      "years": "1984-1990",
+      "description": "Independent researcher who investigated the manor's architectural anomalies. Disappeared in 1989.",
+      "role": "Researcher",
+      "annotationStyle": {
+        "fontFamily": "Kalam",
+        "fontSize": 9,
+        "color": "#1a1a1a",
+        "fontStyle": "normal",
+        "description": "Messy black ballpoint"
+      }
+    },
+    "EW": {
+      "name": "Eliza Winston",
+      "fullName": "Eliza Winston",
+      "years": "1995-1999",
+      "description": "Structural engineer commissioned to assess the building's safety. Her reports raised serious concerns.",
+      "role": "Engineer",
+      "annotationStyle": {
+        "fontFamily": "Architects Daughter",
+        "fontSize": 10,
+        "color": "#c41e3a",
+        "fontStyle": "normal",
+        "description": "Precise red pen"
+      }
+    },
+    "SW": {
+      "name": "Simon Wells",
+      "fullName": "Simon Wells",
+      "years": "2024+",
+      "description": "Current investigator exploring the manor's mysteries. His sister Claire also disappeared.",
+      "role": "Current Investigator",
+      "annotationStyle": {
+        "fontFamily": "Kalam",
+        "fontSize": 9,
+        "color": "#2c2c2c",
+        "fontStyle": "normal",
+        "description": "Hurried pencil"
+      }
+    },
+    "Detective Sharma": {
+      "name": "Detective Sharma",
+      "fullName": "Detective Moira Sharma",
+      "years": "2024+",
+      "description": "County Police detective investigating the disappearances at Blackthorn Manor.",
+      "role": "Police Investigator",
+      "annotationStyle": {
+        "fontFamily": "Courier Prime",
+        "fontSize": 8,
+        "color": "#006400",
+        "fontStyle": "normal",
+        "description": "Official green ink"
+      }
+    },
+    "Dr. Chambers": {
+      "name": "Dr. Chambers",
+      "fullName": "Dr. E. Chambers",
+      "years": "2024+",
+      "description": "Government analyst with Department 8, specializing in anomalous phenomena.",
+      "role": "Government Analyst",
+      "annotationStyle": {
+        "fontFamily": "Courier Prime",
+        "fontSize": 8,
+        "color": "#000000",
+        "fontStyle": "normal",
+        "description": "Official black ink"
+      }
+    }
+  },
+  "temporalRules": {
+    "pre2000": {
+      "allowedTypes": [
+        "marginalia"
+      ],
+      "allowedZones": [
+        "leftMargin",
+        "rightMargin",
+        "topMargin",
+        "bottomMargin"
+      ],
+      "description": "Pre-2000 annotations are fixed in margins only"
+    },
+    "post2000": {
+      "allowedTypes": [
+        "postIt",
+        "sticker"
+      ],
+      "allowedZones": [
+        "leftMargin",
+        "rightMargin",
+        "topMargin",
+        "bottomMargin",
+        "content"
+      ],
+      "description": "Post-2000 annotations can be placed anywhere and are draggable"
+    }
+  }
+}
