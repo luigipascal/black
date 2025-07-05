@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor - Phase D3: Reading Experience Optimization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            padding: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .nav-tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            background: transparent;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .nav-tab.active {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-tab:hover:not(.active) {
+            background: #f0f1f5;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Reader Panel */
+        .reader-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .reading-time-estimate {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #90caf9;
+        }
+
+        .reading-time-estimate i {
+            color: #1976d2;
+            font-size: 18px;
+        }
+
+        .reading-time-estimate span {
+            color: #1976d2;
+            font-weight: 600;
+        }
+
+        .content-text {
+            font-size: var(--font-size, 18px);
+            line-height: var(--line-height, 1.8);
+            letter-spacing: var(--letter-spacing, 0.3px);
+            text-align: justify;
+            margin-bottom: var(--paragraph-spacing, 20px);
+            color: var(--text-color, #2c3e50);
+        }
+
+        .content-heading {
+            font-size: calc(var(--font-size, 18px) * 1.5);
+            font-weight: bold;
+            margin-bottom: calc(var(--paragraph-spacing, 20px) * 0.75);
+            color: var(--text-color, #2c3e50);
+        }
+
+        .annotation {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .annotation:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        .annotation-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .annotation-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .annotation-name {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .annotation-year {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Reading Progress */
+        .reading-progress {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border: 1px solid #e9ecef;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 1s ease;
+        }
+
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Preferences Panel */
+        .preferences-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .preferences-section {
+            margin-bottom: 40px;
+        }
+
+        .preferences-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Reading Mode Selector */
+        .reading-modes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .reading-mode {
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .reading-mode:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .reading-mode.active {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .reading-mode-preview {
+            width: 60px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .reading-mode-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .reading-mode-description {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Control Slider */
+        .control-slider {
+            margin-bottom: 25px;
+        }
+
+        .control-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .control-value {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #e9ecef;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Goals and Achievements */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .goal-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .goal-card.completed {
+            background: #f8fff8;
+            border-color: #28a745;
+        }
+
+        .goal-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .goal-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #667eea;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .goal-card.completed .goal-icon {
+            background: #28a745;
+        }
+
+        .goal-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .goal-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .goal-progress {
+            margin-bottom: 10px;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+
+        .achievement-card.unlocked {
+            opacity: 1;
+            background: #fff8f0;
+            border-color: #f39c12;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .achievement-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .achievement-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #e9ecef;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .achievement-card.unlocked .achievement-icon {
+            background: #f39c12;
+        }
+
+        .achievement-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .achievement-description {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .achievement-rarity {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .rarity-common { background: #95a5a6; color: white; }
+        .rarity-rare { background: #3498db; color: white; }
+        .rarity-epic { background: #9b59b6; color: white; }
+        .rarity-legendary { background: #f39c12; color: white; }
+
+        /* Statistics */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .app-container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .goals-grid,
+            .achievement-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .reading-modes {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Reading Mode Styles */
+        .mode-standard {
+            --bg-color: #ffffff;
+            --text-color: #2c3e50;
+            --margin-multiplier: 1;
+        }
+
+        .mode-comfortable {
+            --bg-color: #fffdf7;
+            --text-color: #2c2c2c;
+            --margin-multiplier: 1.2;
+        }
+
+        .mode-focused {
+            --bg-color: #f8f8f6;
+            --text-color: #1a1a1a;
+            --margin-multiplier: 1.5;
+        }
+
+        .mode-night {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --margin-multiplier: 1.3;
+        }
+
+        .mode-sepia {
+            --bg-color: #f4f1e8;
+            --text-color: #5c4b37;
+            --margin-multiplier: 1.1;
+        }
+
+        /* Switch Toggle */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .switch-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.3s;
+            border-radius: 34px;
+        }
+
+        .switch-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+
+        .switch input:checked + .switch-slider {
+            background-color: #667eea;
+        }
+
+        .switch input:checked + .switch-slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📚 Blackthorn Manor</h1>
+            <p>Phase D3: Reading Experience Optimization</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="switchTab('reader')">📖 Adaptive Reader</button>
+            <button class="nav-tab" onclick="switchTab('preferences')">⚙️ Preferences</button>
+            <button class="nav-tab" onclick="switchTab('goals')">🎯 Goals</button>
+            <button class="nav-tab" onclick="switchTab('achievements')">🏆 Achievements</button>
+            <button class="nav-tab" onclick="switchTab('analytics')">📊 Analytics</button>
+        </div>
+
+        <!-- Reader Tab -->
+        <div id="reader" class="tab-content active">
+            <div class="reader-panel">
+                <div class="reading-time-estimate">
+                    <i>⏱️</i>
+                    <span>Estimated reading time: <span id="estimated-time">3m 15s</span></span>
+                    <span style="margin-left: 20px;">📄 <span id="word-count">485</span> words</span>
+                </div>
+
+                <div class="content-heading">Chapter 1: The Investigation Begins</div>
+                
+                <div class="content-text">
+                    The morning mist clung to the ancient stones of Blackthorn Manor like whispered secrets from centuries past. Professor Harold Finch adjusted his spectacles and opened his leather-bound notebook, unaware that this seemingly routine architectural survey would become something far more extraordinary.
+                </div>
+
+                <div class="content-text">
+                    The Gothic Revival manor stood before him, its weathered limestone façade bearing the scars of nearly two centuries. Built in 1847 by the reclusive industrialist Cornelius Blackthorn, the structure exhibited the characteristic pointed arches and ribbed vaults that defined the period's architectural ambitions.
+                </div>
+
+                <div class="annotation" data-character="MB">
+                    <div class="annotation-author">
+                        <div class="annotation-avatar">M</div>
+                        <div class="annotation-name">Margaret Blackthorn</div>
+                        <div class="annotation-year">1963</div>
+                    </div>
+                    <div class="annotation-text">
+                        Something feels different about this place today. The shadows seem longer, more purposeful. Great-grandfather's portrait in the main hall appears to be watching more intently than usual. I've noticed several guests commenting on unusual sounds at night.
+                    </div>
+                </div>
+
+                <div class="content-text">
+                    Professor Finch made careful notes about the building's structural integrity, documenting the settlement patterns in the eastern wing and the curious discoloration of the stonework near the foundation. What he couldn't document, however, was the persistent feeling that he was being observed.
+                </div>
+
+                <div class="annotation" data-character="JR">
+                    <div class="annotation-author">
+                        <div class="annotation-avatar" style="background: #e67e22;">J</div>
+                        <div class="annotation-name">James Reed</div>
+                        <div class="annotation-year">1989</div>
+                    </div>
+                    <div class="annotation-text">
+                        Professor Finch's original observations were remarkably prescient. The "discoloration" he noted corresponds exactly to the thermal anomalies we've detected with modern equipment. Whatever is happening here has been consistent for decades.
+                    </div>
+                </div>
+
+                <div class="reading-progress">
+                    <div class="progress-header">
+                        <strong>📈 Reading Progress</strong>
+                        <span id="progress-percent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span>⏰ <span id="current-time">0:00</span></span>
+                        <span>🎯 <span id="estimated-total">3:15</span> estimated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preferences Tab -->
+        <div id="preferences" class="tab-content">
+            <div class="preferences-panel">
+                <div class="preferences-section">
+                    <h3>🎨 Reading Mode</h3>
+                    <div class="reading-modes">
+                        <div class="reading-mode active" data-mode="standard">
+                            <div class="reading-mode-preview" style="background: white; color: black; border: 1px solid #ddd;">Aa</div>
+                            <div class="reading-mode-title">Standard</div>
+                            <div class="reading-mode-description">Default white background</div>
+                        </div>
+                        <div class="reading-mode" data-mode="comfortable">
+                            <div class="reading-mode-preview" style="background: #fffdf7; color: #2c2c2c; border: 1px solid #ddd;">Aa</div>
+                            <div class="reading-mode-title">Comfortable</div>
+                            <div class="reading-mode-description">Warm, easy on eyes</div>
+                        </div>
+                        <div class="reading-mode" data-mode="focused">
+                            <div class="reading-mode-preview" style="background: #f8f8f6; color: #1a1a1a; border: 1px solid #ddd;">Aa</div>
+                            <div class="reading-mode-title">Focused</div>
+                            <div class="reading-mode-description">Minimalist, distraction-free</div>
+                        </div>
+                        <div class="reading-mode" data-mode="night">
+                            <div class="reading-mode-preview" style="background: #1a1a1a; color: #e0e0e0; border: 1px solid #ddd;">Aa</div>
+                            <div class="reading-mode-title">Night</div>
+                            <div class="reading-mode-description">Dark mode for low light</div>
+                        </div>
+                        <div class="reading-mode" data-mode="sepia">
+                            <div class="reading-mode-preview" style="background: #f4f1e8; color: #5c4b37; border: 1px solid #ddd;">Aa</div>
+                            <div class="reading-mode-title">Sepia</div>
+                            <div class="reading-mode-description">Classic book-like feel</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="preferences-section">
+                    <h3>🔤 Typography</h3>
+                    
+                    <div class="control-slider">
+                        <div class="control-label">
+                            <span>Font Size</span>
+                            <span class="control-value" id="font-size-value">100%</span>
+                        </div>
+                        <input type="range" class="slider" id="font-size-slider" min="80" max="150" value="100">
+                    </div>
+
+                    <div class="control-slider">
+                        <div class="control-label">
+                            <span>Line Height</span>
+                            <span class="control-value" id="line-height-value">100%</span>
+                        </div>
+                        <input type="range" class="slider" id="line-height-slider" min="80" max="200" value="100">
+                    </div>
+
+                    <div class="control-slider">
+                        <div class="control-label">
+                            <span>Paragraph Spacing</span>
+                            <span class="control-value" id="spacing-value">100%</span>
+                        </div>
+                        <input type="range" class="slider" id="spacing-slider" min="50" max="200" value="100">
+                    </div>
+                </div>
+
+                <div class="preferences-section">
+                    <h3>♿ Accessibility</h3>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div>
+                            <strong>Adaptive Typography</strong>
+                            <div style="color: #666; font-size: 0.9em;">Automatically adjust text for different content types</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="adaptive-typography" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="preferences-section">
+                    <h3>🧠 Engagement</h3>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <div>
+                            <strong>Reading Goals</strong>
+                            <div style="color: #666; font-size: 0.9em;">Track progress with daily, weekly, and monthly goals</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="reading-goals" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong>Achievements</strong>
+                            <div style="color: #666; font-size: 0.9em;">Unlock achievements for reading milestones</div>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="achievements" checked>
+                            <span class="switch-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Goals Tab -->
+        <div id="goals" class="tab-content">
+            <div class="goals-grid">
+                <div class="goal-card completed">
+                    <div class="goal-header">
+                        <div class="goal-icon">✅</div>
+                        <div>
+                            <div class="goal-title">Daily Reader</div>
+                            <div class="goal-description">Read for 15 minutes today</div>
+                        </div>
+                    </div>
+                    <div class="goal-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px; color: #28a745; font-weight: bold;">
+                            Completed! 🎉
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="goal-icon">📚</div>
+                        <div>
+                            <div class="goal-title">Weekly Explorer</div>
+                            <div class="goal-description">Read 5 pages this week</div>
+                        </div>
+                    </div>
+                    <div class="goal-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px; font-weight: bold;">
+                            3 / 5 pages (60%)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="goal-icon">🎯</div>
+                        <div>
+                            <div class="goal-title">Monthly Investigator</div>
+                            <div class="goal-description">Complete 25% of the book this month</div>
+                        </div>
+                    </div>
+                    <div class="goal-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 32%"></div>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px; font-weight: bold;">
+                            8 / 25% complete (32%)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <div class="goal-icon">🔥</div>
+                        <div>
+                            <div class="goal-title">Reading Streak</div>
+                            <div class="goal-description">Read for 7 consecutive days</div>
+                        </div>
+                    </div>
+                    <div class="goal-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 43%"></div>
+                        </div>
+                        <div style="text-align: center; margin-top: 10px; font-weight: bold;">
+                            3 / 7 days (43%)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Tab -->
+        <div id="achievements" class="tab-content">
+            <div class="achievement-grid">
+                <div class="achievement-card unlocked">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">🔍</div>
+                        <div>
+                            <div class="achievement-title">Investigation Begins</div>
+                            <div class="achievement-description">Read your first page</div>
+                        </div>
+                    </div>
+                    <div class="achievement-rarity rarity-common">Common</div>
+                    <div style="margin-top: 10px; color: #f39c12; font-size: 0.9em;">
+                        Unlocked today
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">⚡</div>
+                        <div>
+                            <div class="achievement-title">Speed Reader</div>
+                            <div class="achievement-description">Achieve 300 words per minute reading speed</div>
+                        </div>
+                    </div>
+                    <div class="achievement-rarity rarity-rare">Rare</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">🔥</div>
+                        <div>
+                            <div class="achievement-title">Dedicated Investigator</div>
+                            <div class="achievement-description">Read for 7 days in a row</div>
+                        </div>
+                    </div>
+                    <div class="achievement-rarity rarity-epic">Epic</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">📚</div>
+                        <div>
+                            <div class="achievement-title">Marathon Reader</div>
+                            <div class="achievement-description">Read for 2 hours total</div>
+                        </div>
+                    </div>
+                    <div class="achievement-rarity rarity-rare">Rare</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">🕵️</div>
+                        <div>
+                            <div class="achievement-title">Mystery Solver</div>
+                            <div class="achievement-description">Complete 50% of the investigation</div>
+                        </div>
+                    </div>
+                    <div class="achievement-rarity rarity-legendary">Legendary</div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-header">
+                        <div class="achievement-icon">🏆</div>
+                        <div>
+                            <div class="achievement-title">Truth Seeker</div>
+                            <div class="achievement-description">Complete the entire investigation</div>
+                        </div>
+                    </div>
+                    <div class="achievement-rarity rarity-legendary">Legendary</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Tab -->
+        <div id="analytics" class="tab-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📖</div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Pages Read</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-value">45m</div>
+                    <div class="stat-label">Reading Time</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Day Streak</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-value">235</div>
+                    <div class="stat-label">Words/Min</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-value">1.2%</div>
+                    <div class="stat-label">Book Progress</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value">85%</div>
+                    <div class="stat-label">Reading Efficiency</div>
+                </div>
+            </div>
+
+            <div class="preferences-panel">
+                <h3>📈 Reading Insights</h3>
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <strong>Overall Progress</strong>
+                        <span style="color: #667eea; font-weight: bold;">3 / 247 pages</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 1.2%"></div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <strong>Front Matter</strong>
+                        <span style="color: #667eea; font-weight: bold;">0 / 26 pages</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <strong>Main Content</strong>
+                        <span style="color: #667eea; font-weight: bold;">3 / 75 pages</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 4%"></div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <strong>Appendices</strong>
+                        <span style="color: #667eea; font-weight: bold;">0 / 146 pages</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Remove active class from all nav tabs
+            const navTabs = document.querySelectorAll('.nav-tab');
+            navTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked nav tab
+            event.target.classList.add('active');
+        }
+
+        // Reading mode selection
+        document.querySelectorAll('.reading-mode').forEach(mode => {
+            mode.addEventListener('click', function() {
+                // Remove active class from all modes
+                document.querySelectorAll('.reading-mode').forEach(m => m.classList.remove('active'));
+                
+                // Add active class to clicked mode
+                this.classList.add('active');
+                
+                // Apply reading mode
+                const modeType = this.dataset.mode;
+                applyReadingMode(modeType);
+            });
+        });
+
+        // Apply reading mode
+        function applyReadingMode(mode) {
+            const readerPanel = document.querySelector('.reader-panel');
+            
+            // Remove existing mode classes
+            readerPanel.classList.remove('mode-standard', 'mode-comfortable', 'mode-focused', 'mode-night', 'mode-sepia');
+            
+            // Add new mode class
+            readerPanel.classList.add(`mode-${mode}`);
+            
+            // Apply background color based on mode
+            const backgrounds = {
+                'standard': '#ffffff',
+                'comfortable': '#fffdf7',
+                'focused': '#f8f8f6',
+                'night': '#1a1a1a',
+                'sepia': '#f4f1e8'
+            };
+            
+            const colors = {
+                'standard': '#2c3e50',
+                'comfortable': '#2c2c2c',
+                'focused': '#1a1a1a',
+                'night': '#e0e0e0',
+                'sepia': '#5c4b37'
+            };
+            
+            readerPanel.style.backgroundColor = backgrounds[mode];
+            readerPanel.style.color = colors[mode];
+            
+            // Update CSS variables
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', backgrounds[mode]);
+            root.style.setProperty('--text-color', colors[mode]);
+        }
+
+        // Typography controls
+        const fontSizeSlider = document.getElementById('font-size-slider');
+        const lineHeightSlider = document.getElementById('line-height-slider');
+        const spacingSlider = document.getElementById('spacing-slider');
+
+        fontSizeSlider.addEventListener('input', function() {
+            const value = this.value;
+            document.getElementById('font-size-value').textContent = value + '%';
+            document.documentElement.style.setProperty('--font-size', (18 * value / 100) + 'px');
+        });
+
+        lineHeightSlider.addEventListener('input', function() {
+            const value = this.value;
+            document.getElementById('line-height-value').textContent = value + '%';
+            document.documentElement.style.setProperty('--line-height', (1.8 * value / 100));
+        });
+
+        spacingSlider.addEventListener('input', function() {
+            const value = this.value;
+            document.getElementById('spacing-value').textContent = value + '%';
+            document.documentElement.style.setProperty('--paragraph-spacing', (20 * value / 100) + 'px');
+        });
+
+        // Reading progress simulation
+        let readingStartTime = Date.now();
+        let currentProgress = 0;
+        
+        function updateReadingProgress() {
+            const elapsed = (Date.now() - readingStartTime) / 1000;
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = Math.floor(elapsed % 60);
+            
+            document.getElementById('current-time').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Simulate reading progress (roughly 3 minutes for full content)
+            const estimatedTotal = 3 * 60; // 3 minutes in seconds
+            currentProgress = Math.min((elapsed / estimatedTotal) * 100, 100);
+            
+            document.getElementById('progress-percent').textContent = Math.round(currentProgress) + '%';
+            document.getElementById('progress-fill').style.width = currentProgress + '%';
+        }
+
+        // Update progress every second
+        setInterval(updateReadingProgress, 1000);
+
+        // Initialize reading mode
+        applyReadingMode('standard');
+    </script>
+</body>
+</html>
