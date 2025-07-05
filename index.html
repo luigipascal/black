@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor: Complete Archive</title>
+    <style>
+        :root {
+            --parchment: #f4f1e8;
+            --aged-paper: #ede5d3;
+            --dark-brown: #3d2914;
+            --margin-brown: #8b4513;
+            --faded-ink: #4a4a4a;
+            --mb-blue: #2653a3;
+            --jr-black: #1a1a1a;
+            --ew-red: #c41e3a;
+            --sw-gray: #2c2c2c;
+            --detective-green: #006400;
+            --chambers-black: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(45deg, var(--parchment), var(--aged-paper));
+            color: var(--dark-brown);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--dark-brown), #2d1a0a);
+            color: var(--parchment);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--margin-brown);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .navigation {
+            background: var(--aged-paper);
+            padding: 0.5rem 0;
+            border-bottom: 2px solid var(--margin-brown);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: var(--dark-brown);
+            color: var(--parchment);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-btn:hover {
+            background: var(--margin-brown);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .nav-btn.active {
+            background: var(--margin-brown);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .revelation-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 2px solid var(--margin-brown);
+        }
+
+        .revelation-level {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .revelation-slider {
+            flex: 1;
+            height: 6px;
+            background: var(--parchment);
+            border-radius: 3px;
+            appearance: none;
+            outline: none;
+        }
+
+        .revelation-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--margin-brown);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .character-discovery {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .character-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 2px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .character-badge.discovered {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .character-badge.undiscovered {
+            opacity: 0.3;
+            transform: scale(0.9);
+        }
+
+        .character-mb { border-color: var(--mb-blue); color: var(--mb-blue); }
+        .character-jr { border-color: var(--jr-black); color: var(--jr-black); }
+        .character-ew { border-color: var(--ew-red); color: var(--ew-red); }
+        .character-sw { border-color: var(--sw-gray); color: var(--sw-gray); }
+        .character-detective { border-color: var(--detective-green); color: var(--detective-green); }
+        .character-chambers { border-color: var(--chambers-black); color: var(--chambers-black); }
+
+        .progress-stats {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .document-viewer {
+            background: white;
+            border: 1px solid var(--margin-brown);
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .page-content {
+            padding: 3rem;
+            min-height: 600px;
+            position: relative;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                transparent 8%, 
+                var(--aged-paper) 8%, 
+                var(--aged-paper) 12%, 
+                white 12%);
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            font-size: 0.9rem;
+            color: var(--margin-brown);
+            font-weight: bold;
+        }
+
+        .page-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--margin-brown);
+        }
+
+        .page-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .page-nav button {
+            background: var(--dark-brown);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .page-nav button:hover:not(:disabled) {
+            background: var(--margin-brown);
+        }
+
+        .page-nav button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .annotation {
+            position: absolute;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            line-height: 1.3;
+            max-width: 200px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .annotation:hover {
+            transform: scale(1.05);
+            z-index: 20;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+
+        .annotation.marginalia {
+            background: var(--aged-paper);
+            border: 1px solid var(--margin-brown);
+        }
+
+        .annotation.postit {
+            background: #fffe9e;
+            border: 1px solid #e6d900;
+            cursor: move;
+        }
+
+        .annotation.redaction {
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .annotation.revealed {
+            background: #ffecb3;
+            border: 2px solid #ff9800;
+        }
+
+        .mb-annotation { color: var(--mb-blue); font-style: italic; }
+        .jr-annotation { color: var(--jr-black); font-family: 'Courier New', monospace; }
+        .ew-annotation { color: var(--ew-red); font-weight: bold; }
+        .sw-annotation { color: var(--sw-gray); }
+        .detective-annotation { color: var(--detective-green); font-family: 'Courier New', monospace; }
+        .chambers-annotation { color: var(--chambers-black); font-weight: bold; }
+
+        .timeline-view {
+            display: none;
+            grid-template-columns: 1fr 3fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .timeline-sidebar {
+            background: var(--aged-paper);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--margin-brown);
+            height: fit-content;
+        }
+
+        .timeline-entry {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: white;
+            border-left: 4px solid var(--margin-brown);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-entry:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .timeline-entry.selected {
+            background: var(--parchment);
+            border-left-color: var(--dark-brown);
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: var(--dark-brown);
+            font-size: 0.9rem;
+        }
+
+        .timeline-character {
+            color: var(--margin-brown);
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .footer {
+            background: var(--dark-brown);
+            color: var(--parchment);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: var(--margin-brown);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .page-content {
+                padding: 1.5rem;
+            }
+
+            .timeline-view {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .front-matter {
+            font-style: italic;
+            text-align: center;
+        }
+
+        .front-matter h1 {
+            font-size: 2rem;
+            margin: 2rem 0;
+            color: var(--dark-brown);
+        }
+
+        .front-matter h2 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+            color: var(--margin-brown);
+        }
+
+        .back-matter {
+            font-family: 'Times New Roman', serif;
+        }
+
+        .back-matter h1 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--dark-brown);
+            border-bottom: 2px solid var(--margin-brown);
+            padding-bottom: 0.5rem;
+        }
+
+        .back-matter h2 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--margin-brown);
+        }
+
+        .redacted-text {
+            background: #333;
+            color: #333;
+            cursor: pointer;
+            border-radius: 2px;
+            padding: 0 4px;
+            transition: all 0.3s ease;
+        }
+
+        .redacted-text:hover {
+            background: #555;
+        }
+
+        .redacted-text.revealed {
+            background: #ffecb3;
+            color: var(--dark-brown);
+            border: 1px solid #ff9800;
+        }
+
+        .welcome-screen {
+            background: var(--aged-paper);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid var(--margin-brown);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-screen h2 {
+            margin-bottom: 1rem;
+            color: var(--dark-brown);
+        }
+
+        .app-selector {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .app-option {
+            background: var(--dark-brown);
+            color: var(--parchment);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            font-size: 1rem;
+        }
+
+        .app-option:hover {
+            background: var(--margin-brown);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .demo-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--margin-brown);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .demo-annotation {
+            background: #fffe9e;
+            border: 1px solid #e6d900;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .demo-annotation.mb-style {
+            color: var(--mb-blue);
+            font-style: italic;
+        }
+
+        .demo-annotation.jr-style {
+            color: var(--jr-black);
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏰 Blackthorn Manor: Interactive Archive</h1>
+        <p>A Digital Investigation into a Mysterious Victorian Manor</p>
+    </header>
+
+    <main class="container">
+        <div class="welcome-screen">
+            <h2>Welcome to Blackthorn Manor</h2>
+            <p>Experience the complete interactive documentary with multiple investigation modes:</p>
+            
+            <div class="app-selector">
+                <a href="web_app/complete_integrated_index.html" class="app-option">
+                    📚 Complete Archive<br>
+                    <small>Full 247-page experience</small>
+                </a>
+                <a href="web_app/phase_d4_investigation.html" class="app-option">
+                    🔍 Investigation Mode<br>
+                    <small>Interactive evidence collection</small>
+                </a>
+                <a href="web_app/phase_d3_reading_experience.html" class="app-option">
+                    📖 Enhanced Reading<br>
+                    <small>Optimized reading experience</small>
+                </a>
+                <a href="web_app/enhanced_index.html" class="app-option">
+                    🌟 Enhanced Edition<br>
+                    <small>Progressive revelation system</small>
+                </a>
+            </div>
+        </div>
+
+        <div class="demo-content">
+            <h2>About This Project</h2>
+            <p>Blackthorn Manor is an interactive digital book that simulates classified government documents about a mysterious Victorian manor. The project features:</p>
+            
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li><strong>247 pages</strong> of immersive content</li>
+                <li><strong>535+ annotations</strong> from 6 different investigators</li>
+                <li><strong>Progressive revelation system</strong> with 5 levels of mystery</li>
+                <li><strong>Interactive elements</strong> including draggable annotations and redacted content</li>
+                <li><strong>Character-specific handwriting styles</strong> for authentic document feel</li>
+                <li><strong>Timeline spanning 1866-2024</strong> with missing persons mystery</li>
+            </ul>
+
+            <h3>Sample Annotations:</h3>
+            <div class="demo-annotation mb-style">
+                <strong>Margaret Blackthorn (1975):</strong> "The family records speak of strange occurrences in the west wing. We must be careful not to disturb what lies dormant."
+            </div>
+            <div class="demo-annotation jr-style">
+                <strong>James Reed (1989):</strong> "Something is very wrong here. The architectural measurements don't add up. There are spaces that shouldn't exist."
+            </div>
+
+            <p style="margin-top: 1rem; font-style: italic; color: var(--margin-brown);">
+                Choose your preferred experience above to begin your investigation into the mysteries of Blackthorn Manor.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Blackthorn Manor Interactive Archive • A Digital Investigation Experience</p>
+    </footer>
+
+    <script>
+        // Add some interactivity to the demo
+        document.querySelectorAll('.demo-annotation').forEach(annotation => {
+            annotation.addEventListener('click', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = 'none';
+                }, 200);
+            });
+        });
+
+        // Add hover effects to app options
+        document.querySelectorAll('.app-option').forEach(option => {
+            option.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = 'var(--margin-brown)';
+            });
+            option.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = 'var(--dark-brown)';
+            });
+        });
+    </script>
+</body>
+</html>
