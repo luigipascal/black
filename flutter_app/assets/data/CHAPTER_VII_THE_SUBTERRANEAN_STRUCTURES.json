@@ -17,10 +17,10 @@
           "type": "marginalia",
           "year": 1976,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.42623574869963987,
-            "y": 0.9286904233404041,
-            "rotation": 0.003727857187324657
+            "zone": "leftMargin",
+            "x": 0.06239879298372894,
+            "y": 0.4786712975311004,
+            "rotation": 0.038404947841387586
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 1
@@ -32,10 +32,10 @@
           "type": "marginalia",
           "year": 1978,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.03901398440782802,
-            "y": 0.7784047502915716,
-            "rotation": -0.04896808889571183
+            "zone": "topMargin",
+            "x": 0.6937492761208051,
+            "y": 0.05116817774274992,
+            "rotation": -0.0323236211775969
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 1
@@ -47,10 +47,10 @@
           "type": "marginalia",
           "year": null,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04650631556589969,
-            "y": 0.8290459675498089,
-            "rotation": 0.02006344372412716
+            "zone": "rightMargin",
+            "x": 0.9339247558038968,
+            "y": 0.16397175804814018,
+            "rotation": -0.044090048241988505
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 1
@@ -62,10 +62,10 @@
           "type": "marginalia",
           "year": 1997,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.0469207769889482,
-            "y": 0.7212910644362729,
-            "rotation": 0.04837649295985054
+            "zone": "rightMargin",
+            "x": 0.932491638410956,
+            "y": 0.5445180567963969,
+            "rotation": 0.035440639422238844
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 1
@@ -77,10 +77,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.20301883984807828,
-            "y": 0.9193653643019657,
-            "rotation": -0.036198446813258955
+            "zone": "content",
+            "x": 0.36332528036597594,
+            "y": 0.594537009090335,
+            "rotation": 0.03194452282928364
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 1
@@ -92,10 +92,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.22488773901621065,
-            "y": 0.9205917603496864,
-            "rotation": 0.02997444057321859
+            "zone": "rightMargin",
+            "x": 0.9568656682331798,
+            "y": 0.29535307984558534,
+            "rotation": 0.017356161024634786
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 1
@@ -107,10 +107,10 @@
           "type": "marginalia",
           "year": 1962,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.056283499900121645,
-            "y": 0.49725191917467715,
-            "rotation": 0.01098506539939208
+            "zone": "bottomMargin",
+            "x": 0.23485998884698478,
+            "y": 0.9306219011925919,
+            "rotation": 0.026820730330052535
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 1
@@ -131,9 +131,9 @@
           "year": 1984,
           "position": {
             "zone": "leftMargin",
-            "x": 0.03224339077388477,
-            "y": 0.44554694161916353,
-            "rotation": 0.037006887370374233
+            "x": 0.06927480621259462,
+            "y": 0.6920003773364225,
+            "rotation": -0.006972270054105312
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 2
@@ -145,10 +145,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.561321836646022,
-            "y": 0.9407615456091214,
-            "rotation": 0.04128111687636096
+            "zone": "topMargin",
+            "x": 0.7915421392898457,
+            "y": 0.0960517559142354,
+            "rotation": 0.04438787572039189
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 2
@@ -160,10 +160,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.15936810604466536,
-            "y": 0.930589720590237,
-            "rotation": 0.020898955482225225
+            "zone": "topMargin",
+            "x": 0.26148456846727186,
+            "y": 0.03616055460611059,
+            "rotation": 0.039331143222378545
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 2
@@ -175,10 +175,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.37486242512544166,
-            "y": 0.925914797557689,
-            "rotation": 0.03847194408683644
+            "zone": "topMargin",
+            "x": 0.45945341173508303,
+            "y": 0.026288529156539717,
+            "rotation": -0.033707696077129715
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 2
@@ -190,10 +190,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9646738706451897,
-            "y": 0.1533704675883416,
-            "rotation": 0.042038219014458846
+            "zone": "bottomMargin",
+            "x": 0.47236821735284484,
+            "y": 0.9095989630542879,
+            "rotation": 0.023231606666051764
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 2
@@ -205,10 +205,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.226090913793775,
-            "y": 0.7203135606821536,
-            "rotation": -0.035717023395727444
+            "zone": "topMargin",
+            "x": 0.21654563169963714,
+            "y": 0.03656622936358367,
+            "rotation": 0.03426870351878526
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 2
@@ -220,10 +220,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.3074688729389008,
-            "y": 0.9335269130471561,
-            "rotation": -0.011614018841401974
+            "zone": "rightMargin",
+            "x": 0.9303183390510754,
+            "y": 0.5999646790801665,
+            "rotation": 0.023381430828798146
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 2
@@ -243,10 +243,10 @@
           "type": "marginalia",
           "year": 1995,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.08750749845435733,
-            "y": 0.3007805192071191,
-            "rotation": -0.017216005083215493
+            "zone": "rightMargin",
+            "x": 0.9420513845760693,
+            "y": 0.24765849307184595,
+            "rotation": -0.041516052911918656
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 3
@@ -259,9 +259,9 @@
           "year": 1997,
           "position": {
             "zone": "leftMargin",
-            "x": 0.05662172724354603,
-            "y": 0.2258348754080516,
-            "rotation": 0.04836727299465813
+            "x": 0.05226560742121859,
+            "y": 0.24885572290747826,
+            "rotation": -0.015690548663224082
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 3
@@ -274,9 +274,9 @@
           "year": 2024,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.35652138623923846,
-            "y": 0.9562138118399744,
-            "rotation": 0.028937318855311447
+            "x": 0.3012396140376573,
+            "y": 0.9194663263881913,
+            "rotation": -0.04848255788149537
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 3
@@ -288,10 +288,10 @@
           "type": "marginalia",
           "year": 1980,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.6780239446541833,
-            "y": 0.9030585029639876,
-            "rotation": -0.005956860281982313
+            "zone": "topMargin",
+            "x": 0.601863279601127,
+            "y": 0.06911529914188062,
+            "rotation": -0.03257282888752101
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 3
@@ -303,10 +303,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.36784135067268653,
-            "y": 0.04787495345933415,
-            "rotation": 0.007563259500415043
+            "zone": "bottomMargin",
+            "x": 0.7332181793346277,
+            "y": 0.9038104078764166,
+            "rotation": 0.0124055944467104
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 3
@@ -319,9 +319,9 @@
           "year": 2024,
           "position": {
             "zone": "leftMargin",
-            "x": 0.04835107405459459,
-            "y": 0.8427252872276567,
-            "rotation": -0.021274424263598924
+            "x": 0.07203852683942759,
+            "y": 0.4233215697671304,
+            "rotation": 0.010648267359751008
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 3
@@ -333,10 +333,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9637698230594776,
-            "y": 0.6924611933368451,
-            "rotation": 0.03081708562319604
+            "zone": "topMargin",
+            "x": 0.5498068817441398,
+            "y": 0.063805773519043,
+            "rotation": 0.0023198061669830183
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 3
@@ -356,10 +356,10 @@
           "type": "marginalia",
           "year": 1976,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.024608208754399376,
-            "y": 0.15609091366575428,
-            "rotation": 0.02164387401570901
+            "zone": "bottomMargin",
+            "x": 0.7442834739645402,
+            "y": 0.9290362629011003,
+            "rotation": 0.008901178853984516
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 4
@@ -371,10 +371,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.3548894991735511,
-            "y": 0.09565765367475464,
-            "rotation": -0.04899101815703541
+            "zone": "rightMargin",
+            "x": 0.9015863348179054,
+            "y": 0.4612088160643891,
+            "rotation": 0.02363120535928344
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 4
@@ -387,9 +387,9 @@
           "year": 2024,
           "position": {
             "zone": "leftMargin",
-            "x": 0.04396901379222187,
-            "y": 0.28175689523705527,
-            "rotation": -0.03827687600704552
+            "x": 0.0625469153440755,
+            "y": 0.2762537680885214,
+            "rotation": 0.027053486741753886
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 4
@@ -402,9 +402,9 @@
           "year": 1987,
           "position": {
             "zone": "rightMargin",
-            "x": 0.9090300711365131,
-            "y": 0.1542260063871236,
-            "rotation": 0.012506341273419076
+            "x": 0.9714150371853884,
+            "y": 0.45850470038479474,
+            "rotation": 0.03870122156940436
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 4
@@ -416,10 +416,10 @@
           "type": "postIt",
           "year": 2025,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9315728590773493,
-            "y": 0.2918506960071148,
-            "rotation": 0.0033785005141528713
+            "zone": "leftMargin",
+            "x": 0.08661230544950516,
+            "y": 0.693602741276783,
+            "rotation": 0.00913631898575915
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 4
@@ -431,10 +431,10 @@
           "type": "marginalia",
           "year": 1982,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.08136736142590936,
-            "y": 0.3857135065901306,
-            "rotation": -0.0019272559560860048
+            "zone": "bottomMargin",
+            "x": 0.48991333074330534,
+            "y": 0.9564008732301575,
+            "rotation": 0.014641159571609996
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 4
@@ -446,10 +446,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.934770975500685,
-            "y": 0.21821912244372677,
-            "rotation": -0.016774788852462197
+            "zone": "bottomMargin",
+            "x": 0.6343437973805882,
+            "y": 0.9637839963917633,
+            "rotation": -0.023613038856187686
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 4
@@ -470,9 +470,9 @@
           "year": 1985,
           "position": {
             "zone": "topMargin",
-            "x": 0.27113895394761023,
-            "y": 0.048690431259230726,
-            "rotation": -0.046219210654682985
+            "x": 0.7229720225224077,
+            "y": 0.03721785511033335,
+            "rotation": 0.003297096284664214
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 5
@@ -484,10 +484,10 @@
           "type": "marginalia",
           "year": 1978,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04200629109215277,
-            "y": 0.15166015577409003,
-            "rotation": -0.04083265454307107
+            "zone": "topMargin",
+            "x": 0.44746398319926706,
+            "y": 0.06872424314228537,
+            "rotation": 0.007214759269381455
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 5
@@ -499,10 +499,10 @@
           "type": "marginalia",
           "year": 1979,
           "position": {
-            "zone": "topMargin",
-            "x": 0.7005128111669994,
-            "y": 0.0908095394391225,
-            "rotation": -0.007198813689194206
+            "zone": "rightMargin",
+            "x": 0.9076074530446453,
+            "y": 0.5081261070123443,
+            "rotation": 0.000951688096025971
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 5
@@ -514,10 +514,10 @@
           "type": "marginalia",
           "year": 1998,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.0727464309553125,
-            "y": 0.21051836130647728,
-            "rotation": 0.04788034354903764
+            "zone": "topMargin",
+            "x": 0.6791504369212361,
+            "y": 0.05813663633334834,
+            "rotation": -0.005939849206638404
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 5
@@ -529,10 +529,10 @@
           "type": "marginalia",
           "year": 1999,
           "position": {
-            "zone": "topMargin",
-            "x": 0.1822760565477116,
-            "y": 0.021094162920803176,
-            "rotation": 0.02995015255470003
+            "zone": "leftMargin",
+            "x": 0.07031083811700031,
+            "y": 0.49361996153580345,
+            "rotation": -0.0311027641313011
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 5
@@ -545,9 +545,9 @@
           "year": 1988,
           "position": {
             "zone": "topMargin",
-            "x": 0.2698960509940628,
-            "y": 0.06769350375634044,
-            "rotation": -0.03837827794761174
+            "x": 0.7904017206656784,
+            "y": 0.04955986459713246,
+            "rotation": 0.002873738185419228
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 5
@@ -559,10 +559,10 @@
           "type": "postIt",
           "year": 2025,
           "position": {
-            "zone": "content",
-            "x": 0.6026991872502159,
-            "y": 0.43085304473537034,
-            "rotation": -0.018674294590924092
+            "zone": "bottomMargin",
+            "x": 0.582192720533587,
+            "y": 0.948572351229452,
+            "rotation": -0.0135919098319086
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 5
@@ -583,9 +583,9 @@
           "year": 2024,
           "position": {
             "zone": "leftMargin",
-            "x": 0.04445806592405313,
-            "y": 0.6680797944569777,
-            "rotation": -0.0012408485099094535
+            "x": 0.07662898980983478,
+            "y": 0.16480876000669004,
+            "rotation": 0.02984938954464572
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 6
@@ -597,10 +597,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.2833640414310722,
-            "y": 0.9699159211835082,
-            "rotation": -0.022553354491511524
+            "zone": "leftMargin",
+            "x": 0.05493278908235484,
+            "y": 0.2337752854375122,
+            "rotation": 0.036054873336138236
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 6
@@ -612,10 +612,10 @@
           "type": "marginalia",
           "year": 1985,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.025574231951223717,
-            "y": 0.5910476669175192,
-            "rotation": -0.00165520637798946
+            "zone": "topMargin",
+            "x": 0.3997968499970612,
+            "y": 0.09174172079690086,
+            "rotation": 0.03230520036362616
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 6
@@ -628,9 +628,9 @@
           "year": 2024,
           "position": {
             "zone": "rightMargin",
-            "x": 0.9252895208877163,
-            "y": 0.7072889570578113,
-            "rotation": 0.023863133236515732
+            "x": 0.9705482616152553,
+            "y": 0.20502071963330337,
+            "rotation": -0.0021901416123223383
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 6
@@ -642,10 +642,10 @@
           "type": "postIt",
           "year": 2025,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9383707271267593,
-            "y": 0.5787429669818595,
-            "rotation": 0.005890022200473322
+            "zone": "bottomMargin",
+            "x": 0.843603784376386,
+            "y": 0.9737534114394142,
+            "rotation": 0.020415976973654715
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 6
@@ -658,9 +658,9 @@
           "year": 2000,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.46554428607037734,
-            "y": 0.9572085789085657,
-            "rotation": -0.01508592012352551
+            "x": 0.7740661568228068,
+            "y": 0.9328105526065253,
+            "rotation": 0.03180953018362922
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 6
@@ -680,10 +680,10 @@
           "type": "marginalia",
           "year": 1977,
           "position": {
-            "zone": "topMargin",
-            "x": 0.759520108792291,
-            "y": 0.06192227162280457,
-            "rotation": -0.031323487387534835
+            "zone": "leftMargin",
+            "x": 0.0914500506559662,
+            "y": 0.5892919189153284,
+            "rotation": -0.01997636541117074
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 7
@@ -695,10 +695,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.4608997920313692,
-            "y": 0.9175142974379354,
-            "rotation": 0.039091410765394734
+            "zone": "content",
+            "x": 0.5849536014663781,
+            "y": 0.5777777973163978,
+            "rotation": -0.0007733501961361356
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 7
@@ -710,10 +710,10 @@
           "type": "marginalia",
           "year": 1996,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.5210404444765819,
-            "y": 0.9715290854691147,
-            "rotation": 0.008265456299040175
+            "zone": "topMargin",
+            "x": 0.7738676859385692,
+            "y": 0.062393996699281334,
+            "rotation": -0.004750553050836714
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 7
@@ -726,9 +726,9 @@
           "year": 2024,
           "position": {
             "zone": "topMargin",
-            "x": 0.6229234847945612,
-            "y": 0.05616370703892107,
-            "rotation": -0.0203484440140974
+            "x": 0.41309193640757635,
+            "y": 0.02748108797302372,
+            "rotation": -0.04688803171609695
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 7
@@ -740,10 +740,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.42769884908256117,
-            "y": 0.9240891972490043,
-            "rotation": -0.010888563233562455
+            "zone": "topMargin",
+            "x": 0.4276018496576244,
+            "y": 0.0704246630903883,
+            "rotation": -0.04475538566363925
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 7
@@ -755,10 +755,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.4676601843353625,
-            "y": 0.40074423998848496,
-            "rotation": -0.013720353233685867
+            "zone": "bottomMargin",
+            "x": 0.765413561844188,
+            "y": 0.9685488533709966,
+            "rotation": 0.049149886318845565
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 7
@@ -778,10 +778,10 @@
           "type": "marginalia",
           "year": 1985,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.49542001844136496,
-            "y": 0.9765402638284365,
-            "rotation": 0.039079033210006046
+            "zone": "leftMargin",
+            "x": 0.037657571969319084,
+            "y": 0.38869114629379486,
+            "rotation": -0.002209932668874548
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 8
@@ -794,9 +794,9 @@
           "year": 1979,
           "position": {
             "zone": "leftMargin",
-            "x": 0.05298273483949355,
-            "y": 0.13610332937119002,
-            "rotation": 0.0067878141739140425
+            "x": 0.05544055735312646,
+            "y": 0.863381192258645,
+            "rotation": 0.02891957815734746
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 8
@@ -808,10 +808,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.38226396299209986,
-            "y": 0.08685589097137665,
-            "rotation": 0.0037057660520029567
+            "zone": "content",
+            "x": 0.4491176056780914,
+            "y": 0.8410033440773033,
+            "rotation": 0.019248574163113888
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 8
@@ -823,10 +823,10 @@
           "type": "marginalia",
           "year": 1981,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04553815966610396,
-            "y": 0.4701606949306869,
-            "rotation": 0.012313520738147666
+            "zone": "bottomMargin",
+            "x": 0.6662471921490393,
+            "y": 0.9446284762871006,
+            "rotation": 0.03432223639943268
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 8
@@ -838,10 +838,10 @@
           "type": "marginalia",
           "year": 1982,
           "position": {
-            "zone": "topMargin",
-            "x": 0.27363607364993886,
-            "y": 0.061184409127121725,
-            "rotation": -0.043555155156992265
+            "zone": "bottomMargin",
+            "x": 0.739278850533509,
+            "y": 0.9009416115648469,
+            "rotation": -0.017839439791101086
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 8
@@ -853,10 +853,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.6696156069001745,
-            "y": 0.9765050060540442,
-            "rotation": 0.049367797456981416
+            "zone": "rightMargin",
+            "x": 0.9584024261917705,
+            "y": 0.2871786817602403,
+            "rotation": -0.02325946760267319
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 8
@@ -876,10 +876,10 @@
           "type": "marginalia",
           "year": 1996,
           "position": {
-            "zone": "topMargin",
-            "x": 0.17904938983462693,
-            "y": 0.03169298442480431,
-            "rotation": 0.009652291038048856
+            "zone": "leftMargin",
+            "x": 0.044067804253314705,
+            "y": 0.596385806421098,
+            "rotation": -0.013719257743871517
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 9
@@ -891,10 +891,10 @@
           "type": "marginalia",
           "year": 1940,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.3191862359871269,
-            "y": 0.9133264700343358,
-            "rotation": -0.04295240495667109
+            "zone": "leftMargin",
+            "x": 0.07147493156960387,
+            "y": 0.3327709204170288,
+            "rotation": -0.020040848894974372
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 9
@@ -907,9 +907,9 @@
           "year": 1980,
           "position": {
             "zone": "leftMargin",
-            "x": 0.07879809401871019,
-            "y": 0.6598874114277529,
-            "rotation": -0.02388914356239671
+            "x": 0.02574406455526641,
+            "y": 0.2262083684971975,
+            "rotation": -0.047001534895331
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 9
@@ -922,9 +922,9 @@
           "year": 1988,
           "position": {
             "zone": "leftMargin",
-            "x": 0.0936089840729354,
-            "y": 0.8532012614665464,
-            "rotation": -0.00042181336009031737
+            "x": 0.048064228011903784,
+            "y": 0.11967244546687789,
+            "rotation": -0.007100847464607552
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 9
@@ -936,10 +936,10 @@
           "type": "marginalia",
           "year": 1987,
           "position": {
-            "zone": "topMargin",
-            "x": 0.2312180277908552,
-            "y": 0.0818015095970692,
-            "rotation": -0.010528843702892754
+            "zone": "rightMargin",
+            "x": 0.9175211688859981,
+            "y": 0.6717710257704648,
+            "rotation": 0.019941907595398135
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 9
@@ -951,10 +951,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9508624502282654,
-            "y": 0.4459375959628028,
-            "rotation": -0.011559247079458091
+            "zone": "leftMargin",
+            "x": 0.0784857910567224,
+            "y": 0.20361382449924825,
+            "rotation": -0.016785311019730853
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 9
@@ -974,10 +974,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.5711632888183902,
-            "y": 0.9770055337763998,
-            "rotation": -0.02490727376015992
+            "zone": "content",
+            "x": 0.4424553523176936,
+            "y": 0.2065598932117386,
+            "rotation": 0.04050787156793681
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 10
@@ -989,10 +989,10 @@
           "type": "marginalia",
           "year": 1999,
           "position": {
-            "zone": "topMargin",
-            "x": 0.7203940267835568,
-            "y": 0.0425902222748719,
-            "rotation": 0.014746094078533556
+            "zone": "bottomMargin",
+            "x": 0.3516216326344603,
+            "y": 0.9257966426342836,
+            "rotation": -0.020247980497060548
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 10
@@ -1004,10 +1004,10 @@
           "type": "marginalia",
           "year": 1986,
           "position": {
-            "zone": "topMargin",
-            "x": 0.1810334001466466,
-            "y": 0.049454176392331115,
-            "rotation": -0.04744386194741659
+            "zone": "bottomMargin",
+            "x": 0.1974129156450954,
+            "y": 0.9400852640048548,
+            "rotation": -0.02671720754558389
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 10
@@ -1019,10 +1019,10 @@
           "type": "marginalia",
           "year": 1999,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.05222880446708612,
-            "y": 0.10072483492612055,
-            "rotation": 0.03829915378338832
+            "zone": "topMargin",
+            "x": 0.23915321171947795,
+            "y": 0.09469451040519111,
+            "rotation": 0.04840646434057721
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 10
@@ -1034,10 +1034,10 @@
           "type": "marginalia",
           "year": 1999,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9706715432641326,
-            "y": 0.691696517628491,
-            "rotation": 0.01271029313774812
+            "zone": "leftMargin",
+            "x": 0.09131154202129796,
+            "y": 0.2714471528109419,
+            "rotation": 0.0010876201277624565
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 10
@@ -1049,10 +1049,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.07168893504420984,
-            "y": 0.4865470562864176,
-            "rotation": -0.04942454439495576
+            "zone": "topMargin",
+            "x": 0.6602344516721966,
+            "y": 0.07487814212278923,
+            "rotation": 0.037207806381439605
           },
           "chapterName": "CHAPTER_VII_THE_SUBTERRANEAN_STRUCTURES",
           "pageNumber": 10

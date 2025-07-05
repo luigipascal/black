@@ -17,10 +17,10 @@
           "type": "marginalia",
           "year": null,
           "position": {
-            "zone": "topMargin",
-            "x": 0.1643664330455599,
-            "y": 0.05338948008597347,
-            "rotation": -0.03531591309047225
+            "zone": "bottomMargin",
+            "x": 0.6706362842835953,
+            "y": 0.9010945496856251,
+            "rotation": -0.029485288422883994
           },
           "chapterName": "CHAPTER_V_THE_UPPER_FLOORS_AND_PRIVATE_ROOMS",
           "pageNumber": 1
@@ -40,10 +40,10 @@
           "type": "marginalia",
           "year": null,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9565432296558245,
-            "y": 0.310049430310142,
-            "rotation": 0.005699292665231049
+            "zone": "bottomMargin",
+            "x": 0.7873586920905716,
+            "y": 0.9256311873092368,
+            "rotation": 0.014736767256803208
           },
           "chapterName": "CHAPTER_V_THE_UPPER_FLOORS_AND_PRIVATE_ROOMS",
           "pageNumber": 2

@@ -1,7 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:json_annotation/json_annotation.dart';
-
-part 'document_models.g.dart';
 
 enum AnnotationType {
   marginalia,
@@ -23,7 +20,6 @@ enum ReadingMode {
   bookSpread,
 }
 
-@JsonSerializable()
 class AnnotationPosition extends Equatable {
   final AnnotationZone zone;
   final double x;
@@ -37,16 +33,29 @@ class AnnotationPosition extends Equatable {
     required this.rotation,
   });
 
-  factory AnnotationPosition.fromJson(Map<String, dynamic> json) =>
-      _$AnnotationPositionFromJson(json);
+  factory AnnotationPosition.fromJson(Map<String, dynamic> json) {
+    return AnnotationPosition(
+      zone: AnnotationZone.values.firstWhere(
+        (e) => e.name == json['zone'],
+        orElse: () => AnnotationZone.leftMargin,
+      ),
+      x: (json['x'] as num).toDouble(),
+      y: (json['y'] as num).toDouble(),
+      rotation: (json['rotation'] as num?)?.toDouble() ?? 0.0,
+    );
+  }
 
-  Map<String, dynamic> toJson() => _$AnnotationPositionToJson(this);
+  Map<String, dynamic> toJson() => {
+    'zone': zone.name,
+    'x': x,
+    'y': y,
+    'rotation': rotation,
+  };
 
   @override
   List<Object?> get props => [zone, x, y, rotation];
 }
 
-@JsonSerializable()
 class Annotation extends Equatable {
   final String id;
   final String character;
@@ -68,10 +77,32 @@ class Annotation extends Equatable {
     required this.pageNumber,
   });
 
-  factory Annotation.fromJson(Map<String, dynamic> json) =>
-      _$AnnotationFromJson(json);
+  factory Annotation.fromJson(Map<String, dynamic> json) {
+    return Annotation(
+      id: json['id'] as String,
+      character: json['character'] as String,
+      text: json['text'] as String,
+      type: AnnotationType.values.firstWhere(
+        (e) => e.name == json['type'],
+        orElse: () => AnnotationType.marginalia,
+      ),
+      year: json['year'] as int?,
+      position: AnnotationPosition.fromJson(json['position'] as Map<String, dynamic>),
+      chapterName: json['chapterName'] as String,
+      pageNumber: json['pageNumber'] as int,
+    );
+  }
 
-  Map<String, dynamic> toJson() => _$AnnotationToJson(this);
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'character': character,
+    'text': text,
+    'type': type.name,
+    'year': year,
+    'position': position.toJson(),
+    'chapterName': chapterName,
+    'pageNumber': pageNumber,
+  };
 
   bool get isPre2000 => year == null || year! < 2000;
   bool get isPost2000 => year != null && year! >= 2000;
@@ -89,7 +120,6 @@ class Annotation extends Equatable {
       ];
 }
 
-@JsonSerializable()
 class DocumentPage extends Equatable {
   final int pageNumber;
   final String chapterName;
@@ -107,10 +137,27 @@ class DocumentPage extends Equatable {
     required this.annotations,
   });
 
-  factory DocumentPage.fromJson(Map<String, dynamic> json) =>
-      _$DocumentPageFromJson(json);
+  factory DocumentPage.fromJson(Map<String, dynamic> json) {
+    return DocumentPage(
+      pageNumber: json['pageNumber'] as int,
+      chapterName: json['chapterName'] as String,
+      content: json['content'] as String,
+      wordCount: json['wordCount'] as int,
+      annotationCount: json['annotationCount'] as int? ?? 0,
+      annotations: (json['annotations'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList() ?? [],
+    );
+  }
 
-  Map<String, dynamic> toJson() => _$DocumentPageToJson(this);
+  Map<String, dynamic> toJson() => {
+    'pageNumber': pageNumber,
+    'chapterName': chapterName,
+    'content': content,
+    'wordCount': wordCount,
+    'annotationCount': annotationCount,
+    'annotations': annotations.map((e) => e.toJson()).toList(),
+  };
 
   List<Annotation> get fixedAnnotations =>
       annotations.where((a) => a.isPre2000).toList();
@@ -129,7 +176,6 @@ class DocumentPage extends Equatable {
       ];
 }
 
-@JsonSerializable()
 class Chapter extends Equatable {
   final int chapterNumber;
   final String chapterName;
@@ -147,10 +193,27 @@ class Chapter extends Equatable {
     required this.pages,
   });
 
-  factory Chapter.fromJson(Map<String, dynamic> json) =>
-      _$ChapterFromJson(json);
+  factory Chapter.fromJson(Map<String, dynamic> json) {
+    return Chapter(
+      chapterNumber: json['chapterNumber'] as int,
+      chapterName: json['chapterName'] as String,
+      filename: json['filename'] as String,
+      wordCount: json['wordCount'] as int,
+      pageCount: json['pageCount'] as int,
+      pages: (json['pages'] as List<dynamic>)
+          .map((e) => DocumentPage.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+  }
 
-  Map<String, dynamic> toJson() => _$ChapterToJson(this);
+  Map<String, dynamic> toJson() => {
+    'chapterNumber': chapterNumber,
+    'chapterName': chapterName,
+    'filename': filename,
+    'wordCount': wordCount,
+    'pageCount': pageCount,
+    'pages': pages.map((e) => e.toJson()).toList(),
+  };
 
   @override
   List<Object?> get props => [
@@ -163,7 +226,6 @@ class Chapter extends Equatable {
       ];
 }
 
-@JsonSerializable()
 class AnnotationStyle extends Equatable {
   final String fontFamily;
   final int fontSize;
@@ -179,16 +241,28 @@ class AnnotationStyle extends Equatable {
     required this.description,
   });
 
-  factory AnnotationStyle.fromJson(Map<String, dynamic> json) =>
-      _$AnnotationStyleFromJson(json);
+  factory AnnotationStyle.fromJson(Map<String, dynamic> json) {
+    return AnnotationStyle(
+      fontFamily: json['fontFamily'] as String,
+      fontSize: json['fontSize'] as int,
+      color: json['color'] as String,
+      fontStyle: json['fontStyle'] as String,
+      description: json['description'] as String,
+    );
+  }
 
-  Map<String, dynamic> toJson() => _$AnnotationStyleToJson(this);
+  Map<String, dynamic> toJson() => {
+    'fontFamily': fontFamily,
+    'fontSize': fontSize,
+    'color': color,
+    'fontStyle': fontStyle,
+    'description': description,
+  };
 
   @override
   List<Object?> get props => [fontFamily, fontSize, color, fontStyle, description];
 }
 
-@JsonSerializable()
 class Character extends Equatable {
   final String name;
   final String fullName;
@@ -206,16 +280,32 @@ class Character extends Equatable {
     required this.annotationStyle,
   });
 
-  factory Character.fromJson(Map<String, dynamic> json) =>
-      _$CharacterFromJson(json);
+  factory Character.fromJson(Map<String, dynamic> json) {
+    return Character(
+      name: json['name'] as String,
+      fullName: json['fullName'] as String,
+      years: json['years'] as String,
+      description: json['description'] as String,
+      role: json['role'] as String,
+      annotationStyle: AnnotationStyle.fromJson(
+        json['annotationStyle'] as Map<String, dynamic>
+      ),
+    );
+  }
 
-  Map<String, dynamic> toJson() => _$CharacterToJson(this);
+  Map<String, dynamic> toJson() => {
+    'name': name,
+    'fullName': fullName,
+    'years': years,
+    'description': description,
+    'role': role,
+    'annotationStyle': annotationStyle.toJson(),
+  };
 
   @override
   List<Object?> get props => [name, fullName, years, description, role, annotationStyle];
 }
 
-@JsonSerializable()
 class BookData extends Equatable {
   final String title;
   final String author;
@@ -233,10 +323,27 @@ class BookData extends Equatable {
     required this.chapters,
   });
 
-  factory BookData.fromJson(Map<String, dynamic> json) =>
-      _$BookDataFromJson(json);
+  factory BookData.fromJson(Map<String, dynamic> json) {
+    return BookData(
+      title: json['title'] as String,
+      author: json['author'] as String,
+      totalChapters: json['totalChapters'] as int,
+      totalPages: json['totalPages'] as int,
+      totalAnnotations: json['totalAnnotations'] as int,
+      chapters: (json['chapters'] as List<dynamic>)
+          .map((e) => Chapter.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+  }
 
-  Map<String, dynamic> toJson() => _$BookDataToJson(this);
+  Map<String, dynamic> toJson() => {
+    'title': title,
+    'author': author,
+    'totalChapters': totalChapters,
+    'totalPages': totalPages,
+    'totalAnnotations': totalAnnotations,
+    'chapters': chapters.map((e) => e.toJson()).toList(),
+  };
 
   @override
   List<Object?> get props => [

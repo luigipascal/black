@@ -17,10 +17,10 @@
           "type": "marginalia",
           "year": 1991,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.8329970376506339,
-            "y": 0.9094918879832935,
-            "rotation": 0.01872172017342306
+            "zone": "rightMargin",
+            "x": 0.9633589763392828,
+            "y": 0.7695617762360731,
+            "rotation": 0.03687719682439451
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 1
@@ -32,10 +32,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.6333450999577155,
-            "y": 0.7672765680524933,
-            "rotation": 0.010168074811311401
+            "zone": "rightMargin",
+            "x": 0.9748629433533423,
+            "y": 0.40531215035799395,
+            "rotation": -0.01443052927577032
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 1
@@ -47,10 +47,10 @@
           "type": "marginalia",
           "year": 1992,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.07196580590083136,
-            "y": 0.7977220386727407,
-            "rotation": 0.02123873046943671
+            "zone": "rightMargin",
+            "x": 0.9122799991255736,
+            "y": 0.6190127188754592,
+            "rotation": -0.0482726051797454
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 1
@@ -62,10 +62,10 @@
           "type": "postIt",
           "year": 2002,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.049162529696334514,
-            "y": 0.7358897892480597,
-            "rotation": 0.019892841781161533
+            "zone": "rightMargin",
+            "x": 0.9263310484727572,
+            "y": 0.7493119950423827,
+            "rotation": -0.034577010214638326
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 1
@@ -77,10 +77,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9669036997057818,
-            "y": 0.30738901632467047,
-            "rotation": 0.016263795008040118
+            "zone": "bottomMargin",
+            "x": 0.5952274246287204,
+            "y": 0.90138363846684,
+            "rotation": 0.01895873142396557
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 1
@@ -100,10 +100,10 @@
           "type": "marginalia",
           "year": 1990,
           "position": {
-            "zone": "topMargin",
-            "x": 0.6886904648641005,
-            "y": 0.05146165770931922,
-            "rotation": -0.043292350844266
+            "zone": "bottomMargin",
+            "x": 0.6396250591898562,
+            "y": 0.9381750027877984,
+            "rotation": 0.04564221717090277
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 2
@@ -115,10 +115,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.038760200783209214,
-            "y": 0.8084108836250459,
-            "rotation": 0.04369117951985394
+            "zone": "content",
+            "x": 0.39908881737174184,
+            "y": 0.521696177938389,
+            "rotation": -0.048308315448008676
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 2
@@ -131,9 +131,9 @@
           "year": 1923,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.22626639752833674,
-            "y": 0.9434945685807696,
-            "rotation": 0.006811960847133036
+            "x": 0.4887380324280203,
+            "y": 0.9334023881807563,
+            "rotation": -0.0007440375928229437
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 2
@@ -145,10 +145,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04788498427827652,
-            "y": 0.15224935818380525,
-            "rotation": 0.01829831790699349
+            "zone": "bottomMargin",
+            "x": 0.22722971388313148,
+            "y": 0.9501847717962015,
+            "rotation": -0.027257797242423533
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 2
@@ -160,10 +160,10 @@
           "type": "postIt",
           "year": 2026,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.3575320464849135,
-            "y": 0.9736454856867754,
-            "rotation": 0.005252619674047066
+            "zone": "rightMargin",
+            "x": 0.9745335758830775,
+            "y": 0.5523066630162003,
+            "rotation": 0.036480319773629345
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 2
@@ -184,9 +184,9 @@
           "year": 2001,
           "position": {
             "zone": "content",
-            "x": 0.7004088848920602,
-            "y": 0.5660538881479001,
-            "rotation": -0.027442843835799303
+            "x": 0.3911496016618149,
+            "y": 0.5219630578254341,
+            "rotation": -0.03876067414536791
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 3
@@ -198,10 +198,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04419475862124923,
-            "y": 0.6749854095363076,
-            "rotation": -0.016798813181973193
+            "zone": "bottomMargin",
+            "x": 0.15759436073702343,
+            "y": 0.9561565868259264,
+            "rotation": -0.041331626377447084
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 3
@@ -213,10 +213,10 @@
           "type": "postIt",
           "year": 2002,
           "position": {
-            "zone": "content",
-            "x": 0.7553454691258632,
-            "y": 0.17368310893726355,
-            "rotation": 0.04465520090624347
+            "zone": "leftMargin",
+            "x": 0.05603536073507197,
+            "y": 0.601653054637486,
+            "rotation": -0.03675503145113964
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 3
@@ -228,10 +228,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9200960462018201,
-            "y": 0.5132380400755034,
-            "rotation": 0.04454079697342276
+            "zone": "topMargin",
+            "x": 0.25522887323541943,
+            "y": 0.09361486698222236,
+            "rotation": 0.03214597664999672
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 3
@@ -243,10 +243,10 @@
           "type": "marginalia",
           "year": null,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.07958876871885825,
-            "y": 0.2333568534505484,
-            "rotation": -0.010445699911331641
+            "zone": "rightMargin",
+            "x": 0.9707357154535157,
+            "y": 0.658489019076119,
+            "rotation": 0.007739141206455569
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 3
@@ -267,9 +267,9 @@
           "year": 2024,
           "position": {
             "zone": "topMargin",
-            "x": 0.47764679912441643,
-            "y": 0.08051323447169491,
-            "rotation": -0.02493737519137479
+            "x": 0.3888126607451131,
+            "y": 0.027767402636471605,
+            "rotation": -0.006492448020194142
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 4
@@ -281,10 +281,10 @@
           "type": "marginalia",
           "year": 1992,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.21322543092371982,
-            "y": 0.9362576826031862,
-            "rotation": -0.041782328644783144
+            "zone": "topMargin",
+            "x": 0.32031923621556535,
+            "y": 0.022648689078133763,
+            "rotation": 0.041462263819490044
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 4
@@ -296,10 +296,10 @@
           "type": "marginalia",
           "year": 1923,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.02335518678284097,
-            "y": 0.35340744080316233,
-            "rotation": -0.023060896117249586
+            "zone": "topMargin",
+            "x": 0.2912442705884495,
+            "y": 0.063551619589147,
+            "rotation": 0.02783169062470832
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 4
@@ -312,9 +312,9 @@
           "year": 2024,
           "position": {
             "zone": "leftMargin",
-            "x": 0.02569019129199921,
-            "y": 0.5426216192225545,
-            "rotation": -0.014938159670049711
+            "x": 0.053554124105676934,
+            "y": 0.4332100519437464,
+            "rotation": -0.028740915059986816
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 4
@@ -335,9 +335,9 @@
           "year": 2024,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.2147467453091875,
-            "y": 0.9298161300424685,
-            "rotation": -0.038195034489710566
+            "x": 0.3398701921617743,
+            "y": 0.9441827453514592,
+            "rotation": -0.027956958787514165
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 5
@@ -350,9 +350,9 @@
           "year": 1991,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.7006821008664552,
-            "y": 0.9077908109146212,
-            "rotation": -0.031431243643565
+            "x": 0.8401535580211459,
+            "y": 0.9093572983119171,
+            "rotation": 0.019941769794095666
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 5
@@ -364,10 +364,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9758485421548401,
-            "y": 0.8817253364692581,
-            "rotation": -0.022794544276128804
+            "zone": "bottomMargin",
+            "x": 0.3996986883003817,
+            "y": 0.9583432802289366,
+            "rotation": 0.0018955804054393345
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 5
@@ -380,9 +380,9 @@
           "year": 1993,
           "position": {
             "zone": "rightMargin",
-            "x": 0.97066908639741,
-            "y": 0.5842569275361268,
-            "rotation": 0.0027820889561525845
+            "x": 0.9317777474997982,
+            "y": 0.2905299228314937,
+            "rotation": -0.04353059520597552
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 5
@@ -402,10 +402,10 @@
           "type": "marginalia",
           "year": 1991,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9538241409113909,
-            "y": 0.30398756514164904,
-            "rotation": -0.006706527978807686
+            "zone": "topMargin",
+            "x": 0.5525243103682007,
+            "y": 0.024534781206475228,
+            "rotation": 0.013416264034104697
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 6
@@ -417,10 +417,10 @@
           "type": "postIt",
           "year": 2002,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.055746030543478334,
-            "y": 0.7155425121883625,
-            "rotation": -0.01651197772603642
+            "zone": "rightMargin",
+            "x": 0.9153689117760754,
+            "y": 0.8709724059861924,
+            "rotation": 0.035373461677550455
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 6
@@ -432,10 +432,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.33291959777632457,
-            "y": 0.07118397186121843,
-            "rotation": 0.0023516874384941324
+            "zone": "leftMargin",
+            "x": 0.022061743749164267,
+            "y": 0.6278338225558321,
+            "rotation": -0.03413279980162215
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 6
@@ -448,9 +448,9 @@
           "year": 1991,
           "position": {
             "zone": "leftMargin",
-            "x": 0.054126645006770197,
-            "y": 0.556904146888621,
-            "rotation": -0.01739939163407994
+            "x": 0.020244580268647266,
+            "y": 0.5383630605077607,
+            "rotation": -0.027852889778804513
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 6
@@ -470,10 +470,10 @@
           "type": "marginalia",
           "year": 1990,
           "position": {
-            "zone": "topMargin",
-            "x": 0.7494779563813962,
-            "y": 0.06876652264989293,
-            "rotation": -0.04567641140287907
+            "zone": "leftMargin",
+            "x": 0.08916511572792396,
+            "y": 0.19131546242686825,
+            "rotation": -0.0296173683040597
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 7
@@ -485,10 +485,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.1714075256863645,
-            "y": 0.0426204418127349,
-            "rotation": 0.04889430408351382
+            "zone": "leftMargin",
+            "x": 0.09420440762072105,
+            "y": 0.5654153434483706,
+            "rotation": 0.007008239579568543
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 7
@@ -500,10 +500,10 @@
           "type": "marginalia",
           "year": 1993,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9032564003832485,
-            "y": 0.7953959649896749,
-            "rotation": 0.004424631582475547
+            "zone": "topMargin",
+            "x": 0.82743627151693,
+            "y": 0.07479261285220859,
+            "rotation": -0.017018415313107393
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 7
@@ -516,9 +516,9 @@
           "year": 2003,
           "position": {
             "zone": "rightMargin",
-            "x": 0.944052610065235,
-            "y": 0.21407395359280548,
-            "rotation": 0.023322484635342235
+            "x": 0.9146524058520977,
+            "y": 0.7876981995298289,
+            "rotation": -0.04866565774211051
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 7
@@ -538,10 +538,10 @@
           "type": "postIt",
           "year": 2002,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04168738291567146,
-            "y": 0.7776004363435146,
-            "rotation": -0.01191078154391182
+            "zone": "topMargin",
+            "x": 0.5470311606044393,
+            "y": 0.06962101328294204,
+            "rotation": 0.010781964585297222
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 8
@@ -553,10 +553,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.08100240948119093,
-            "y": 0.5195763889284206,
-            "rotation": -0.033018931250700705
+            "zone": "rightMargin",
+            "x": 0.9308809475093954,
+            "y": 0.7344774686922239,
+            "rotation": 0.01178071912692218
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 8
@@ -568,10 +568,10 @@
           "type": "marginalia",
           "year": 1991,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.030228928747879556,
-            "y": 0.5379094369817471,
-            "rotation": 0.0008586511879180137
+            "zone": "rightMargin",
+            "x": 0.9596141087298904,
+            "y": 0.19860680636637795,
+            "rotation": 0.048530643276776655
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 8
@@ -583,10 +583,10 @@
           "type": "postIt",
           "year": 2025,
           "position": {
-            "zone": "topMargin",
-            "x": 0.44716243673905376,
-            "y": 0.09832731230478632,
-            "rotation": -0.044014436932931195
+            "zone": "content",
+            "x": 0.2513129828027366,
+            "y": 0.6216010948383746,
+            "rotation": -0.046620573446689434
           },
           "chapterName": "CHAPTER_X_THE_ARCHITECTURAL_LEGACY",
           "pageNumber": 8

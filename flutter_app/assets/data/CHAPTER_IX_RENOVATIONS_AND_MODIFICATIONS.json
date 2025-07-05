@@ -17,10 +17,10 @@
           "type": "marginalia",
           "year": 1912,
           "position": {
-            "zone": "topMargin",
-            "x": 0.5599445076143897,
-            "y": 0.02881872900011379,
-            "rotation": -0.008742840012950415
+            "zone": "leftMargin",
+            "x": 0.020379802397940433,
+            "y": 0.19163186764298903,
+            "rotation": 0.04128506997704735
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 1
@@ -32,10 +32,10 @@
           "type": "marginalia",
           "year": 1989,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.919076082227669,
-            "y": 0.6370373774431529,
-            "rotation": 0.04792334220791842
+            "zone": "leftMargin",
+            "x": 0.03965649798544495,
+            "y": 0.5237815010006207,
+            "rotation": -0.044746352837309024
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 1
@@ -47,10 +47,10 @@
           "type": "postIt",
           "year": 2001,
           "position": {
-            "zone": "content",
-            "x": 0.3677502178902279,
-            "y": 0.5847961319166681,
-            "rotation": -0.007241411533708275
+            "zone": "leftMargin",
+            "x": 0.02656656893579678,
+            "y": 0.5010173603010377,
+            "rotation": 0.028732856495891825
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 1
@@ -62,10 +62,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.5527673419211079,
-            "y": 0.8012538526073689,
-            "rotation": -0.046792485805525155
+            "zone": "rightMargin",
+            "x": 0.9259525076340042,
+            "y": 0.2585853015232319,
+            "rotation": 0.04968070325115542
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 1
@@ -78,9 +78,9 @@
           "year": 2024,
           "position": {
             "zone": "leftMargin",
-            "x": 0.05794076745021018,
-            "y": 0.23276819642223714,
-            "rotation": -0.04327737629238348
+            "x": 0.04658662019533881,
+            "y": 0.40486860918171763,
+            "rotation": 0.004845279850870166
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 1
@@ -92,10 +92,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.42902144572791656,
-            "y": 0.3910507014127801,
-            "rotation": 0.006176859687471437
+            "zone": "leftMargin",
+            "x": 0.08998359590470621,
+            "y": 0.4370804786179474,
+            "rotation": -0.02341091632731517
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 1
@@ -115,10 +115,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "topMargin",
-            "x": 0.20237535024164943,
-            "y": 0.05381534270663059,
-            "rotation": 0.009950000211104128
+            "zone": "rightMargin",
+            "x": 0.951194487290234,
+            "y": 0.5556604385262336,
+            "rotation": -0.017442255982427525
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 2
@@ -130,10 +130,10 @@
           "type": "postIt",
           "year": 2000,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9223108756604769,
-            "y": 0.24271243389455527,
-            "rotation": -0.022965006814917057
+            "zone": "content",
+            "x": 0.23867043060275528,
+            "y": 0.6244270777711385,
+            "rotation": -0.013650712299912571
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 2
@@ -145,10 +145,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9103732017423143,
-            "y": 0.3408087348889254,
-            "rotation": 0.03855989514633415
+            "zone": "leftMargin",
+            "x": 0.07320121942850953,
+            "y": 0.7134046441959362,
+            "rotation": 0.039552923837457614
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 2
@@ -160,10 +160,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.07625979453562821,
-            "y": 0.37222488677235854,
-            "rotation": 0.039876206460793456
+            "zone": "bottomMargin",
+            "x": 0.2681031895495096,
+            "y": 0.952712226063586,
+            "rotation": -0.033172437054419024
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 2
@@ -175,10 +175,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.05569737064224409,
-            "y": 0.3521604156867709,
-            "rotation": -0.02190375832793602
+            "zone": "bottomMargin",
+            "x": 0.42538853518397735,
+            "y": 0.9796014876630875,
+            "rotation": -0.04969946324388949
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 2
@@ -190,10 +190,10 @@
           "type": "postIt",
           "year": 2026,
           "position": {
-            "zone": "content",
-            "x": 0.35156156631247726,
-            "y": 0.21667947250181468,
-            "rotation": -0.03603109449948495
+            "zone": "bottomMargin",
+            "x": 0.6579106795930505,
+            "y": 0.9690851804245504,
+            "rotation": 0.03305615841135561
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 2
@@ -214,9 +214,9 @@
           "year": 1989,
           "position": {
             "zone": "rightMargin",
-            "x": 0.9339980116637694,
-            "y": 0.1490704047323871,
-            "rotation": -0.010968763715236652
+            "x": 0.9045023497172352,
+            "y": 0.6385497449323954,
+            "rotation": -0.027087256084693836
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 3
@@ -228,10 +228,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.5205737906822075,
-            "y": 0.27937014249372816,
-            "rotation": 0.04466673521443995
+            "zone": "rightMargin",
+            "x": 0.9264431773895706,
+            "y": 0.760645482951465,
+            "rotation": 0.04208425127111266
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 3
@@ -243,10 +243,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.5515252770128902,
-            "y": 0.9738182948113989,
-            "rotation": -0.004354268718185572
+            "zone": "topMargin",
+            "x": 0.1603056775291554,
+            "y": 0.041636174667795976,
+            "rotation": -0.043864922500311536
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 3
@@ -258,10 +258,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04221239551718613,
-            "y": 0.516812057326652,
-            "rotation": -0.04779848563804278
+            "zone": "bottomMargin",
+            "x": 0.3261181090142545,
+            "y": 0.964596738410562,
+            "rotation": 0.028599626588206875
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 3
@@ -273,10 +273,10 @@
           "type": "marginalia",
           "year": 1990,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.7389298741690815,
-            "y": 0.9040881156515516,
-            "rotation": -0.030132064429379157
+            "zone": "leftMargin",
+            "x": 0.05292182268213351,
+            "y": 0.23981701046334597,
+            "rotation": -0.04543321495651449
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 3
@@ -297,9 +297,9 @@
           "year": 2000,
           "position": {
             "zone": "topMargin",
-            "x": 0.3392893270125944,
-            "y": 0.0829814142131014,
-            "rotation": 0.017439264691207792
+            "x": 0.48820019621240807,
+            "y": 0.07712222023318656,
+            "rotation": -0.014918790505908898
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 4
@@ -312,9 +312,9 @@
           "year": 2024,
           "position": {
             "zone": "content",
-            "x": 0.5237649486380221,
-            "y": 0.35669583553746353,
-            "rotation": -0.02577689889726318
+            "x": 0.48673291782741823,
+            "y": 0.33041482541863687,
+            "rotation": 0.006996094179442614
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 4
@@ -326,10 +326,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.3509621563614246,
-            "y": 0.05223515313832526,
-            "rotation": 0.007276344884568154
+            "zone": "bottomMargin",
+            "x": 0.41092014165069346,
+            "y": 0.9173075933695463,
+            "rotation": -0.037327438590689786
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 4
@@ -341,10 +341,10 @@
           "type": "marginalia",
           "year": 1990,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9343145455477507,
-            "y": 0.19978407667649495,
-            "rotation": -0.0008464915149052455
+            "zone": "bottomMargin",
+            "x": 0.598603396577166,
+            "y": 0.9575092652006458,
+            "rotation": 0.034372712097481786
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 4
@@ -356,10 +356,10 @@
           "type": "marginalia",
           "year": 1990,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04605957155295392,
-            "y": 0.7922376701685725,
-            "rotation": 0.034141401403614303
+            "zone": "topMargin",
+            "x": 0.3936575119369836,
+            "y": 0.03200666827620119,
+            "rotation": -0.02436073119917677
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 4
@@ -379,10 +379,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.8451887060742889,
-            "y": 0.0369062008482178,
-            "rotation": -0.03657425754926352
+            "zone": "leftMargin",
+            "x": 0.02345219894236256,
+            "y": 0.40349426496658625,
+            "rotation": -0.04072799037726857
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 5
@@ -394,10 +394,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9133656852144971,
-            "y": 0.12738558357525137,
-            "rotation": -0.028647293322530076
+            "zone": "leftMargin",
+            "x": 0.08691077163401677,
+            "y": 0.10712028864905819,
+            "rotation": 0.019013373486331878
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 5
@@ -409,10 +409,10 @@
           "type": "marginalia",
           "year": 1936,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.05698748101713433,
-            "y": 0.8173863341902502,
-            "rotation": 0.012128522718887803
+            "zone": "rightMargin",
+            "x": 0.9061355358614724,
+            "y": 0.13437142406450447,
+            "rotation": -0.0024286682858088216
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 5
@@ -424,10 +424,10 @@
           "type": "marginalia",
           "year": 1990,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9173102066230867,
-            "y": 0.18289482416075167,
-            "rotation": 0.04386083991322243
+            "zone": "leftMargin",
+            "x": 0.08207805688835218,
+            "y": 0.14031795482865272,
+            "rotation": 0.023341247636055995
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 5
@@ -439,10 +439,10 @@
           "type": "postIt",
           "year": 2001,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.07276610120023129,
-            "y": 0.45463666550093484,
-            "rotation": 0.0012776476742417332
+            "zone": "bottomMargin",
+            "x": 0.4931492046875342,
+            "y": 0.9651310572510053,
+            "rotation": -0.027270599991228984
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 5
@@ -462,10 +462,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.36267301016699666,
-            "y": 0.9042236906072169,
-            "rotation": 0.026123538893722233
+            "zone": "topMargin",
+            "x": 0.3873426657441855,
+            "y": 0.06646518825016146,
+            "rotation": -0.04987502778788257
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 6
@@ -477,10 +477,10 @@
           "type": "marginalia",
           "year": 1989,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.8302943889338968,
-            "y": 0.9605370748441201,
-            "rotation": -0.022823410262039146
+            "zone": "leftMargin",
+            "x": 0.044787929732489004,
+            "y": 0.7836389178078965,
+            "rotation": -0.03828094580594646
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 6
@@ -492,10 +492,10 @@
           "type": "marginalia",
           "year": 1936,
           "position": {
-            "zone": "topMargin",
-            "x": 0.30978890720790264,
-            "y": 0.09324477167574013,
-            "rotation": -0.01142675793920166
+            "zone": "rightMargin",
+            "x": 0.9220942898471728,
+            "y": 0.20596115720733624,
+            "rotation": 0.022703841139763405
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 6
@@ -508,9 +508,9 @@
           "year": 2001,
           "position": {
             "zone": "rightMargin",
-            "x": 0.9431040814946084,
-            "y": 0.8856564146492761,
-            "rotation": -0.026773546041552177
+            "x": 0.901519690927086,
+            "y": 0.1909804946562245,
+            "rotation": 0.003429727443327091
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 6
@@ -522,10 +522,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.07134312583603189,
-            "y": 0.7897478445642665,
-            "rotation": -0.02329895054107869
+            "zone": "bottomMargin",
+            "x": 0.5241980261608752,
+            "y": 0.9026903065011778,
+            "rotation": 0.013373330641805993
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 6
@@ -545,10 +545,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.02984853128881719,
-            "y": 0.42507064878616285,
-            "rotation": 0.006623546767461475
+            "zone": "rightMargin",
+            "x": 0.9695951000905003,
+            "y": 0.73538385226293,
+            "rotation": -0.03707017002881774
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 7
@@ -560,10 +560,10 @@
           "type": "marginalia",
           "year": 1989,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.17757459702173098,
-            "y": 0.9645258900218612,
-            "rotation": -0.04465610546284598
+            "zone": "topMargin",
+            "x": 0.7494621827231345,
+            "y": 0.08886152719214306,
+            "rotation": -0.005457892410336407
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 7
@@ -575,10 +575,10 @@
           "type": "postIt",
           "year": 2001,
           "position": {
-            "zone": "topMargin",
-            "x": 0.40435270122897193,
-            "y": 0.08527191218707901,
-            "rotation": -0.020351358648429164
+            "zone": "content",
+            "x": 0.41045205270310636,
+            "y": 0.23003087848504963,
+            "rotation": 0.0070399896950929415
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 7
@@ -590,10 +590,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.22068498817221993,
-            "y": 0.9404615196952093,
-            "rotation": -0.04825222308735662
+            "zone": "topMargin",
+            "x": 0.8411902289352777,
+            "y": 0.09611508546719444,
+            "rotation": 0.04587008947865311
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 7
@@ -605,10 +605,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9782017495609832,
-            "y": 0.14758813495928155,
-            "rotation": -0.03621404302534335
+            "zone": "leftMargin",
+            "x": 0.08987085073150447,
+            "y": 0.43273816425024225,
+            "rotation": -0.0330285460063272
           },
           "chapterName": "CHAPTER_IX_RENOVATIONS_AND_MODIFICATIONS",
           "pageNumber": 7

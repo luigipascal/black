@@ -18,9 +18,9 @@
           "year": 1983,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.357826594961008,
-            "y": 0.9009233991635077,
-            "rotation": 0.014361814622243386
+            "x": 0.6791875289067333,
+            "y": 0.9278857827716805,
+            "rotation": -0.001240190941057795
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 1
@@ -32,10 +32,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.06061609872875599,
-            "y": 0.39828500598557925,
-            "rotation": 0.01935371792065972
+            "zone": "topMargin",
+            "x": 0.8469997878340384,
+            "y": 0.08543638440467871,
+            "rotation": -0.014224559383247782
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 1
@@ -47,10 +47,10 @@
           "type": "marginalia",
           "year": 1998,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.938806437157654,
-            "y": 0.10024868162135672,
-            "rotation": 0.021461805665035007
+            "zone": "leftMargin",
+            "x": 0.05278792825728193,
+            "y": 0.45075506738179905,
+            "rotation": 0.030536557843767777
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 1
@@ -62,10 +62,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "topMargin",
-            "x": 0.798929840758605,
-            "y": 0.09650308579070055,
-            "rotation": 0.03001509067979652
+            "zone": "content",
+            "x": 0.5624411467298946,
+            "y": 0.6147642732240424,
+            "rotation": 0.01349991980612837
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 1
@@ -77,10 +77,10 @@
           "type": "postIt",
           "year": 2025,
           "position": {
-            "zone": "content",
-            "x": 0.41820075418256886,
-            "y": 0.8071049901819304,
-            "rotation": 0.020056953506475662
+            "zone": "leftMargin",
+            "x": 0.022430675137853715,
+            "y": 0.8482002545731734,
+            "rotation": -0.04434540727787703
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 1
@@ -92,10 +92,10 @@
           "type": "marginalia",
           "year": 1986,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.925039028387295,
-            "y": 0.8357918844991402,
-            "rotation": 0.010604998066919658
+            "zone": "bottomMargin",
+            "x": 0.23480651885372095,
+            "y": 0.9762431409602979,
+            "rotation": 0.014991970440908154
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 1
@@ -107,10 +107,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.7366675427854478,
-            "y": 0.9320810701273012,
-            "rotation": -0.0056653692238880955
+            "zone": "topMargin",
+            "x": 0.5923572882994093,
+            "y": 0.06393030238040485,
+            "rotation": -0.030907573162493707
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 1
@@ -130,10 +130,10 @@
           "type": "marginalia",
           "year": 1986,
           "position": {
-            "zone": "topMargin",
-            "x": 0.46898811757261616,
-            "y": 0.028835089690860877,
-            "rotation": 0.001935564091152431
+            "zone": "leftMargin",
+            "x": 0.024054578355577335,
+            "y": 0.7057522732675575,
+            "rotation": 0.03248347042795208
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 2
@@ -145,10 +145,10 @@
           "type": "marginalia",
           "year": 1984,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.5289528128574874,
-            "y": 0.9458901925090614,
-            "rotation": 0.017396328377337022
+            "zone": "rightMargin",
+            "x": 0.9138329248420674,
+            "y": 0.3792851125348141,
+            "rotation": 0.0204257155553628
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 2
@@ -160,10 +160,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.07386835194660375,
-            "y": 0.3710265246203214,
-            "rotation": -0.03457390754452692
+            "zone": "topMargin",
+            "x": 0.332096334488343,
+            "y": 0.08818926891144692,
+            "rotation": -0.00872442334057756
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 2
@@ -175,10 +175,10 @@
           "type": "marginalia",
           "year": 1986,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.6749249842147999,
-            "y": 0.9626949535293317,
-            "rotation": 0.04723280302650858
+            "zone": "rightMargin",
+            "x": 0.9216420241274463,
+            "y": 0.1677415805031508,
+            "rotation": -0.049188353191411495
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 2
@@ -191,9 +191,9 @@
           "year": 2026,
           "position": {
             "zone": "topMargin",
-            "x": 0.6642016383845772,
-            "y": 0.07404008001475913,
-            "rotation": -0.016762650910692845
+            "x": 0.8348952212358841,
+            "y": 0.08148403818766038,
+            "rotation": -0.04368081558622577
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 2
@@ -206,9 +206,9 @@
           "year": 1989,
           "position": {
             "zone": "topMargin",
-            "x": 0.19861201484665417,
-            "y": 0.09545420640559638,
-            "rotation": -0.02936997501587434
+            "x": 0.23703770360552534,
+            "y": 0.08422906955143135,
+            "rotation": 0.02590509691705918
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 2
@@ -220,10 +220,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.49367392796365106,
-            "y": 0.6406035011302952,
-            "rotation": 0.0418274454135428
+            "zone": "topMargin",
+            "x": 0.7744930933759333,
+            "y": 0.03915141993463329,
+            "rotation": -0.0218922939555691
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 2
@@ -243,10 +243,10 @@
           "type": "marginalia",
           "year": 1996,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9032947979313679,
-            "y": 0.12373896471348074,
-            "rotation": 0.029475854748851928
+            "zone": "leftMargin",
+            "x": 0.030433228704833004,
+            "y": 0.2817010394349597,
+            "rotation": -0.010885212861636406
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 3
@@ -258,10 +258,10 @@
           "type": "marginalia",
           "year": 1987,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.050185565002519646,
-            "y": 0.7589504710235974,
-            "rotation": 0.012652681548282153
+            "zone": "rightMargin",
+            "x": 0.9056956887092922,
+            "y": 0.6354086431455402,
+            "rotation": -0.03448272122144739
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 3
@@ -274,9 +274,9 @@
           "year": 2024,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.5180797639468256,
-            "y": 0.9074939598866036,
-            "rotation": 0.007673231455848084
+            "x": 0.8348976662099343,
+            "y": 0.9265746461671177,
+            "rotation": 0.03913309998722462
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 3
@@ -288,10 +288,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9436166685010401,
-            "y": 0.5649350613318735,
-            "rotation": 0.031592194681705724
+            "zone": "topMargin",
+            "x": 0.15062914534619215,
+            "y": 0.0630140234666465,
+            "rotation": -0.009599623499061983
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 3
@@ -303,10 +303,10 @@
           "type": "postIt",
           "year": 2026,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.31288449164529875,
-            "y": 0.9640773531994311,
-            "rotation": 0.025835460418701352
+            "zone": "leftMargin",
+            "x": 0.09286839971171004,
+            "y": 0.8747982938575382,
+            "rotation": -0.026923331869139745
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 3
@@ -318,10 +318,10 @@
           "type": "postIt",
           "year": 2000,
           "position": {
-            "zone": "topMargin",
-            "x": 0.7466664773851832,
-            "y": 0.08093512058857802,
-            "rotation": -0.04024086339819449
+            "zone": "content",
+            "x": 0.6754729909275529,
+            "y": 0.3268345748302094,
+            "rotation": 0.021632971896858734
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 3
@@ -333,10 +333,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.3259092735517868,
-            "y": 0.5412932564003776,
-            "rotation": -0.0018039264136994527
+            "zone": "rightMargin",
+            "x": 0.960499531584759,
+            "y": 0.33465674147317126,
+            "rotation": -0.0008657947561396929
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 3
@@ -356,10 +356,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.6450126649413048,
-            "y": 0.9666954572878818,
-            "rotation": -0.040786114656632046
+            "zone": "leftMargin",
+            "x": 0.026532910635683377,
+            "y": 0.5052249817427238,
+            "rotation": 0.039827619836232654
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 4
@@ -371,10 +371,10 @@
           "type": "marginalia",
           "year": 1997,
           "position": {
-            "zone": "topMargin",
-            "x": 0.7112360928659278,
-            "y": 0.09754268175786918,
-            "rotation": 0.010920588763265328
+            "zone": "rightMargin",
+            "x": 0.9544591643012474,
+            "y": 0.2925426422268419,
+            "rotation": -0.015289278476067881
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 4
@@ -386,10 +386,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.6828409132957477,
-            "y": 0.9283278356963925,
-            "rotation": 0.035525074096024345
+            "zone": "leftMargin",
+            "x": 0.028830755940657496,
+            "y": 0.16288413049234265,
+            "rotation": 0.04292154409806616
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 4
@@ -401,10 +401,10 @@
           "type": "marginalia",
           "year": 1999,
           "position": {
-            "zone": "topMargin",
-            "x": 0.2972570188031529,
-            "y": 0.09681859065097828,
-            "rotation": -0.002710795519156739
+            "zone": "bottomMargin",
+            "x": 0.7441813210727888,
+            "y": 0.9106588553881192,
+            "rotation": 0.001141562113360528
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 4
@@ -416,10 +416,10 @@
           "type": "marginalia",
           "year": null,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9656156632659333,
-            "y": 0.16632650200531185,
-            "rotation": -0.040711656413022684
+            "zone": "topMargin",
+            "x": 0.6847218234749923,
+            "y": 0.029556437268830216,
+            "rotation": 0.045378582217653535
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 4
@@ -432,9 +432,9 @@
           "year": 2024,
           "position": {
             "zone": "rightMargin",
-            "x": 0.9403088729817346,
-            "y": 0.20419351652762663,
-            "rotation": 0.004289508902805073
+            "x": 0.9321070878666502,
+            "y": 0.8552904426080211,
+            "rotation": 0.04919211503118046
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 4
@@ -446,10 +446,10 @@
           "type": "postIt",
           "year": 2026,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.37291896825540694,
-            "y": 0.9787630962706206,
-            "rotation": -0.006317395845605068
+            "zone": "topMargin",
+            "x": 0.5437123041248266,
+            "y": 0.03143679951938878,
+            "rotation": -0.03828835792516542
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 4
@@ -470,9 +470,9 @@
           "year": 2024,
           "position": {
             "zone": "topMargin",
-            "x": 0.6948207337368633,
-            "y": 0.07514192149160391,
-            "rotation": 0.005997237839968084
+            "x": 0.21542241694479858,
+            "y": 0.058117069916270775,
+            "rotation": 0.02563119223329523
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 5
@@ -484,10 +484,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.4664932024448477,
-            "y": 0.947255946850523,
-            "rotation": -0.04184703313349081
+            "zone": "rightMargin",
+            "x": 0.9404667071398802,
+            "y": 0.39359307811243205,
+            "rotation": 0.02487777919607156
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 5
@@ -499,10 +499,10 @@
           "type": "marginalia",
           "year": 1985,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9068759348602039,
-            "y": 0.7322920366484683,
-            "rotation": -0.03784480621927319
+            "zone": "topMargin",
+            "x": 0.7213201106077546,
+            "y": 0.02035264058867826,
+            "rotation": -0.03288825424752014
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 5
@@ -515,9 +515,9 @@
           "year": 2024,
           "position": {
             "zone": "rightMargin",
-            "x": 0.9665017245804219,
-            "y": 0.4141315700115896,
-            "rotation": 0.04525496110286527
+            "x": 0.9236329120406419,
+            "y": 0.1692174509134688,
+            "rotation": -0.013956220877832926
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 5
@@ -529,10 +529,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04291014351398126,
-            "y": 0.5334682072987652,
-            "rotation": -0.03229281967177094
+            "zone": "rightMargin",
+            "x": 0.9479091389404601,
+            "y": 0.4937834632543304,
+            "rotation": -0.03951882761336789
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 5
@@ -544,10 +544,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.6468488643567215,
-            "y": 0.2211285022493839,
-            "rotation": 0.02176989707925534
+            "zone": "rightMargin",
+            "x": 0.9271562513826039,
+            "y": 0.6808564207539314,
+            "rotation": 0.019095779922931135
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 5
@@ -567,10 +567,10 @@
           "type": "marginalia",
           "year": 1984,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.03751980126825903,
-            "y": 0.7095869145731036,
-            "rotation": -0.019642018467465897
+            "zone": "bottomMargin",
+            "x": 0.5808084822288825,
+            "y": 0.9151487193775458,
+            "rotation": -0.005635567451973267
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 6
@@ -582,10 +582,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.0719308008452379,
-            "y": 0.6067940551762054,
-            "rotation": 0.027080469801561015
+            "zone": "rightMargin",
+            "x": 0.9305159198001843,
+            "y": 0.8513808136350248,
+            "rotation": 0.011516227316655714
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 6
@@ -597,10 +597,10 @@
           "type": "marginalia",
           "year": 1988,
           "position": {
-            "zone": "topMargin",
-            "x": 0.17051284585986512,
-            "y": 0.024221276472834737,
-            "rotation": -0.036387918191165804
+            "zone": "rightMargin",
+            "x": 0.9539628135225193,
+            "y": 0.7946292202917303,
+            "rotation": -0.026017824724255914
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 6
@@ -612,10 +612,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.24097891855020054,
-            "y": 0.96642941063147,
-            "rotation": 0.009023355836244784
+            "zone": "rightMargin",
+            "x": 0.9099767277659888,
+            "y": 0.805119800858965,
+            "rotation": 0.008075942235185518
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 6
@@ -627,10 +627,10 @@
           "type": "marginalia",
           "year": 1999,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.03406111068778407,
-            "y": 0.31281175572895226,
-            "rotation": -0.040246347004300215
+            "zone": "bottomMargin",
+            "x": 0.20826935961720067,
+            "y": 0.9224005458342629,
+            "rotation": -0.003061348765729155
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 6
@@ -643,9 +643,9 @@
           "year": 2024,
           "position": {
             "zone": "content",
-            "x": 0.7076164506748277,
-            "y": 0.776945637620984,
-            "rotation": 0.024321858142648325
+            "x": 0.43098048567440217,
+            "y": 0.6312608686368892,
+            "rotation": -0.03908404926060943
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 6
@@ -666,9 +666,9 @@
           "year": 1986,
           "position": {
             "zone": "topMargin",
-            "x": 0.4705792164410393,
-            "y": 0.026376232233161448,
-            "rotation": -0.031851268054089624
+            "x": 0.19915494111688276,
+            "y": 0.07634412466136607,
+            "rotation": 0.0018679934762627416
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 7
@@ -680,10 +680,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.08743729899000958,
-            "y": 0.8858480145396648,
-            "rotation": -0.012514895266515981
+            "zone": "bottomMargin",
+            "x": 0.7859566269656937,
+            "y": 0.9530983950669203,
+            "rotation": 0.007696755422843516
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 7
@@ -696,9 +696,9 @@
           "year": 1998,
           "position": {
             "zone": "topMargin",
-            "x": 0.1588863998511773,
-            "y": 0.06990345998957223,
-            "rotation": 0.037423850702160234
+            "x": 0.3295778007189086,
+            "y": 0.023889213520167686,
+            "rotation": -0.017339481792155543
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 7
@@ -710,10 +710,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.49631102033839636,
-            "y": 0.6191216787548334,
-            "rotation": -0.03457584148576922
+            "zone": "leftMargin",
+            "x": 0.08249139663423892,
+            "y": 0.875409262129445,
+            "rotation": -0.04614874327554187
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 7
@@ -725,10 +725,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "rightMargin",
-            "x": 0.9174186451381426,
-            "y": 0.5586976490484717,
-            "rotation": -0.0006545465739978496
+            "zone": "leftMargin",
+            "x": 0.07174297046394486,
+            "y": 0.3544487272012201,
+            "rotation": 0.03355292075332283
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 7
@@ -740,10 +740,10 @@
           "type": "marginalia",
           "year": 1987,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.020178359499294612,
-            "y": 0.4009664184759413,
-            "rotation": 0.04944020450889173
+            "zone": "bottomMargin",
+            "x": 0.6995986957035926,
+            "y": 0.9366265710437841,
+            "rotation": -0.027752362878927905
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 7
@@ -764,9 +764,9 @@
           "year": 1997,
           "position": {
             "zone": "rightMargin",
-            "x": 0.9594557794805714,
-            "y": 0.19825230704543256,
-            "rotation": 0.046215648747381
+            "x": 0.9456442325282668,
+            "y": 0.13581366673096273,
+            "rotation": 0.034515882343078855
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 8
@@ -779,9 +779,9 @@
           "year": 1985,
           "position": {
             "zone": "bottomMargin",
-            "x": 0.6746999025731998,
-            "y": 0.9785354908918806,
-            "rotation": -0.01338291457505979
+            "x": 0.532348455388203,
+            "y": 0.9034575599472748,
+            "rotation": -0.04842078830615805
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 8
@@ -793,10 +793,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.7729644900418151,
-            "y": 0.6024371285767708,
-            "rotation": 0.03722926540539331
+            "zone": "topMargin",
+            "x": 0.30343562492420584,
+            "y": 0.048463155160246116,
+            "rotation": -0.019087291319833402
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 8
@@ -809,9 +809,9 @@
           "year": 2025,
           "position": {
             "zone": "content",
-            "x": 0.5612123026626435,
-            "y": 0.7766197276145952,
-            "rotation": -0.031864240199526044
+            "x": 0.7948998295179137,
+            "y": 0.47468119590390867,
+            "rotation": 0.04675691300047133
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 8
@@ -823,10 +823,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.5738899743457162,
-            "y": 0.9151226148843902,
-            "rotation": 0.034946247111776456
+            "zone": "content",
+            "x": 0.26266416261903425,
+            "y": 0.28036821807844925,
+            "rotation": -0.03925594663927628
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 8
@@ -839,9 +839,9 @@
           "year": 1989,
           "position": {
             "zone": "topMargin",
-            "x": 0.8169425348020294,
-            "y": 0.06941247814107282,
-            "rotation": 0.03004334181787678
+            "x": 0.8235931526601807,
+            "y": 0.07271384955785683,
+            "rotation": 0.02277186846987026
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 8
@@ -861,10 +861,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "bottomMargin",
-            "x": 0.3714548320208003,
-            "y": 0.9056823210550428,
-            "rotation": -0.031474052455886484
+            "zone": "rightMargin",
+            "x": 0.9213234898664288,
+            "y": 0.5547912037308097,
+            "rotation": -0.026234506291253668
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 9
@@ -876,10 +876,10 @@
           "type": "marginalia",
           "year": 1987,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.04836917400040257,
-            "y": 0.4005831009846784,
-            "rotation": -0.04276764753841721
+            "zone": "bottomMargin",
+            "x": 0.6990316301999808,
+            "y": 0.9277201471072235,
+            "rotation": 0.04644919261772425
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 9
@@ -891,10 +891,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.0882323562013665,
-            "y": 0.6605027705498526,
-            "rotation": -0.006256956728125662
+            "zone": "bottomMargin",
+            "x": 0.3377856141301394,
+            "y": 0.9226579315326249,
+            "rotation": -0.0111404806788444
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 9
@@ -906,10 +906,10 @@
           "type": "postIt",
           "year": 2025,
           "position": {
-            "zone": "content",
-            "x": 0.477147095972639,
-            "y": 0.18253392813953945,
-            "rotation": -0.016950831866370066
+            "zone": "bottomMargin",
+            "x": 0.384500958500848,
+            "y": 0.932055893205731,
+            "rotation": 0.04136005516799275
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 9
@@ -921,10 +921,10 @@
           "type": "postIt",
           "year": 2024,
           "position": {
-            "zone": "content",
-            "x": 0.3855542321694899,
-            "y": 0.5037734667463524,
-            "rotation": 0.02720297936513849
+            "zone": "rightMargin",
+            "x": 0.950164119195994,
+            "y": 0.8105095194035509,
+            "rotation": 0.005508550931010603
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 9
@@ -936,10 +936,10 @@
           "type": "postIt",
           "year": 2000,
           "position": {
-            "zone": "content",
-            "x": 0.28887563715980114,
-            "y": 0.745045701808512,
-            "rotation": -0.030029204418992917
+            "zone": "rightMargin",
+            "x": 0.9622151032556141,
+            "y": 0.6072352740177889,
+            "rotation": 0.03588052967017049
           },
           "chapterName": "CHAPTER_VIII_THE_GARDENS_AND_OUTER_GROUNDS",
           "pageNumber": 9

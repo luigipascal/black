@@ -17,10 +17,10 @@
           "type": "marginalia",
           "year": null,
           "position": {
-            "zone": "topMargin",
-            "x": 0.20318913103870692,
-            "y": 0.03232217347356642,
-            "rotation": 0.0026054869274462103
+            "zone": "bottomMargin",
+            "x": 0.35469441878320596,
+            "y": 0.9555398581000203,
+            "rotation": 0.02948769517841542
           },
           "chapterName": "CHAPTER_III_THE_EAST_WING_AND_HIDDEN_CHAMBERS",
           "pageNumber": 1
@@ -40,10 +40,10 @@
           "type": "marginalia",
           "year": 1942,
           "position": {
-            "zone": "leftMargin",
-            "x": 0.09369858305841641,
-            "y": 0.7730791913411522,
-            "rotation": 0.014939436230844006
+            "zone": "topMargin",
+            "x": 0.4293267137454376,
+            "y": 0.07879905401347605,
+            "rotation": 0.0013332051777612986
           },
           "chapterName": "CHAPTER_III_THE_EAST_WING_AND_HIDDEN_CHAMBERS",
           "pageNumber": 2
