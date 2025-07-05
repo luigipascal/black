@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor Archive</title>
+    <style>
+        :root {
+            --paper-color: #f4f1e8;
+            --paper-dark: #e8e1d3;
+            --text-color: #2c2c2c;
+            --margin-blue: #2653a3;
+            --margin-black: #1a1a1a;
+            --margin-red: #c41e3a;
+            --book-spine: #8b4513;
+            --book-cover: #654321;
+            --post-it-yellow: #fff68f;
+            --post-it-white: #f8f8f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: var(--book-cover);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-header {
+            background: var(--book-spine);
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .app-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            min-height: 0;
+        }
+
+        .document-container {
+            background: var(--paper-color);
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 800px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .document-page {
+            width: 100%;
+            height: 100%;
+            padding: 3rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--paper-color) 0%, var(--paper-dark) 100%);
+        }
+
+        .document-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(139,69,19,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139,69,19,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .chapter-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .page-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+            position: relative;
+            height: calc(100% - 4rem);
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        .annotation {
+            position: absolute;
+            font-size: 0.8rem;
+            max-width: 200px;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .annotation:hover {
+            transform: scale(1.05);
+            z-index: 20;
+        }
+
+        .annotation.marginalia {
+            background: none;
+            transform: rotate(-2deg);
+        }
+
+        .annotation.post-it {
+            background: var(--post-it-yellow);
+            padding: 0.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transform: rotate(1deg);
+        }
+
+        .annotation.character-mb {
+            color: var(--margin-blue);
+            font-family: cursive;
+            font-style: italic;
+        }
+
+        .annotation.character-jr {
+            color: var(--margin-black);
+            font-family: 'Courier New', monospace;
+        }
+
+        .annotation.character-ew {
+            color: var(--margin-red);
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        .annotation.character-sw {
+            color: #654321;
+            font-family: 'Courier New', monospace;
+        }
+
+        .navigation {
+            background: var(--book-spine);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .nav-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .page-info {
+            font-size: 0.9rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+
+        .character-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .document-page {
+                padding: 1.5rem;
+            }
+            
+            .annotation {
+                max-width: 150px;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-header">
+        <div class="app-title">📖 Blackthorn Manor Archive</div>
+        <div class="controls">
+            <button class="btn" onclick="toggleReadingMode()">📱 Single Page</button>
+            <button class="btn" onclick="showCharacterGuide()">👥 Characters</button>
+            <button class="btn" onclick="showMenu()">⋮</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="document-container">
+            <div class="document-page">
+                <div class="loading" id="loading">
+                    📚 Loading classified documents...
+                </div>
+                <div id="page-content" style="display: none;">
+                    <div class="chapter-title" id="chapter-title"></div>
+                    <div class="page-content" id="main-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn" onclick="previousPage()">← Previous</button>
+        <div class="page-info" id="page-info">Page 1 of 99</div>
+        <button class="nav-btn" id="next-btn" onclick="nextPage()">Next →</button>
+    </div>
+
+    <!-- Annotation Detail Modal -->
+    <div id="annotation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-character"></h2>
+            <p id="modal-year"></p>
+            <p id="modal-text"></p>
+            <div id="modal-character-info" class="character-info"></div>
+        </div>
+    </div>
+
+    <!-- Character Guide Modal -->
+    <div id="character-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCharacterModal()">&times;</span>
+            <h2>Character Guide</h2>
+            <div id="character-list"></div>
+        </div>
+    </div>
+
+    <script>
+        // App State
+        let currentPage = 0;
+        let totalPages = 99;
+        let bookData = null;
+        let readingMode = 'single';
+        let draggedAnnotation = null;
+
+        // Sample data for immediate testing
+        const samplePages = [
+            {
+                pageNumber: 1,
+                chapterName: "CHAPTER_I_INTRODUCTION_AND_HISTORICAL_CONTEXT",
+                content: `# Chapter I: Introduction and Historical Context
+
+                The Blackthorn Manor stands as one of the most enigmatic architectural achievements of the Victorian era. Built between 1847 and 1853 by the reclusive Edmund Blackthorn, this Gothic Revival mansion has long captured the imagination of architectural historians and supernatural enthusiasts alike.
+
+                Located in the remote countryside of Yorkshire, England, the manor encompasses over 40 rooms spread across four floors, with additional subterranean chambers that were not part of the original architectural plans. The building's most striking feature is its asymmetrical design, which appears to deliberately violate established principles of Gothic architecture.
+
+                Recent archaeological surveys have revealed that the manor was constructed atop a much older foundation, possibly dating back to the 13th century. Stone fragments bearing unknown symbols have been discovered in the basement walls, suggesting the presence of a previous structure whose purpose remains unclear.
+
+                The Blackthorn family occupied the manor for over 150 years, with the last resident, Margaret Blackthorn, passing away in 1999. Since then, the property has remained largely uninhabited, though it has been the subject of numerous academic studies and paranormal investigations.`,
+                annotations: [
+                    {
+                        id: "ann1",
+                        character: "MB",
+                        text: "The symbols weren't unknown to us. We just couldn't speak of them openly.",
+                        type: "marginalia",
+                        year: 1987,
+                        position: { x: 0.85, y: 0.3 }
+                    },
+                    {
+                        id: "ann2", 
+                        character: "SW",
+                        text: "Note: Claire was investigating these same symbols before she disappeared.",
+                        type: "post-it",
+                        year: 2024,
+                        position: { x: 0.05, y: 0.6 }
+                    }
+                ]
+            },
+            {
+                pageNumber: 2,
+                chapterName: "CHAPTER_I_INTRODUCTION_AND_HISTORICAL_CONTEXT",
+                content: `The architectural style of Blackthorn Manor defies easy categorization. While primarily Gothic Revival, the building incorporates elements that seem to predate this movement by centuries. The stonework displays mastery of techniques that were supposedly lost during the medieval period, raising questions about the true identity of the craftsmen involved.
+
+                Of particular note are the manor's numerous doorways - a total of 47 have been documented, though architectural plans suggest there should be only 31. These additional entrances appear to have been added during construction, not as later modifications. More puzzling still, several of these doors open onto walls or lead to rooms that cannot be accessed by any other means.
+
+                The building's most controversial feature is the so-called "Observation Tower" - a circular structure that rises 60 feet above the main building. No contemporary records explain its purpose, and its interior contains only a single, windowless chamber. The tower's exterior is adorned with carved figures that bear no resemblance to typical Gothic ornamentation.
+
+                Local folklore has long associated the manor with supernatural occurrences, though these tales were dismissed by academic researchers until the 1980s, when a series of unexplained events began to be documented by credible witnesses.`,
+                annotations: [
+                    {
+                        id: "ann3",
+                        character: "JR",
+                        text: "The door count keeps changing. I've counted 47, then 49, then back to 47. Something's not right.",
+                        type: "marginalia",
+                        year: 1989,
+                        position: { x: 0.02, y: 0.2 }
+                    },
+                    {
+                        id: "ann4",
+                        character: "EW",
+                        text: "Structural analysis shows these 'extra' doors are load-bearing. Removing them would cause collapse.",
+                        type: "marginalia",
+                        year: 1998,
+                        position: { x: 0.9, y: 0.4 }
+                    }
+                ]
+            }
+        ];
+
+        const characters = {
+            "MB": {
+                name: "Margaret Blackthorn",
+                years: "1930-1999",
+                role: "Family Guardian",
+                description: "Last surviving member of the Blackthorn family. Maintained the estate and its secrets until her death.",
+                style: "character-mb"
+            },
+            "JR": {
+                name: "James Reed", 
+                years: "1984-1990",
+                role: "Independent Researcher",
+                description: "Independent researcher who investigated the manor's architectural anomalies. Disappeared in 1989.",
+                style: "character-jr"
+            },
+            "EW": {
+                name: "Eliza Winston",
+                years: "1995-1999", 
+                role: "Structural Engineer",
+                description: "Structural engineer commissioned to assess the building's safety. Her reports raised serious concerns.",
+                style: "character-ew"
+            },
+            "SW": {
+                name: "Simon Wells",
+                years: "2024+",
+                role: "Current Investigator", 
+                description: "Current investigator exploring the manor's mysteries. His sister Claire also disappeared.",
+                style: "character-sw"
+            }
+        };
+
+        // Initialize the app
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('page-content').style.display = 'block';
+                loadPage(currentPage);
+            }, 1500);
+        };
+
+        function loadPage(pageIndex) {
+            const page = samplePages[pageIndex];
+            if (!page) return;
+
+            // Clear existing annotations
+            document.querySelectorAll('.annotation').forEach(el => el.remove());
+
+            // Set content
+            document.getElementById('chapter-title').textContent = formatChapterName(page.chapterName);
+            document.getElementById('main-text').innerHTML = formatContent(page.content);
+
+            // Add annotations
+            page.annotations.forEach(annotation => {
+                createAnnotation(annotation);
+            });
+
+            // Update navigation
+            updateNavigation();
+        }
+
+        function formatChapterName(chapterName) {
+            return chapterName.replace(/_/g, ' ').replace(/CHAPTER (\w+)/, 'Chapter $1:');
+        }
+
+        function formatContent(content) {
+            return content.replace(/\n\n/g, '</p><p>').replace(/^/, '<p>').replace(/$/, '</p>');
+        }
+
+        function createAnnotation(annotation) {
+            const annotationEl = document.createElement('div');
+            annotationEl.className = `annotation ${annotation.type} ${characters[annotation.character]?.style || ''}`;
+            annotationEl.style.left = `${annotation.position.x * 100}%`;
+            annotationEl.style.top = `${annotation.position.y * 100}%`;
+            annotationEl.textContent = annotation.text;
+            
+            annotationEl.onclick = () => showAnnotationDetail(annotation);
+            
+            if (annotation.type === 'post-it') {
+                annotationEl.draggable = true;
+                annotationEl.ondragstart = (e) => {
+                    draggedAnnotation = annotation;
+                };
+            }
+
+            document.querySelector('.document-page').appendChild(annotationEl);
+        }
+
+        function showAnnotationDetail(annotation) {
+            const character = characters[annotation.character];
+            document.getElementById('modal-character').textContent = character?.name || annotation.character;
+            document.getElementById('modal-year').textContent = annotation.year ? `Year: ${annotation.year}` : '';
+            document.getElementById('modal-text').textContent = annotation.text;
+            
+            if (character) {
+                document.getElementById('modal-character-info').innerHTML = `
+                    <strong>Role:</strong> ${character.role}<br>
+                    <strong>Years:</strong> ${character.years}<br>
+                    <strong>Description:</strong> ${character.description}
+                `;
+            }
+            
+            document.getElementById('annotation-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('annotation-modal').style.display = 'none';
+        }
+
+        function showCharacterGuide() {
+            const characterList = document.getElementById('character-list');
+            characterList.innerHTML = '';
+            
+            Object.entries(characters).forEach(([code, character]) => {
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <h3>${character.name} (${code})</h3>
+                    <p><strong>${character.role}</strong> • ${character.years}</p>
+                    <p>${character.description}</p>
+                    <hr style="margin: 1rem 0;">
+                `;
+                characterList.appendChild(div);
+            });
+            
+            document.getElementById('character-modal').style.display = 'block';
+        }
+
+        function closeCharacterModal() {
+            document.getElementById('character-modal').style.display = 'none';
+        }
+
+        function previousPage() {
+            if (currentPage > 0) {
+                currentPage--;
+                loadPage(currentPage);
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < samplePages.length - 1) {
+                currentPage++;
+                loadPage(currentPage);
+            }
+        }
+
+        function updateNavigation() {
+            document.getElementById('prev-btn').disabled = currentPage === 0;
+            document.getElementById('next-btn').disabled = currentPage === samplePages.length - 1;
+            document.getElementById('page-info').textContent = `Page ${currentPage + 1} of ${samplePages.length}`;
+        }
+
+        function toggleReadingMode() {
+            readingMode = readingMode === 'single' ? 'spread' : 'single';
+            document.querySelector('.controls .btn').textContent = 
+                readingMode === 'single' ? '📱 Single Page' : '📖 Book Spread';
+        }
+
+        function showMenu() {
+            alert('📋 Menu\n\n• Tap annotations to see details\n• Drag yellow post-it notes to move them\n• Use Character Guide to learn about annotators\n• Navigate with arrow buttons\n\n🎭 Welcome to Blackthorn Manor!');
+        }
+
+        // Touch support for mobile
+        document.addEventListener('touchstart', function(e) {
+            if (e.target.classList.contains('annotation') && e.target.classList.contains('post-it')) {
+                e.target.style.zIndex = '100';
+            }
+        });
+    </script>
+</body>
+</html>
