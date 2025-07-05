@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackthorn Manor: Complete Archive - Fixed</title>
+    <style>
+        :root {
+            --parchment: #f4f1e8;
+            --aged-paper: #ede5d3;
+            --dark-brown: #3d2914;
+            --margin-brown: #8b4513;
+            --faded-ink: #4a4a4a;
+            --mb-blue: #2653a3;
+            --jr-black: #1a1a1a;
+            --ew-red: #c41e3a;
+            --sw-gray: #2c2c2c;
+            --detective-green: #006400;
+            --chambers-black: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(45deg, var(--parchment), var(--aged-paper));
+            color: var(--dark-brown);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--dark-brown), #2d1a0a);
+            color: var(--parchment);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--margin-brown);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .revelation-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 2px solid var(--margin-brown);
+        }
+
+        .revelation-level {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .revelation-slider {
+            flex: 1;
+            height: 6px;
+            background: var(--parchment);
+            border-radius: 3px;
+            appearance: none;
+            outline: none;
+        }
+
+        .revelation-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--margin-brown);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .character-discovery {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .character-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 2px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .character-badge.discovered {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .character-badge.undiscovered {
+            opacity: 0.3;
+            transform: scale(0.9);
+        }
+
+        .character-mb { border-color: var(--mb-blue); color: var(--mb-blue); }
+        .character-jr { border-color: var(--jr-black); color: var(--jr-black); }
+        .character-ew { border-color: var(--ew-red); color: var(--ew-red); }
+        .character-sw { border-color: var(--sw-gray); color: var(--sw-gray); }
+        .character-detective { border-color: var(--detective-green); color: var(--detective-green); }
+        .character-chambers { border-color: var(--chambers-black); color: var(--chambers-black); }
+
+        .progress-stats {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .document-viewer {
+            background: white;
+            border: 1px solid var(--margin-brown);
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .page-content {
+            padding: 3rem;
+            min-height: 600px;
+            position: relative;
+            background: linear-gradient(to right, 
+                transparent 0%, 
+                transparent 8%, 
+                var(--aged-paper) 8%, 
+                var(--aged-paper) 12%, 
+                white 12%);
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            font-size: 0.9rem;
+            color: var(--margin-brown);
+            font-weight: bold;
+        }
+
+        .page-controls {
+            background: var(--aged-paper);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--margin-brown);
+        }
+
+        .page-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .page-nav button {
+            background: var(--dark-brown);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .page-nav button:hover:not(:disabled) {
+            background: var(--margin-brown);
+        }
+
+        .page-nav button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .annotation {
+            position: absolute;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            max-width: 250px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            user-select: none;
+        }
+
+        .annotation:hover {
+            transform: scale(1.05);
+            z-index: 20;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+
+        .annotation.marginalia {
+            background: var(--aged-paper);
+            border: 1px solid var(--margin-brown);
+        }
+
+        .annotation.postIt {
+            background: #fffe9e;
+            border: 1px solid #e6d900;
+            cursor: move;
+        }
+
+        .annotation.redaction {
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .annotation.revealed {
+            background: #ffecb3;
+            border: 2px solid #ff9800;
+        }
+
+        .annotation.dragging {
+            opacity: 0.8;
+            transform: scale(1.1);
+            z-index: 100;
+        }
+
+        .character-mb { color: var(--mb-blue); font-style: italic; }
+        .character-jr { color: var(--jr-black); font-family: 'Courier New', monospace; }
+        .character-ew { color: var(--ew-red); font-weight: bold; }
+        .character-sw { color: var(--sw-gray); }
+        .character-detective { color: var(--detective-green); font-family: 'Courier New', monospace; }
+        .character-chambers { color: var(--chambers-black); font-weight: bold; }
+
+        .footer {
+            background: var(--dark-brown);
+            color: var(--parchment);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: var(--margin-brown);
+        }
+
+        .error {
+            background: #ffe6e6;
+            border: 1px solid #ff6b6b;
+            padding: 1rem;
+            border-radius: 4px;
+            color: #d63031;
+            margin: 1rem 0;
+        }
+
+        .front-matter {
+            font-style: italic;
+            text-align: center;
+        }
+
+        .front-matter h1 {
+            font-size: 2rem;
+            margin: 2rem 0;
+            color: var(--dark-brown);
+        }
+
+        .front-matter h2 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+            color: var(--margin-brown);
+        }
+
+        .back-matter {
+            font-family: 'Times New Roman', serif;
+        }
+
+        .back-matter h1 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--dark-brown);
+            border-bottom: 2px solid var(--margin-brown);
+            padding-bottom: 0.5rem;
+        }
+
+        .back-matter h2 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--margin-brown);
+        }
+
+        .section-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-info select {
+            padding: 0.5rem;
+            border: 1px solid var(--margin-brown);
+            border-radius: 4px;
+            background: white;
+        }
+
+        .debug-info {
+            background: rgba(0,0,0,0.1);
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .page-content {
+                padding: 1.5rem;
+            }
+
+            .annotation {
+                max-width: 180px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏰 Blackthorn Manor: Complete Archive</h1>
+        <p>Interactive Document Experience • 247 Pages • 535+ Annotations</p>
+    </header>
+
+    <main class="container">
+        <!-- Progressive Revelation Controls -->
+        <div class="revelation-controls">
+            <div class="revelation-level">
+                <label><strong>Revelation Level:</strong></label>
+                <input type="range" id="revelationSlider" class="revelation-slider" 
+                       min="1" max="5" value="1" oninput="updateRevelationLevel(this.value)">
+                <span id="revelationLabel">Academic Study</span>
+            </div>
+            
+            <div class="character-discovery">
+                <div class="character-badge character-mb undiscovered" data-character="MB">Margaret B.</div>
+                <div class="character-badge character-jr undiscovered" data-character="JR">James Reed</div>
+                <div class="character-badge character-ew undiscovered" data-character="EW">Eliza Winston</div>
+                <div class="character-badge character-sw undiscovered" data-character="SW">Simon Wells</div>
+                <div class="character-badge character-detective undiscovered" data-character="Detective">Detective</div>
+                <div class="character-badge character-chambers undiscovered" data-character="Chambers">Dr. Chambers</div>
+            </div>
+
+            <div class="progress-stats">
+                <strong>Progress:</strong> 
+                <span id="discoveredCount">0</span>/6 Characters • 
+                <span id="annotationCount">0</span>/535 Annotations • 
+                <span id="pageProgress">Page 1/247</span>
+            </div>
+        </div>
+
+        <!-- Document Section -->
+        <div class="document-viewer">
+            <div class="page-content" id="pageContent">
+                <div class="loading">📄 Loading complete archive...</div>
+            </div>
+            <div class="page-number" id="pageNumber">Page 1</div>
+            <div class="page-controls">
+                <div class="page-nav">
+                    <button onclick="previousPage()" id="prevBtn" disabled>← Previous</button>
+                    <button onclick="nextPage()" id="nextBtn">Next →</button>
+                </div>
+                <div class="section-info">
+                    <select id="sectionSelector" onchange="jumpToSection(this.value)">
+                        <option value="front">Front Matter</option>
+                        <option value="chapters">Chapters</option>
+                        <option value="back">Back Matter</option>
+                    </select>
+                    <span id="sectionInfo">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="debug-info" id="debugInfo">
+            Debug: Ready to load data...
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Blackthorn Manor Interactive Archive • A Digital Investigation Experience</p>
+    </footer>
+
+    <script>
+        // Global variables
+        let bookData = null;
+        let currentPage = 1;
+        let totalPages = 247;
+        let currentSection = 'front';
+        let revelationLevel = 1;
+        let discoveredCharacters = new Set();
+        let draggedAnnotations = new Map();
+        let allPages = [];
+
+        const revelationLevels = {
+            1: { name: 'Academic Study', description: 'Original architectural analysis only' },
+            2: { name: 'Family Secrets', description: 'Margaret Blackthorn\'s family knowledge' },
+            3: { name: 'Investigative Discovery', description: 'Research findings and anomalies' },
+            4: { name: 'Supernatural Truth', description: 'Paranormal investigations revealed' },
+            5: { name: 'Complete Truth', description: 'All mysteries and government secrets' }
+        };
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+        });
+
+        async function initializeApp() {
+            updateDebugInfo('Starting initialization...');
+            
+            try {
+                const dataLoaded = await loadBookData();
+                
+                if (dataLoaded) {
+                    updateDebugInfo(`Successfully loaded ${totalPages} pages`);
+                } else {
+                    updateDebugInfo('Failed to load data - check console for errors');
+                }
+                
+                renderCurrentPage();
+                updateUI();
+                
+            } catch (error) {
+                updateDebugInfo('Error during initialization: ' + error.message);
+                console.error('Initialization error:', error);
+            }
+        }
+
+        async function loadBookData() {
+            try {
+                updateDebugInfo('Loading book data...');
+                const response = await fetch('data/web_book_data.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const loadedData = await response.json();
+                updateDebugInfo('Data file loaded, processing...');
+                
+                // Process the loaded data
+                allPages = [];
+                let pageNumber = 1;
+                
+                // Add front matter pages
+                if (loadedData.frontMatter && loadedData.frontMatter.pages) {
+                    loadedData.frontMatter.pages.forEach(page => {
+                        allPages.push({
+                            ...page,
+                            actualPageNumber: pageNumber++,
+                            section: 'front'
+                        });
+                    });
+                }
+                
+                // Add chapter pages
+                if (loadedData.chapters && loadedData.chapters.pages) {
+                    loadedData.chapters.pages.forEach(page => {
+                        allPages.push({
+                            ...page,
+                            actualPageNumber: pageNumber++,
+                            section: 'chapters'
+                        });
+                    });
+                }
+                
+                // Add back matter pages
+                if (loadedData.backMatter && loadedData.backMatter.pages) {
+                    loadedData.backMatter.pages.forEach(page => {
+                        allPages.push({
+                            ...page,
+                            actualPageNumber: pageNumber++,
+                            section: 'back'
+                        });
+                    });
+                }
+                
+                totalPages = allPages.length;
+                bookData = loadedData;
+                
+                updateDebugInfo(`Processed ${totalPages} pages successfully`);
+                console.log('Book data loaded successfully:', { totalPages, frontPages: loadedData.frontMatter?.pages?.length, chapterPages: loadedData.chapters?.pages?.length, backPages: loadedData.backMatter?.pages?.length });
+                
+                return true;
+                
+            } catch (error) {
+                updateDebugInfo('Error loading data: ' + error.message);
+                console.error('Error loading book data:', error);
+                return false;
+            }
+        }
+
+        function renderCurrentPage() {
+            const pageContent = document.getElementById('pageContent');
+            
+            if (!allPages || allPages.length === 0) {
+                pageContent.innerHTML = '<div class="error">No book data available. Please check the data file.</div>';
+                return;
+            }
+            
+            const pageIndex = currentPage - 1;
+            if (pageIndex < 0 || pageIndex >= allPages.length) {
+                pageContent.innerHTML = '<div class="error">Page not found</div>';
+                return;
+            }
+            
+            const page = allPages[pageIndex];
+            
+            // Render page content
+            let content = page.content || '';
+            
+            // Convert markdown-style content to HTML if needed
+            if (content.includes('# ')) {
+                content = content.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+                content = content.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+                content = content.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+            }
+            
+            // Add line breaks for better readability
+            content = content.replace(/\n/g, '<br>');
+            
+            // Add appropriate section class
+            const sectionClass = page.type === 'front_matter' ? 'front-matter' : 
+                                page.type === 'back_matter' ? 'back-matter' : '';
+            
+            pageContent.innerHTML = `<div class="${sectionClass}">${content}</div>`;
+            
+            // Add annotations
+            renderAnnotations(page);
+            
+            // Update page number
+            document.getElementById('pageNumber').textContent = `Page ${currentPage}`;
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentPage <= 1;
+            document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+            
+            // Update section info
+            updateSectionInfo(page);
+        }
+
+        function renderAnnotations(page) {
+            const pageContent = document.getElementById('pageContent');
+            const annotations = page.annotations || [];
+            
+            // Filter annotations based on revelation level and discovered characters
+            const visibleAnnotations = annotations.filter(ann => {
+                const charCode = ann.character || 'Unknown';
+                const hasCharacter = charCode === 'Unknown' || discoveredCharacters.has(charCode);
+                const withinLevel = ann.revealLevel <= revelationLevel;
+                
+                return hasCharacter && withinLevel;
+            });
+            
+            visibleAnnotations.forEach(annotation => {
+                const annotationEl = createAnnotationElement(annotation);
+                pageContent.appendChild(annotationEl);
+            });
+        }
+
+        function createAnnotationElement(annotation) {
+            const div = document.createElement('div');
+            
+            // Set basic properties
+            div.className = `annotation ${annotation.type || 'marginalia'} character-${annotation.character.toLowerCase()}`;
+            div.textContent = annotation.text;
+            div.title = `${getCharacterName(annotation.character)} (${annotation.year || 'Unknown'})`;
+            
+            // Position the annotation
+            const position = annotation.position || { x: 0.85, y: 0.2 };
+            div.style.left = `${position.x * 100}%`;
+            div.style.top = `${position.y * 100}%`;
+            
+            // Add click handler
+            div.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handleAnnotationClick(annotation, div);
+            });
+            
+            // Make draggable if it's a post-it
+            if (annotation.type === 'postIt' || annotation.isDraggable) {
+                makeAnnotationDraggable(div, annotation.id);
+            }
+            
+            return div;
+        }
+
+        function handleAnnotationClick(annotation, element) {
+            // Discover character if not already discovered
+            if (!discoveredCharacters.has(annotation.character)) {
+                discoverCharacter(annotation.character);
+            }
+            
+            // Show annotation details
+            element.classList.add('revealed');
+            
+            // Update UI
+            updateUI();
+        }
+
+        function makeAnnotationDraggable(element, annotationId) {
+            let isDragging = false;
+            let startX, startY, initialX, initialY;
+
+            element.addEventListener('mousedown', startDrag);
+            element.addEventListener('touchstart', startDrag);
+
+            function startDrag(e) {
+                isDragging = true;
+                element.classList.add('dragging');
+                
+                const touch = e.touches ? e.touches[0] : e;
+                startX = touch.clientX;
+                startY = touch.clientY;
+                initialX = element.offsetLeft;
+                initialY = element.offsetTop;
+                
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('touchmove', drag);
+                document.addEventListener('mouseup', stopDrag);
+                document.addEventListener('touchend', stopDrag);
+                
+                e.preventDefault();
+            }
+
+            function drag(e) {
+                if (!isDragging) return;
+                
+                const touch = e.touches ? e.touches[0] : e;
+                const deltaX = touch.clientX - startX;
+                const deltaY = touch.clientY - startY;
+                
+                element.style.left = `${initialX + deltaX}px`;
+                element.style.top = `${initialY + deltaY}px`;
+                
+                e.preventDefault();
+            }
+
+            function stopDrag() {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                element.classList.remove('dragging');
+                
+                document.removeEventListener('mousemove', drag);
+                document.removeEventListener('touchmove', drag);
+                document.removeEventListener('mouseup', stopDrag);
+                document.removeEventListener('touchend', stopDrag);
+                
+                // Save position
+                draggedAnnotations.set(annotationId, {
+                    x: element.offsetLeft,
+                    y: element.offsetTop
+                });
+            }
+        }
+
+        function updateRevelationLevel(level) {
+            revelationLevel = parseInt(level);
+            const levelInfo = revelationLevels[level];
+            document.getElementById('revelationLabel').textContent = levelInfo.name;
+            
+            // Auto-discover characters based on level
+            if (level >= 2) discoverCharacter('MB');
+            if (level >= 3) {
+                discoverCharacter('JR');
+                discoverCharacter('EW');
+            }
+            if (level >= 4) {
+                discoverCharacter('SW');
+                discoverCharacter('Detective');
+            }
+            if (level >= 5) discoverCharacter('Chambers');
+            
+            renderCurrentPage();
+            updateUI();
+        }
+
+        function discoverCharacter(character) {
+            discoveredCharacters.add(character);
+            const badge = document.querySelector(`[data-character="${character}"]`);
+            if (badge) {
+                badge.classList.remove('undiscovered');
+                badge.classList.add('discovered');
+            }
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        function jumpToSection(section) {
+            if (!allPages || allPages.length === 0) return;
+            
+            // Find the first page of the selected section
+            const sectionPage = allPages.find(page => page.section === section);
+            if (sectionPage) {
+                currentPage = sectionPage.actualPageNumber;
+                renderCurrentPage();
+                updateUI();
+            }
+        }
+
+        function updateSectionInfo(page) {
+            const sectionInfo = document.getElementById('sectionInfo');
+            const sectionName = page.section === 'front' ? 'Front Matter' :
+                              page.section === 'chapters' ? 'Chapters' :
+                              page.section === 'back' ? 'Back Matter' : 'Unknown';
+            
+            sectionInfo.textContent = `${sectionName} • ${page.wordCount || 0} words`;
+        }
+
+        function updateUI() {
+            // Update progress stats
+            document.getElementById('discoveredCount').textContent = discoveredCharacters.size;
+            document.getElementById('pageProgress').textContent = `Page ${currentPage}/${totalPages}`;
+            
+            // Calculate annotation count (approximation)
+            const annotationCount = Math.min(discoveredCharacters.size * 50 + revelationLevel * 20, 535);
+            document.getElementById('annotationCount').textContent = annotationCount;
+        }
+
+        function updateDebugInfo(message) {
+            const debugInfo = document.getElementById('debugInfo');
+            debugInfo.textContent = 'Debug: ' + message;
+        }
+
+        function getCharacterName(char) {
+            const names = {
+                'MB': 'Margaret Blackthorn',
+                'JR': 'James Reed',
+                'EW': 'Eliza Winston',
+                'SW': 'Simon Wells',
+                'Detective': 'Detective Sharma',
+                'Chambers': 'Dr. Chambers'
+            };
+            return names[char] || char;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') previousPage();
+            if (e.key === 'ArrowRight') nextPage();
+            if (e.key >= '1' && e.key <= '5') {
+                updateRevelationLevel(parseInt(e.key));
+                document.getElementById('revelationSlider').value = e.key;
+            }
+        });
+    </script>
+</body>
+</html>
